@@ -293,7 +293,8 @@
                               <dl>
                                  <dt><span class="section"><a href="#d3e30" class="toc">Evolution of the WWP’s theory and practice of markup</a></span></dt>
                                  <dt><span class="section"><a href="#d3e54" class="toc">Evolution of toolsets</a></span></dt>
-                                 <dt><span class="section"><a href="#d3e114" class="toc">Project sustainability</a></span></dt>
+                                 <dt><span class="section"><a href="#d3e140" class="toc">Project sustainability</a></span></dt>
+                                 <dt><span class="section"><a href="#d3e196" class="toc">Synthesis</a></span></dt>
                               </dl>
                            </details>
                         </div>
@@ -361,7 +362,8 @@
                      <dl>
                         <dt><span class="section"><a href="#d3e30" class="toc">Evolution of the WWP’s theory and practice of markup</a></span></dt>
                         <dt><span class="section"><a href="#d3e54" class="toc">Evolution of toolsets</a></span></dt>
-                        <dt><span class="section"><a href="#d3e114" class="toc">Project sustainability</a></span></dt>
+                        <dt><span class="section"><a href="#d3e140" class="toc">Project sustainability</a></span></dt>
+                        <dt><span class="section"><a href="#d3e196" class="toc">Synthesis</a></span></dt>
                      </dl>
                   </details>
                </div>
@@ -708,23 +710,50 @@
                         used to encode letterforms commonly substituted for each other in early typesetting,
                         such as
                         an “j” represented with an “i”. The <code class="code">&lt;vuji&gt;</code> element is a useful shorthand for a
-                        TEI <code class="code">&lt;choice&gt;</code>: 
+                        TEI <code class="code">&lt;choice&gt;</code>.
                         
-                        <pre class="programlisting" id="d3e96"><!--language: xml-->in&lt;vuji&gt;i&lt;/vuji&gt;urious</pre>
-                        <pre class="programlisting" id="d3e98"><!--language: xml-->in&lt;choice&gt;&lt;orig&gt;i&lt;/orig&gt;&lt;reg&gt;j&lt;/reg&gt;&lt;/choice&gt;urious</pre>
+                        <figure id="d3e96">
+                           <p class="title">Figure&nbsp;1</p>
+                           <div class="figure-contents">
+                              <pre class="programlisting" id="d3e97"><!--language: xml-->in&lt;choice&gt;&lt;orig&gt;i&lt;/orig&gt;&lt;reg&gt;j&lt;/reg&gt;&lt;/choice&gt;urious</pre>
+                              <div class="caption">
+                                 <p id="d3e100">The word “injurious” transcribed using standard TEI elements <code class="code">&lt;choice&gt;</code>, <code class="code">&lt;orig&gt;</code>, and <code class="code">&lt;reg&gt;</code>. The encoding indicates that the word was originally printed with an “i” where modern
+                                    readers would expect a “j”.</p>
+                              </div>
+                           </div>
+                        </figure>
+                        
+                        <figure id="injurious-vuji">
+                           <p class="title">Figure&nbsp;2</p>
+                           <div class="figure-contents">
+                              <pre class="programlisting" id="d3e110"><!--language: xml-->in&lt;vuji&gt;i&lt;/vuji&gt;urious</pre>
+                              <div class="caption">
+                                 <p id="d3e113">The same word, transcribed using the WWP’s shorthand element <code class="code">&lt;vuji&gt;</code>. Only the originally-printed letter is transcribed. When encoded this way, the letter
+                                    “i” will only ever be regularized to the letter “j”.</p>
+                              </div>
+                           </div>
+                        </figure>
                         XML publishing software consistently treats element tags as distinct words. Our
                         pre-publication stylesheets adapt our markup as needed to avoid this problem. Originally,
                         the
                         original letterform represented in <code class="code">&lt;vuji&gt;</code> was converted to its modern
                         equivalent, and the tag itself was removed.</p>
-                     <p id="d3e104">More recently, when WWO introduced a feature allowing users to toggle between modern
+                     <p id="d3e122">More recently, when WWO introduced a feature allowing users to toggle between modern
                         and
                         original typography, the pre-publication stylesheets retained <code class="code">&lt;vuji&gt;</code>. This had
                         the unfortunate side effect of reducing XTF’s ability to index older documents, because
                         a
                         single word would be broken up by tags:
                         
-                        <pre class="programlisting" id="d3e108">in j urious</pre>
+                        <figure id="d3e126">
+                           <p class="title">Figure&nbsp;3</p>
+                           <div class="figure-contents">
+                              <pre class="programlisting" id="d3e127">in j urious</pre>
+                              <div class="caption">
+                                 <p id="d3e129">A plain-text representation of how XTF would parse the word encoded in <a class="xref" href="#injurious-vuji">Figure&nbsp;2</a>. XTF would introduce spaces in place of the start and end tags of <code class="code">&lt;vuji&gt;</code>.</p>
+                              </div>
+                           </div>
+                        </figure>
                         In order to retain both the toggle feature and the collection’s searchability, Women
                         Writers Online was moved out of the XTF platform and into an eXist-DB database. While
                         eXist-DB’s index also treats tags as word boundaries by default, eXist does provide
@@ -732,7 +761,7 @@
                         define elements like  <code class="code">&lt;vuji&gt;</code>as “inline,” or, implying no word break. As such,
                         a search in eXist for the word “injurious” will lead to Jane Anger
                         Her Protection For Women (1589), where XTF would have come up short.</p>
-                     <p id="d3e112">The relationship between the markup and the publication tool is thus very indirect.
+                     <p id="d3e138">The relationship between the markup and the publication tool is thus very indirect.
                         The
                         markup represents a durable, evolving expression of our analysis of the source texts,
                         based on
@@ -749,7 +778,7 @@
                         aimed at producing a specific kind of outcome, the source markup remains tool-agnostic
                         and
                         could be published through varied systems to produce varied user experiences.</p>
-                     <p id="d3e113">Read broadly, this history reveals several important points. First, the lifespan of
+                     <p id="d3e139">Read broadly, this history reveals several important points. First, the lifespan of
                         monolithic tools was comparatively short: the first two iterations of Women Writers
                         Online
                         (DynaWeb and Philologic) each lasted about six years, whereas our current system has
@@ -769,9 +798,9 @@
                         “XML
                         publishing” means (inflected as well by the WWP’s own intentions for the data).</p>
                   </div>
-                  <div class="section" id="d3e114">
+                  <div class="section" id="d3e140">
                      <h2 class="title" style="clear: both">Project sustainability</h2>
-                     <p id="d3e116">In July 2023, the Women Writers Project staff held a retreat to discuss plans for
+                     <p id="d3e142">In July 2023, the Women Writers Project staff held a retreat to discuss plans for
                         the next
                         ten years of the WWP — what would the Project need in order to continue on indefinitely,
                         in
@@ -782,7 +811,7 @@
                         moment, but analysis revealed that these systems were potentially at risk to events
                         for which
                         we had no contingency or recovery plan.</p>
-                     <p id="d3e117">For example, many of the WWP’s web resources (WWO, WWiC, WWiR, WW:IN and others) are
+                     <p id="d3e143">For example, many of the WWP’s web resources (WWO, WWiC, WWiR, WW:IN and others) are
                         dependent on eXist-DB. The eXist database has its own divergent implementations of
                         XQuery
                         standards, such as XQuery Update and output serialization. The eXist-specific code
@@ -791,27 +820,26 @@
                         barrier
                         to exiting. Thus, the WWP’s dependency on eXist means a dependence on continued staffing
                         with
-                        eXist-specific skills.<sup class="fn-label"><a href="#d3e121" class="footnoteref" id="d3e121-ref">[2]</a></sup></p>
-                     <p id="d3e125">By the close of the retreat, we decided it would be prudent to familiarize ourselves
+                        eXist-specific skills.<sup class="fn-label"><a href="#d3e147" class="footnoteref" id="d3e147-ref">[2]</a></sup></p>
+                     <p id="d3e151">By the close of the retreat, we decided it would be prudent to familiarize ourselves
                         with
-                        the outcomes of the Endings Project. The Endings Project was convened in 2016 by the
+                        the outcomes of the <a href="https://endings.uvic.ca/" class="link">Endings Project</a>. The Endings Project was convened in 2016 by the
                         University of Victoria’s Humanities Computing and Media Centre (HCMC), with the goal
                         of
                         developing methods towards the longevity of their digital artifacts. In 2018, the
                         team
-                        released their first version of the “Endings Principles for Digital Longevity”. These
-                        principles describe the foundations of a digital project which can be
+                        released their first version of the “Endings Principles for Digital Longevity” (<a class="xref" id="d3e156" href="javascript:showcite('cite-endings','d3e156')">Endings Principles 2023</a>). These principles describe the foundations of a digital project which can be
                         used, cited, reproduced, and archived. By building for open use, the Endings Project
                         argues,
                         the digital products are far more likely to be reused and maintained, and thus, more
                         likely to
                         survive.</p>
-                     <p id="d3e126">The Endings Project promotes the use of standalone, static websites, with no server-side
+                     <p id="d3e158">The Endings Project promotes the use of standalone, static websites, with no server-side
                         processing or backend components. The HTML markup is not programmatically built out
                         after the
                         page loads; all content is available and all dependencies are satisfied simply by
                         accessing
-                        the file. (<a class="xref" id="d3e128" href="javascript:showcite('cite-endings','d3e128')">Endings Principles 2023</a>) This greatly aids those who intentionally set out to archive the project materials,
+                        the file. (<a class="xref" id="d3e160" href="javascript:showcite('cite-endings','d3e160')">Endings Principles 2023</a>) This greatly aids those who intentionally set out to archive the project materials,
                         such as a digital repository or the Internet Archive’s Wayback Machine. The static
                         site
                         approach also makes it easy for researchers and other users to become casual archivists.
@@ -819,19 +847,19 @@
                         not necessary to use extensions or software to generate a WARC file from the page;
                         saving the
                         page as an HTML file is enough to obtain your own working copy.</p>
-                     <p id="d3e130">Though the WWP puts much of our emphasis on the markup — without which, there would
+                     <p id="d3e162">Though the WWP puts much of our emphasis on the markup — without which, there would
                         be no
                         publication — the Endings Project counsels against considering our data alone as enough
                         for
                         project preservation. Dynamic “products” such as website interfaces are “arguably
                         the most
-                        recognizable and least preservable part of a digital project” (<a class="xref" id="d3e132" href="javascript:showcite('cite-holmes2023a','d3e132')">Holmes, Jenstad, and Huculak 2023</a>).
+                        recognizable and least preservable part of a digital project” (<a class="xref" id="d3e164" href="javascript:showcite('cite-holmes2023a','d3e164')">Holmes, Jenstad, and Huculak 2023</a>).
                         A website is the most public expression of a project’s data, and an invitation for
                         users to
                         participate in the products’ use and reuse. 
                         <div class="blockquote">
                            <blockquote class="blockquote">
-                              <p id="d3e135">Just as we offer repurposable XML versions of our documents, we try to provide HTML
+                              <p id="d3e167">Just as we offer repurposable XML versions of our documents, we try to provide HTML
                                  pages which can also be pulled out of the project and reused easily. While TEI XML
                                  is a
                                  widely-used and trusted archival format for digital scholarly work, compared with
@@ -847,8 +875,8 @@
                                  likely
                                  to be reused than our XML in the long term.</p>
                            </blockquote>
-                        </div> (<a class="xref" id="d3e137" href="javascript:showcite('cite-holmes2023b','d3e137')">Holmes and Takeda 2023</a>).</p>
-                     <p id="d3e139">In our pursuit of maintainability, the WWP is working towards greater synthesis between
+                        </div> (<a class="xref" id="d3e169" href="javascript:showcite('cite-holmes2023b','d3e169')">Holmes and Takeda 2023</a>).</p>
+                     <p id="d3e171">In our pursuit of maintainability, the WWP is working towards greater synthesis between
                         markup, documentation, and website, especially for Women Writers Online. The interface
                         can
                         make greater use of the markup, for instance. We have plans to add more user control
@@ -860,30 +888,30 @@
                         catering to those who just want a clean, readable text. We also intend to make it
                         easier for
                         users to download the WWO TEI files.</p>
-                     <p id="d3e140">However, the highest priority for the WWP is refactoring our current publication processes
+                     <p id="d3e172">However, the highest priority for the WWP is refactoring our current publication processes
                         for sustainability, and to produce static websites. Step one is to migrate our apps
                         from eXist
                         to BaseX. Because the code will be specification-standard XQuery, its maintenance
-                        and upkeep can be undertaken by more people.<sup class="fn-label"><a href="#d3e142" class="footnoteref" id="d3e142-ref">[3]</a></sup> We will document the
+                        and upkeep can be undertaken by more people.<sup class="fn-label"><a href="#d3e174" class="footnoteref" id="d3e174-ref">[3]</a></sup> We will document the
                         process of publication via BaseX and automate as much of the publication processes
                         as
                         possible.</p>
-                     <p id="d3e149">For WWiR and WWiC, step two will be to shift away from single-page Javascript applications
-                        and towards giving the user a complete HTML page on request.<sup class="fn-label"><a href="#d3e151" class="footnoteref" id="d3e151-ref">[4]</a></sup> We will adjust the site for web accessibility and universal design features,
+                     <p id="d3e181">For WWiR and WWiC, step two will be to shift away from single-page Javascript applications
+                        and towards giving the user a complete HTML page on request.<sup class="fn-label"><a href="#d3e183" class="footnoteref" id="d3e183-ref">[4]</a></sup> We will adjust the site for web accessibility and universal design features,
                         limiting Javascript to facilitating interaction. This will also require updating existing
                         URLs, since Backbone.js applications previously maintained the browser’s history once
                         the user
                         entered the site. Women Writers Online already went through this process during the
                         migration
                         to eXist.</p>
-                     <p id="d3e158">Step three is to generate static HTML. The current hope is that we will use the migrated
+                     <p id="d3e190">Step three is to generate static HTML. The current hope is that we will use the migrated
                         XQuery code to generate HTML out of BaseX. Each page will be saved as a separate HTML
                         file, in
                         directories mapping onto the URL paths. When a user requests a web page, the server
                         responds
                         with the static HTML, rather than initiating a request to BaseX. We may still incorporate
                         search through BaseX.</p>
-                     <p id="d3e160">The WWP is at the beginning of step one. This step mostly consists of rewriting XQuery
+                     <p id="d3e192">The WWP is at the beginning of step one. This step mostly consists of rewriting XQuery
                         code so that a BaseX environment can produce the same JSON output that eXist currently
                         does.
                         However, where possible, we are also trying to make it easier to accomplish steps
@@ -891,7 +919,7 @@
                         three. For example, some web content generated in Javascript can be extricated and
                         placed in
                         either an XQuery response, or the HTML page.</p>
-                     <p id="d3e161">Throughout the process, we are also working to make our web content more accessible.
+                     <p id="d3e193">Throughout the process, we are also working to make our web content more accessible.
                         For
                         example, the Women Writers Online interface includes a standard “Search” feature,
                         implemented
@@ -911,22 +939,31 @@
                         page as a result of their request, with the search results found within the content
                         of the
                         page.</p>
-                     <p id="d3e162">By removing usability barriers such as low color contrast, we extend our invitation
+                     <p id="d3e194">By removing usability barriers such as low color contrast, we extend our invitation
                         for
                         use and reuse further, to people of all abilities. And by preferring semantic HTML
                         markup over
                         CSS formatting, we bring the full semantics of the markup into focus.</p>
                   </div>
-                  <div class="bibliography" id="d3e166">
+                  <div class="section" id="d3e196">
+                     <h2 class="title" style="clear: both">Synthesis</h2>
+                     <p id="d3e199">Markup and tools have co-evolved</p>
+                     <p id="d3e200">It turns out that they really are two dialogic/dialectical parts of the same modeling
+                        ecology; tools not just a kind of sea anchor or gaudy temptation, but something that
+                        also contributes to our understanding of what a model of text is</p>
+                     <p id="d3e201">…explore the consequences of this idea</p>
+                     <p id="d3e202">Next steps, research questions, Onward!</p>
+                  </div>
+                  <div class="bibliography" id="d3e204">
                      <h2 class="title">References</h2>
                      <p class="bibliomixed" id="caton1998"><a href="#d3e74">[Caton 1998] </a>Caton, Paul. “Putting Renaissance Women Online.” <span class="ital">WWP
                            Newsletter</span>, vol. 4, no. 1, 1998, Women Writers Project. <a href="https://wwp.northeastern.edu/about/history/archive/newsletter/vol04num01/RWO041.html" class="link">wwp.northeastern.edu/about/history/archive/newsletter/vol04num01/RWO041.html</a>.</p>
-                     <p class="bibliomixed" id="endings"><a href="#d3e128">[Endings Principles 2023] </a>Endings Project Team. “Endings Principles for Digital Longevity.” Version 2.2.1.
+                     <p class="bibliomixed" id="endings"><a href="#d3e156">[Endings Principles 2023] </a>Endings Project Team. “Endings Principles for Digital Longevity.” Version 2.2.1.
                         <span class="ital">The Endings Project</span>, University of Victoria, 3 Mar. 2023. <a href="https://endings.uvic.ca/principles.html" class="link">endings.uvic.ca/principles.html</a>.</p>
-                     <p class="bibliomixed" id="holmes2023a"><a href="#d3e132">[Holmes, Jenstad, and Huculak 2023] </a>Holmes, Martin, Janelle Jenstad, and J. Matthew Huculak. “Introduction to Special
+                     <p class="bibliomixed" id="holmes2023a"><a href="#d3e164">[Holmes, Jenstad, and Huculak 2023] </a>Holmes, Martin, Janelle Jenstad, and J. Matthew Huculak. “Introduction to Special
                         Issue: Project Resiliency in the Digital Humanities.” <span class="ital">Digital Humanities
                            Quarterly</span>, vol. 17, no. 1, 2023, <a href="https://doi.org/10.63744/g7c3rkvm5bzr" class="link">https://doi.org/10.63744/g7c3rkvm5bzr</a>.</p>
-                     <p class="bibliomixed" id="holmes2023b"><a href="#d3e137">[Holmes and Takeda 2023] </a>Holmes, Martin, and Joey Takeda. “From Tamagotchis to Pet Rocks: On Learning to
+                     <p class="bibliomixed" id="holmes2023b"><a href="#d3e169">[Holmes and Takeda 2023] </a>Holmes, Martin, and Joey Takeda. “From Tamagotchis to Pet Rocks: On Learning to
                         Love Simplicity through the Endings Principles.” <span class="ital">Digital Humanities
                            Quarterly</span>, vol. 17, no. 1, 2023, <a href="https://doi.org/10.63744/dr2uaqdau4tz" class="link">https://doi.org/10.63744/dr2uaqdau4tz</a>.</p>
                      <p class="bibliomixed" id="melson2010"><a href="#d3e51">[Melson and Flanders 2010] </a>Melson, John, and Julia Flanders. “Not Just One of Your Holiday Games: Names and
@@ -941,21 +978,21 @@
                      <div id="d3e78" class="footnote">
                         <p><sup class="fn-label"><a href="#d3e78-ref" class="footnoteref">[1]</a></sup> Later, these contextual essays were republished in Women Writers in Context.</p>
                      </div>
-                     <div id="d3e121" class="footnote">
-                        <p><sup class="fn-label"><a href="#d3e121-ref" class="footnoteref">[2]</a></sup> Northeastern’s Digital Scholarship Group — of which the Women Writers Project is a
+                     <div id="d3e147" class="footnote">
+                        <p><sup class="fn-label"><a href="#d3e147-ref" class="footnoteref">[2]</a></sup> Northeastern’s Digital Scholarship Group — of which the Women Writers Project is a
                            part — had
                            already adopted BaseX as its XML database of choice for TEI and other XML projects,
                            due to
                            BaseX’s lightweight footprint, excellent documentation, and adherence to the XQuery
                            standard. At this time, the WWP is the only DSG project which uses eXist.</p>
                      </div>
-                     <div id="d3e142" class="footnote">
-                        <p><sup class="fn-label"><a href="#d3e142-ref" class="footnoteref">[3]</a></sup> See the <a href="https://www.exist-db.org/exist/apps/doc/xquery#unsupported-features" class="link">“XQuery
+                     <div id="d3e174" class="footnote">
+                        <p><sup class="fn-label"><a href="#d3e174-ref" class="footnoteref">[3]</a></sup> See the <a href="https://www.exist-db.org/exist/apps/doc/xquery#unsupported-features" class="link">“XQuery
                               in eXist-db” documentation page</a> for a list of XQuery features unsupported by
                            eXist, and features which have eXist-specific implementations.</p>
                      </div>
-                     <div id="d3e151" class="footnote">
-                        <p><sup class="fn-label"><a href="#d3e151-ref" class="footnoteref">[4]</a></sup> Women Writers in Review and Women Writers in Context each have a single index page.
+                     <div id="d3e183" class="footnote">
+                        <p><sup class="fn-label"><a href="#d3e183-ref" class="footnoteref">[4]</a></sup> Women Writers in Review and Women Writers in Context each have a single index page.
                            On
                            page load, their <a href="https://backbonejs.org/" class="link">Backbone.js</a> apps request and consume data
                            from the XQuery API in eXist. That data is used to construct a web page to match the

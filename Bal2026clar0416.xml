@@ -260,8 +260,19 @@
       Women Writers Online. One example of this is the WWP’s <code>&lt;vuji></code> tag, which is
       used to encode letterforms commonly substituted for each other in early typesetting, such as
       an “j” represented with an “i”. The <code>&lt;vuji></code> element is a useful shorthand for a
-      TEI <code>&lt;choice></code>: 
-        <programlisting language="xml">in&lt;vuji>i&lt;/vuji>urious</programlisting><programlisting language="xml">in&lt;choice>&lt;orig>i&lt;/orig>&lt;reg>j&lt;/reg>&lt;/choice>urious</programlisting>
+      TEI <code>&lt;choice></code>.
+      <figure>
+        <programlisting language="xml">in&lt;choice>&lt;orig>i&lt;/orig>&lt;reg>j&lt;/reg>&lt;/choice>urious</programlisting>
+        <caption>
+          <para>The word “injurious” transcribed using standard TEI elements <code>&lt;choice></code>, <code>&lt;orig></code>, and <code>&lt;reg></code>. The encoding indicates that the word was originally printed with an “i” where modern readers would expect a “j”.</para>
+        </caption>
+      </figure>
+      <figure xml:id="injurious-vuji">
+        <programlisting language="xml">in&lt;vuji>i&lt;/vuji>urious</programlisting>
+        <caption>
+          <para>The same word, transcribed using the WWP’s shorthand element <code>&lt;vuji></code>. Only the originally-printed letter is transcribed. When encoded this way, the letter “i” will only ever be regularized to the letter “j” (and vice versa).</para>
+        </caption>
+      </figure>
 XML publishing software consistently treats element tags as distinct words. Our
       pre-publication stylesheets adapt our markup as needed to avoid this problem. Originally, the
       original letterform represented in <code>&lt;vuji></code> was converted to its modern
@@ -270,7 +281,12 @@ XML publishing software consistently treats element tags as distinct words. Our
       original typography, the pre-publication stylesheets retained <code>&lt;vuji></code>. This had
       the unfortunate side effect of reducing XTF’s ability to index older documents, because a
       single word would be broken up by tags:
-      <programlisting>in j urious</programlisting>
+      <figure>
+        <programlisting>in j urious</programlisting>
+        <caption>
+          <para>A plain-text representation of how XTF would parse the word encoded in <xref linkend="injurious-vuji"/>. XTF would introduce spaces in place of the start and end tags of <code>&lt;vuji></code>.</para>
+        </caption>
+      </figure>
 In order to retain both the toggle feature and the collection’s searchability, Women
       Writers Online was moved out of the XTF platform and into an eXist-DB database. While
       eXist-DB’s index also treats tags as word boundaries by default, eXist does provide a way to
@@ -320,10 +336,10 @@ In order to retain both the toggle feature and the collection’s searchability,
           standard. At this time, the WWP is the only DSG project which uses eXist.</para></footnote></para>
     <!-- Ash: Make sure Endings Project is given more explanation, URL? -->
     <para>By the close of the retreat, we decided it would be prudent to familiarize ourselves with
-      the outcomes of the Endings Project. The Endings Project was convened in 2016 by the
+      the outcomes of the <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://endings.uvic.ca/">Endings Project</link>. The Endings Project was convened in 2016 by the
       University of Victoria’s Humanities Computing and Media Centre (HCMC), with the goal of
       developing methods towards the longevity of their digital artifacts. In 2018, the team
-      released their first version of the “Endings Principles for Digital Longevity”. These principles describe the foundations of a digital project which can be
+      released their first version of the “Endings Principles for Digital Longevity” (<xref linkend="endings"/>). These principles describe the foundations of a digital project which can be
       used, cited, reproduced, and archived. By building for open use, the Endings Project argues,
       the digital products are far more likely to be reused and maintained, and thus, more likely to
       survive.</para>
@@ -412,7 +428,14 @@ In order to retain both the toggle feature and the collection’s searchability,
        Engaging readers with the static site powered interface
        Loop back around from process to impact, synthesis
   -->
-  <!-- Both: stronger conclusion -->
+  <section>
+    <!-- Both: stronger conclusion -->
+    <title>Synthesis</title>
+    <para>Markup and tools have co-evolved</para>
+    <para>It turns out that they really are two dialogic/dialectical parts of the same modeling ecology; tools not just a kind of sea anchor or gaudy temptation, but something that also contributes to our understanding of what a model of text is</para>
+    <para>…explore the consequences of this idea</para>
+    <para>Next steps, research questions, Onward!</para>
+  </section>
   <!-- Could include an appendix listing the WWP’s publications, and/or a timeline of WWP encoding/publication history -->
   <bibliography>
     <title>Works Cited</title>
