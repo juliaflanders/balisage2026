@@ -31,7 +31,7 @@
         filter: invert(100%);
       }
     </style>
-      <link rel="stylesheet" href="style/balisage-plain.css" type="text/css">
+      <link rel="stylesheet" href="style/balisage-proceedings.css" type="text/css">
       <link id="favicon" rel="shortcut icon" type="image/png" href="http://balisage.net/favicon.ico">
       <!--balisage-html.xsl--></head>
    <body>
@@ -39,659 +39,963 @@
       <div id="balisage-header" role="banner">
          <h1><!--* balisage-html.xsl 519.38 *--><i>Balisage:</i>&nbsp;<small>The Markup Conference</small></h1>
       </div>
-      <div lang="en" class="article">
-         <div class="titlepage">
-            <h1 class="article-title" id="d2e5">Balisage Paper: Synthesis and Sustainability: The Evolution of Markup and Toolsets in the Women Writers
-               Project</h1>
-            <div class="author">
-               <h3 class="author">Julia Flanders</h3>
-               <div class="affiliation">
-                  <p class="orgname">Northeastern University</p>
-               </div>
+      <html lang="en">
+         <head>
+            <title>Balisage: Synthesis and Sustainability: The Evolution of Markup and Toolsets in the Women Writers
+    Project</title>
+            <link rel="stylesheet" href="style/balisage-proceedings.css" type="text/css">
+            <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow&amp;display=swap" rel="stylesheet">
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1"><script type="text/JavaScript">
+      var detailsElement = document.createElement("details");
+      if (!("open" in detailsElement)) {
+          document.write('<script src="..//js/bower_components/better-dom/dist/better-dom.js"><\/script>');
+          document.write('<script src="..//js/bower_components/better-details-polyfill/dist/better-details-polyfill.js"><\/script>');
+          document.write('<script src="..//js/classname.js"><\/script>');
+      }
+      /* Enable CSS styling of figure elements in IE:
+       * https://xopus.com/devblog/2008/style-unknown-elements.html
+       */
+      var IEfix = document.createElement('figure');
+    </script><style type="text/css" id="inverter" media="none">
+      html {
+        filter: invert(100%);
+      }
+
+      * {
+        background-color: inherit;
+      }
+
+      /* do not invert SVG images */
+      img:not([src*=".svg"]),
+      [style*="url("] {
+        filter: invert(100%);
+      }
+    </style>
+            <!--balisage-proceedings.xsl-->
+            <meta name="generator" content="Balisage Conference Proceedings XSLT (v1.2)">
+            <link id="favicon" rel="shortcut icon" type="image/png" href="http://balisage.net/favicon.ico"><script type="text/javascript">
+
+   function hidecite(citeID) {
+     cite = document.getElementById(citeID);
+     cite.style.display = "none";
+     return;
+   }
+   
+   function showcite(citeID,anchorID) {
+     cite = document.getElementById(citeID);
+
+     citeLeft = cite.style.left;
+     citeTop = cite.style.top;
+     
+     if (citeLeft != (getLeft(anchorID)+"px") ||
+         citeTop != (getTop(anchorID)+"px")) {
+       cite.style.display = "none";
+     }
+     
+     if (cite.style.display != "table-cell") {
+        movebox(citeID, anchorID);
+        cite.style.display = "table-cell";
+     }
+     else {
+       cite.style.display = "none";
+     };
+     return;
+   }
+
+   function movebox(citeID, anchorID) {
+
+     cite = document.getElementById(citeID);
+     
+     // alert(cite.offsetWidth + " by " + cite.offsetHeight)
+     
+     horizontalOffset = getLeft(anchorID);
+     // horizontalOffset = (inMain(anchorID)) ?
+     // (horizontalOffset - 260) : (horizontalOffset + 20)
+     // (horizontalOffset - (20 + cite.offsetWidth)) : (horizontalOffset + 20)
+
+     verticalOffset = getTop(anchorID);
+     // verticalOffset = (inMain(anchorID)) ?
+     // (verticalOffset - 20) : (verticalOffset + 20)
+     // (verticalOffset - (20 + cite.offsetHeight)) : (verticalOffset + 20)
+
+     /*
+     horizontalOffset = getAbsoluteLeft(anchorID) - getScrollLeft(anchorID) + 20;
+     if (inMain(anchorID)) {
+       horizontalOffset = horizontalOffset - 300;
+     }
+     verticalOffset = getAbsoluteTop(anchorID) - getScrollTop(anchorID) - 40;
+     if (inMain(anchorID)) {
+       verticalOffset = verticalOffset - 300;
+     }
+     */
+     
+     cite.style.left = horizontalOffset + "px";
+     cite.style.top = verticalOffset + "px";
+   }
+   
+   function getLeft(objectID) {
+     var left = getAbsoluteLeft(objectID) - getScrollLeft(objectID);
+     left = (inMain(objectID)) ? (left - 260) : (left + 20)    
+     return left;
+   }
+   
+   function getTop(objectID) {
+     var top = getAbsoluteTop(objectID) - getScrollTop(objectID);
+     top = (inMain(objectID)) ? (top - 50) : (top + 20)
+     return top;     
+   }
+   
+   function getAbsoluteLeft(objectId) {
+   // Get an object left position from the upper left viewport corner
+     o = document.getElementById(objectId)
+     oLeft = o.offsetLeft            // Get left position from the parent object
+     while(o.offsetParent!=null) {   // Parse the parent hierarchy up to the document element
+       oParent = o.offsetParent    // Get parent object reference
+       oLeft += oParent.offsetLeft // Add parent left position
+       o = oParent
+      }
+    return oLeft
+    }
+
+    function getAbsoluteTop(objectId) {
+    // Get an object top position from the upper left viewport corner
+      o = document.getElementById(objectId)
+      oTop = o.offsetTop            // Get top position from the parent object
+      while(o.offsetParent!=null) { // Parse the parent hierarchy up to the document element
+        oParent = o.offsetParent  // Get parent object reference
+        oTop += oParent.offsetTop // Add parent top position
+        o = oParent
+      }
+    return oTop
+    }
+
+   function getScrollLeft(objectId) {
+     // Get a left scroll position
+     o = document.getElementById(objectId)
+     oLeft = o.scrollLeft            // Get left position from the parent object
+     while(o.offsetParent!=null) {   // Parse the parent hierarchy up to the document element
+       oParent = o.offsetParent    // Get parent object reference
+       oLeft += oParent.scrollLeft // Add parent left position
+       o = oParent
+      }
+    return oLeft
+    }
+
+    function getScrollTop(objectId) {
+    // Get a right scroll position
+      o = document.getElementById(objectId)
+      oTop = o.scrollTop            // Get top position from the parent object
+      while(o.offsetParent!=null) { // Parse the parent hierarchy up to the document element
+        oParent = o.offsetParent  // Get parent object reference
+        oTop += oParent.scrollTop // Add parent top position
+        o = oParent
+      }
+    return oTop
+    }
+
+    function inMain(objectId) {
+    // returns true if in div#main
+      o = document.getElementById(objectId)
+      while(o.parentNode != null) { // Parse the parent hierarchy up to div#main
+        oParent = o.parentNode
+        if (o.id == "main") { return true; }
+        o = oParent;
+      }
+    return false;
+    }
+
+
+   /*
+   function showcite(citeID) {
+      cite = document.getElementById(citeID);
+      if (cite.style.display != "table-cell") {
+        cite.style.display = "table-cell";
+      }
+      else {
+        cite.style.display = "none";
+      };
+      return;
+    }
+    */
+
+      </script></head>
+         <body>
+            <div class="skipnav"><a href="#main">Skip to contents.</a></div>
+            <div id="balisage-header" role="banner" aria-label="Logo and breadcrumb links"><a class="quiet" href="http://www.balisage.net"><img style="float:right;border:none" alt="Balisage logo" height="130" src="icons/BalisageSeries-logo.png"></a><h2 class="page-header">Balisage: The Markup Conference</h2>
+               <h1 class="page-header">Proceedings preview</h1>
             </div>
-            <div class="author">
-               <h3 class="author">Ash Clark</h3>
-               <div class="affiliation">
-                  <p class="orgname">Northeastern University</p>
-               </div>
-            </div>
-            <div class="abstract">
-               <h2>Abstract</h2>
-               <p id="d2e8">In 1988, the Women Writers Project (WWP) started out on its very long history of working
-                  with markup systems. In 1999, the WWP began working with XML publication tools as
-                  well. In
-                  both cases, markup and tools, the WWP has treated the work as an active research
-                  undertaking: not only seeking to build a stable, sustainable working system, but also
-                  keeping pace with new developments and exploring their implications for research on
-                  early
-                  women’s writing. The intertwined history and co-evolution of these two sets of practices
-                  within the WWP’s nearly 40 years of work thus far can contribute a valuable perspective
-                  on
-                  the history of scholarly usage of markup in the humanities. This paper will explore
-                  the
-                  evolution of the WWP’s theory and practice of markup, from its pre-TEI origins to
-                  our
-                  present-day usage; as well as the evolution of the project’s publication systems,
-                  from its
-                  first forays into digital publication through DynaWeb to our planned implementation
-                  of a
-                  static-site framework that responds to the recommendations of the Endings Principles.
-                  We
-                  will also consider the reciprocal pressure that tools and markup exert on each other,
-                  and
-                  the nuanced ways in which markup responds to the changing intellectual paradigms proposed
-                  by
-                  successive generations of tools and technologies (and vice versa).</p>
-            </div>
-            <hr>
-         </div>
-         <details class="toc">
-            <summary>
-               <h2 class="inline-heading">Table of Contents</h2>
-            </summary>
-            <dl>
-               <dt><span class="section"><a href="#d2e27" class="toc">Evolution of the WWP’s theory and practice of markup</a></span></dt>
-               <dt><span class="section"><a href="#d2e50" class="toc">Evolution of toolsets</a></span></dt>
-               <dt><span class="section"><a href="#d2e108" class="toc">Project sustainability</a></span></dt>
-            </dl>
-         </details>
-         <div class="note" id="d2e25">
-            <h3 class="title">Note</h3>
-            <p id="d2e26">The introduction to this paper will include a brief backstory on the history and mission
-               of the WWP, and will signal the topics and issues this paper is going to focus on.</p>
-         </div>
-         <div class="section" id="d2e27">
-            <h2 class="title" style="clear: both">Evolution of the WWP’s theory and practice of markup</h2>
-            <p id="d2e29">The WWP’s earliest markup practices were anchored in typesetting tools: student encoders
-               starting in 1988 used Waterloo Script to capture functional textual units and formatting
-               details. This approach was not guided by an explicit theory of markup, but it did
-               embody
-               certain assumptions about the role that markup could play in representing primary
-               source
-               documents (still a somewhat novel role for markup at that time). The now fundamental
-               idea that
-               markup should emphasize semantics rather than solely formatting was already present
-               in the
-               ways that Waterloo Script supported the identification of textual components (headings,
-               paragraphs, etc.) in a way that was separable from their appearance, and this was
-               especially
-               crucial for primary source materials whose actual appearance on the page might vary
-               considerably from text to text. And although this first stage of the WWP’s practice
-               did not at
-               all anticipate what the TEI would come to be, it did lay a groundwork that was at
-               least
-               amenable to an eventual transition to the TEI once P1 and P2 were available to demonstrate
-               what a more thoroughly semantic approach could look like.</p>
-            <p id="d2e30">Paradoxically, however, some of the earliest encoding debates within the project concerned
-               the representation of the appearance of the source, and specifically the question
-               of whether a
-               glyph in the source text should be represented using a character that resembles it
-               visually,
-               or represents it informationally. Examples include the numeral 1 (which in many older
-               sources
-               resembles a capital I and may even have been printed using that piece of type), the
-               letters
-               “u” and “n” (which when inverted are often indistinguishable from each other), and
-               the
-               characters for zero and capital O. The WWP’s thinking about these kinds of cases was
-               shaped by
-               concerns among humanities scholars about loss of information about the physical source,
-               and a
-               resulting desire for visual fidelity to the text. Seen from that perspective (and
-               in the
-               absence of Unicode), the use of a capital I to represent a numeral 1 could appear
-               defensible
-               on visual grounds. But very early on, the project identified that resemblance (unsurprisingly)
-               as a fallacy—dependent on typeface and likely to lead to all sorts of future practical
-               and
-               conceptual problems. The idea of markup as a “digital facsimile” gave way quickly
-               to the idea
-               of markup as a more informational representation of document structure. The project
-               continued
-               to be concerned with ways of representing the material aspects of documents, with
-               each encoded
-               transcription derived from an identifiable physical copy, and capturing aspects of
-               formatting
-               and material structure. But the TEI model demonstrated how that could be done explicitly
-               through the markup itself: for example, through the <code class="code">@rend</code> attribute or through
-               mechanisms like <code class="code">&lt;sic&gt;</code> (the example uses P3-era TEI):</p>
-            <pre class="programlisting" id="d2e36"><!--language: xml-->&lt;sic corr="O"&gt;0&lt;/sic&gt;</pre>
-            <p id="d2e38">The WWP’s early work on rendition ladders provided an opportunity to explore how far
-               the
-               material and visual properties of texts could be formalized for descriptive (rather
-               than
-               output) purposes.</p>
-            <p id="d2e39">In the early days of the TEI in the 1990s, the WWP was a typical early adopter in
-               two
-               senses. With its mission of creating a large collection of early women’s writing in
-               English,
-               the project emphasized both comprehensiveness and the recovery of inaccessible materials.
-               But
-               these two goals proved over time to pull in different directions, as the evolution
-               of the TEI
-               as a <span class="ital">scholarly</span> technology revealed different ways for digital
-               resources to function as research objects. The idea of creating reference corpora
-               or
-               comprehensive research collections was an early and significant driver for the TEI
-               and is
-               exemplified by projects like Perseus, ARTFL, and the early documentary editing projects
-               that
-               constituted the Model Editions Partnership. Such efforts signalled the importance
-               of data
-               interoperability and of markup systems that could work towards that end: schemas that
-               could
-               strongly reinforce consistency and “conformance” and provide a clear model for tools
-               to
-               operate on. The WWP’s work was certainly animated to some degree by motivations towards
-               interoperability; the project explored collaborative approaches to the encoding of
-               personal
-               names with several other projects focused on women’s writing, and placed a high value
-               on
-               following emerging standard practices when possible. But an important early element
-               of the
-               project’s mission was to treat early women’s writing and early printed books as potential
-               sources of complication and resistance to standardization.</p>
-            <p id="d2e44">With the release of P5, the function of customization changed fundamentally: no longer
-               as
-               a laborious way of departing from the standard, but as a more or less required aspect
-               of using
-               the Guidelines, a tool that was in everyone’s hands. This shift coincided exactly
-               with an
-               increased visibility of “digital humanities” within traditional scholarly spaces,
-               and an
-               interest in interpretive and critical uses of data modeling. For the WWP, the question
-               of
-               where early women’s writing might depart from canonical or standard models shifted
-               at this
-               point to become: how does the modeling of early women’s writing constitute a scholarly
-               argument about that writing? And, by extension, the project took an approach to pedagogy
-               (through its encoding seminars) that asked participants to undertake TEI encoding
-               as an
-               exercise in scholarly interpretation and reciprocal communication, rather than an
-               effort to
-               follow an established model in a strictly conformant manner.</p>
-            <p id="d2e45">Another crucial step in the evolution of the WWP’s use of markup—also connected with
-               the
-               release of TEI P5—was the availability of markup structures akin to linked open data:
-               the
-               ‘ographies and their relationship to the emergence of RDF and technologies like XPath
-               that
-               enabled linking to precise locations within XML documents. For the WWP, this launched
-               a shift
-               away from a sole emphasis on documents, to representing a larger universe of entities
-               in which
-               those documents are one meaningful component. The WWP had already begun using internal
-               authority control to manage a database of persons referenced in WWP texts, starting
-               in 1996
-               with a formal keying system developed by Syd Bauman. In 2008 the WWP received an NEH
-               Digital
-               Humanities Start-up grant to explore the complexities of managing personographies
-               in the
-               context of early modern women’s writing (see <a class="xref" href="#melson2010" id="d2e47">Melson and Flanders 2010</a>). Over time, the WWP
-               has developed systematic data on people (with particular emphasis on authors and periodical
-               reviewers, featured in Women Writers in Review), texts (featured in Women Writers:
-               Intertextual Networks), and even to some extent events (which are featured in timelines
-               as
-               part of Women Writers in Context). This work diversifies the role of markup for the
-               WWP, going
-               beyond modeling documents to creating data structures that are independent of documents
-               but
-               constitute an important contextualization mechanism for them.</p>
-            <p id="d2e49">The final niche in the WWP’s evolving use of markup brings us full circle to the roots
-               of
-               SGML as a way of modeling data in which “text” faces Janus-like towards the domains
-               of
-               document and data and operates effectively in both spaces. Over time the WWP has found
-               important uses for lightweight, systematic, highly consistent, “data-like” markup
-               that
-               anticipates interfaces that are focused on retrieval and analysis rather than on “reading”
-               in
-               the traditional sense (as in Women Writers Online’s presentation of primary sources).
-               The
-               project uses TEI for its encoding documentation, for the periodical review documents
-               in Women
-               Writers in Review, and for the essays in Women Writers in Context, and in all three
-               cases the
-               approach is minimalist and functionalist rather than being animated by a research-oriented
-               philosophy of full textual representation (as in the WWP textbase). The markup of
-               the textual
-               content focuses on a selection of high-value features (such as element names or quotations)
-               that are specifically relevant to the rhetorical context of the materials, and the
-               metadata
-               carries more of the burden of representing features of the content that will be valuable
-               for
-               retrieval. In the case of encoding documentation, that includes including topic keywords
-               and
-               an inventory of elements and attributes referenced. In the case of WWiR, it includes
-               thematic
-               keywords and an inventory of authors and texts mentioned in the review. Shifting these
-               aspects
-               of content into metadata (rather than tagging them in the running prose of the review
-               or
-               documentation entry) serves the pragmatic purpose of streamlining the encoding process,
-               but it
-               also acknowledges that these informational aspects are intended to function as retrieval
-               hooks
-               rather than as an activity of analysis or textual representation. In other words,
-               it posits a
-               different rhetorical framing for this information.</p>
-         </div>
-         <div class="section" id="d2e50">
-            <h2 class="title" style="clear: both">Evolution of toolsets</h2>
-            <p id="d2e52">The WWP has had an unusually long history that traverses many generations of SGML
-               and XML
-               publication tools, and the project’s data has presented some valuable challenges and
-               edge
-               cases that have tested and revealed the limits of the tools it has used. The project’s
-               main
-               publication, Women Writers Online, has used four different platforms since its first
-               publication in 1999:
-               <div class="itemizedlist" id="d2e54">
-                  <ul>
-                     <li id="d2e55">
-                        <p id="d2e56">DynaWeb: 1999–2006 (by 2004 this system was no longer supported)</p>
-                     </li>
-                     <li id="d2e57">
-                        <p id="d2e58">Philologic: 2005–2012 (by 2012 this system would not run on a modern server)</p>
-                     </li>
-                     <li id="d2e59">
-                        <p id="d2e60">An in-house, modular publication system served out of XTF: 2012–2025 (by 2019 XTF
-                           was
-                           getting harder to maintain)</p>
-                     </li>
-                     <li id="d2e61">
-                        <p id="d2e62">A redesign of the publication backend for eXist-DB: 2025–present</p>
-                     </li>
-                  </ul>
-               </div>
-            </p>
-            <p id="d2e63">The initial digital publication of Women Writers Online in 1999 showcased Renaissance
-               Women Online (RWO), a subset of WWO representing works originally published between
-               1500 and
-               1670. RWO consisted of two complementary forms of interface. At the time, WWP Electronic
-               Publications Editor Paul Caton described these interfaces:
-               <div class="blockquote">
-                  <blockquote class="blockquote">
-                     <p id="d2e66">A plain HTML version allows relatively quick access but no searching, which suits
+            <nav id="main-menu" role="navigation">
+               <details>
+                  <summary tabindex="0"><svg role="img" viewBox="0 0 20 20" height="20" width="20">
+                        <title>Menu</title>
+                        <path d="m0-0v4h20v-4h-20zm0 8v4h20v-4h-20zm0 8v4h20v-4h-20z" fill="currentColor"></path></svg> Menu
+                     </summary>
+                  <div class="menu">
+                     <div id="navbar"></div>
+                     <div id="index-mast">
+                        <div class="content">
+                           <h1 class="article-title" id="d3e5">Balisage Paper: Synthesis and Sustainability: The Evolution of Markup and Toolsets in the Women Writers
+                              Project</h1>
+                           <details class="mast-box">
+                              <summary class="title">Julia Flanders</summary>
+                              <div class="affiliation">
+                                 <p class="orgname">Northeastern University</p>
+                              </div>
+                              <div class="personblurb">
+                                 <p id="d3e15">Julia Flanders is the Director of the Women Writers Project and Director of the
+                                    Northeastern University Library’s Digital Scholarship Group.</p>
+                              </div>
+                           </details>
+                           <details class="mast-box">
+                              <summary class="title">Ash Clark</summary>
+                              <div class="affiliation">
+                                 <p class="orgname">Northeastern University</p>
+                              </div>
+                              <div class="personblurb">
+                                 <p id="d3e24">Ash Clark is the XML Applications Developer for the WWP and the DSG.</p>
+                              </div>
+                           </details>
+                           <details class="abstract">
+                              <summary>
+                                 <h2 class="inline-heading">Abstract</h2>
+                              </summary>
+                              <p id="d3e8">In 1988, the Women Writers Project (WWP) started out on its very long history of working
+                                 with markup systems. In 1999, the WWP began working with XML publication tools as
+                                 well. In
+                                 both cases, markup and tools, the WWP has treated the work as an active research
+                                 undertaking: not only seeking to build a stable, sustainable working system, but also
+                                 keeping pace with new developments and exploring their implications for research on
+                                 early
+                                 women’s writing. The intertwined history and co-evolution of these two sets of practices
+                                 within the WWP’s nearly 40 years of work thus far can contribute a valuable perspective
+                                 on
+                                 the history of scholarly usage of markup in the humanities. This paper will explore
+                                 the
+                                 evolution of the WWP’s theory and practice of markup, from its pre-TEI origins to
+                                 our
+                                 present-day usage; as well as the evolution of the project’s publication systems,
+                                 from its
+                                 first forays into digital publication through DynaWeb to our planned implementation
+                                 of a
+                                 static-site framework that responds to the recommendations of the Endings Principles.
+                                 We
+                                 will also consider the reciprocal pressure that tools and markup exert on each other,
+                                 and
+                                 the nuanced ways in which markup responds to the changing intellectual paradigms proposed
+                                 by
+                                 successive generations of tools and technologies (and vice versa).</p>
+                           </details>
+                           <details class="toc">
+                              <summary>
+                                 <h2 class="inline-heading">Table of Contents</h2>
+                              </summary>
+                              <dl>
+                                 <dt><span class="section"><a href="#d3e30" class="toc">Evolution of the WWP’s theory and practice of markup</a></span></dt>
+                                 <dt><span class="section"><a href="#d3e54" class="toc">Evolution of toolsets</a></span></dt>
+                                 <dt><span class="section"><a href="#d3e114" class="toc">Project sustainability</a></span></dt>
+                              </dl>
+                           </details>
+                        </div>
+                     </div>
+                  </div>
+               </details>
+            </nav>
+            <nav id="index-mast" class="wide-mode" role="navigation">
+               <div class="content">
+                  <h1 class="article-title" id="d3e5">Balisage Paper: Synthesis and Sustainability: The Evolution of Markup and Toolsets in the Women Writers
+                     Project</h1>
+                  <details class="mast-box">
+                     <summary class="title">Julia Flanders</summary>
+                     <div class="affiliation">
+                        <p class="orgname">Northeastern University</p>
+                     </div>
+                     <div class="personblurb">
+                        <p id="d3e15">Julia Flanders is the Director of the Women Writers Project and Director of the
+                           Northeastern University Library’s Digital Scholarship Group.</p>
+                     </div>
+                  </details>
+                  <details class="mast-box">
+                     <summary class="title">Ash Clark</summary>
+                     <div class="affiliation">
+                        <p class="orgname">Northeastern University</p>
+                     </div>
+                     <div class="personblurb">
+                        <p id="d3e24">Ash Clark is the XML Applications Developer for the WWP and the DSG.</p>
+                     </div>
+                  </details>
+                  <details class="abstract">
+                     <summary>
+                        <h2 class="inline-heading">Abstract</h2>
+                     </summary>
+                     <p id="d3e8">In 1988, the Women Writers Project (WWP) started out on its very long history of working
+                        with markup systems. In 1999, the WWP began working with XML publication tools as
+                        well. In
+                        both cases, markup and tools, the WWP has treated the work as an active research
+                        undertaking: not only seeking to build a stable, sustainable working system, but also
+                        keeping pace with new developments and exploring their implications for research on
+                        early
+                        women’s writing. The intertwined history and co-evolution of these two sets of practices
+                        within the WWP’s nearly 40 years of work thus far can contribute a valuable perspective
+                        on
+                        the history of scholarly usage of markup in the humanities. This paper will explore
                         the
-                        user who wants simply to read or look over a work. The other form uses Inso Corporation’s
-                        DynaWeb software, which dynamically translates an SGML version to HTML for the browser
-                        while retaining access to the SGML; this allows users to perform searches on the
-                        SGML-encoded texts, at the cost of somewhat slower access.</p>
-                  </blockquote>
-               </div> (<a class="xref" href="#caton1998" id="d2e68">Caton 1998</a>)</p>
-            <p id="d2e70">The initial WWO and RWO collections were further defined by robust search with
-               keywords-in-context; tables of contents for user navigation within a given work; as
-               well as
-               contextual materials such as short summaries, scholarly introductions to works, and
-               essays on
-               topics and collections.<sup class="fn-label"><a href="#d2e72" class="footnoteref" id="d2e72-ref">[1]</a></sup></p>
-            <p id="d2e74">By 2003 the WWP began seeking a successor to DynaWeb for both technical and administrative
-               reasons. The Inso Corporation had been bought by another company, which altered both
-               the level
-               of support and also the license terms in ways that made it increasingly untenable
-               to use
-               DynaWeb for a small academic project. In 2004 the project began experimenting with
-               Philologic,
-               developed by Mark Olsen at the University of Chicago, and an updated WWO running on
-               Philologic
-               was released in 2005. Philologic placed its emphasis on speed and power; it was
-               database-driven and selective in its indexing, so that it was able to provide very
-               fast search
-               results as well as context-sensitive searching. Its search also included fuzzy matching,
-               which
-               made it good at handling the highly variable spelling in older WWO texts. This system
-               served
-               us well for several years, but by 2011 the project was seeking a more modern XML framework
-               that would support more flexible experimentation with interface, responding to the
-               significant
-               expansion of interface paradigms as “digital humanities” became a widespread academic
-               domain.</p>
-            <p id="d2e75">Starting in 2012, Women Writers Online was served out of XTF (eXtensible Text Framework),
-               a Java- and XSLT-based publication system created by the California Digital Library.
-               The WWP
-               staff heavily customized XTF's stylesheets in order to produce indexable versions
-               of the WWO
-               documents, as well as HTML representations for display. On the front end, Women Writers
-               Online
-               was reimagined as a dynamic, three-pane interface, with users seamlessly flowing from
-               browsing
-               to searching to reading a document. Within this design, WWO offered users a sense
-               that
-               searching/filtering, visualizing, and reading are really three manifestations or framings
-               of
-               the same thing, at different levels of scale. This approach contrasted strongly with
-               the
-               traditional (at the time) search model in which users would first specify a set of
-               search
-               parameters and then execute a search to receive results—with the need to go back to
-               the start
-               of the process if the results were not what the user wanted. (A few years later, Stephen
-               Ramsay’s essay on “The Hermeneutics of Screwing Around” [<a class="xref" href="#ramsay2010" id="d2e77">Ramsay 2010</a>]
-               captured the element of play and exploration that such “pipeline” systems foreclose.)
-               By
-               searching and filtering across WWO, one can “read” the corpus as a whole as a spread
-               of dots
-               on a timeline, or as a list of matching search results — keywords in context for multiple
-               WWO
-               documents. One can then focus in on a more specific area (e.g. a specific genre or
-               time
-               period) and finally on a specific text. Although this interface doesn’t fully implement
-               this
-               idea, it introduces it and makes it possible.</p>
-            <p id="d2e79">Around the same time, the WWP universe began to expand beyond Women Writers Online.
-               The
-               WWP produced Women Writers in Context (WWiC), a collection of modern scholarly essays
-               providing crucial background for the documents, authors, and genres found in WWO.
-               Later, Women
-               Writers in Review (WWiR) made contemporary reviews of WWO authors’ works available,
-               and
-               referenceable from WWO itself. These two endeavors aim to flesh out the milieu of
-               WWO authors.
-               The sites link to each other to aid users’ exploration, but are not integrated directly
-               into a
-               single interface. Unlike WWO, the sister sites are public resources, available to
-               anyone,
-               regardless of WWO subscription. Their documents are lightly customized TEI, much more
-               geared
-               towards supporting collection-level metadata, presentation and quick publication turnaround
-               than research artifacts. Their interfaces in turn prioritize findability and the ability
-               of
-               users to follow connections between resources.</p>
-            <p id="d2e80">Women Writers: Intertextual Networks sought to compile significant amounts of data
-               from
-               TEI sources for exploration and research. The data was drawn from two primary sources:
-               (1) the
-               WWO documents, which were marked-up to add references to (2) entries within a separate,
-               TEI-encoded bibliography. Unlike its sister sites, however, the WW:IN interface was
-               designed
-               to do much more work on the server-side, with Javascript limited to functions that
-               would make
-               the site more interactive. An EXPath application, housed in eXist-DB, would apply
-               users’
-               desired filters to return customized datasets in full HTML responses. The same API
-               that
-               returned JSON or XML would also serve out the webpages, putting far less pressure
-               on users’
-               devices.</p>
-            <p id="d2e81">This succession of different tools has been challenging, in that it has required periodic
-               episodes of substantial redevelopment. However, those transitions have also given
-               the project
-               an important push at each point to rethink how the interface could best serve readers
-               and best
-               express the capacities of the data. And they also prevented the project from experiencing
-               the
-               publication platform as a fixed horizon of possibility to which the data should adapt.
-               Instead, the project has developed an extensive set of pre-publication processes that
-               take the
-               WWP’s source data and transform it as necessary for the specific foibles and requirements
-               of
-               the current tool.</p>
-            <p id="d2e82">For example, like many TEI projects, the WWP makes frequent use of intra-word markup
-               in
-               Women Writers Online. One example of this is the WWP’s <code class="code">&lt;vuji&gt;</code> tag, which is
-               used to encode letterforms commonly substituted for each other in early typesetting,
-               such as
-               an “j” represented with an “i”. The <code class="code">&lt;vuji&gt;</code> element is a useful shorthand for a
-               TEI <code class="code">&lt;choice&gt;</code>: 
-               
-               <pre class="programlisting" id="d2e90"><!--language: xml-->in&lt;vuji&gt;i&lt;/vuji&gt;urious</pre>
-               <pre class="programlisting" id="d2e92"><!--language: xml-->in&lt;choice&gt;&lt;orig&gt;i&lt;/orig&gt;&lt;reg&gt;j&lt;/reg&gt;&lt;/choice&gt;urious</pre>
-               XML publishing software consistently treats element tags as distinct words. Our
-               pre-publication stylesheets adapt our markup as needed to avoid this problem. Originally,
-               the
-               original letterform represented in <code class="code">&lt;vuji&gt;</code> was converted to its modern
-               equivalent, and the tag itself was removed.</p>
-            <p id="d2e97">More recently, when WWO introduced a feature allowing users to toggle between modern
-               and
-               original typography, the pre-publication stylesheets retained <code class="code">&lt;vuji&gt;</code>. This had
-               the unfortunate side effect of reducing XTF’s ability to index older documents, because
-               a
-               single word would be broken up by tags:
-               
-               <pre class="programlisting" id="d2e101">in j urious</pre>
-               In order to retain both the toggle feature and the collection’s searchability, Women
-               Writers Online was moved out of the XTF platform and into an eXist-DB database. While
-               eXist-DB’s index also treats tags as word boundaries by default, eXist does provide
-               a way to
-               define elements like  <code class="code">&lt;vuji&gt;</code>as “inline,” or, implying no word break. As such,
-               a search in eXist for the word “injurious” will lead to Jane Anger
-               Her Protection For Women (1589), where XTF would have come up short.</p>
-            <p id="d2e106">The relationship between the markup and the publication tool is thus very indirect.
-               The
-               markup represents a durable, evolving expression of our analysis of the source texts,
-               based on
-               the project’s editorial principles and expectations about the kinds of research questions
-               this
-               data should support in the very long term. The publication platform, on the other
-               hand,
-               represents a particular manifestation of the potential of that data, under particular
-               circumstances of resource constraints and technological capability. Even in the WWP’s
-               other
-               publications (Women Writers in Review, Women Writers in Context, and Women Writers:
-               Intertextual Networks, and our encoding documentation) where the encoding is more
-               deliberately
-               aimed at producing a specific kind of outcome, the source markup remains tool-agnostic
-               and
-               could be published through varied systems to produce varied user experiences.</p>
-            <p id="d2e107">Read broadly, this history reveals several important points. First, the lifespan of
-               monolithic tools was comparatively short: the first two iterations of Women Writers
-               Online
-               (DynaWeb and Philologic) each lasted about six years, whereas our current system has
-               evolved
-               more or less gracefully over the past 14 years with incremental modifications. Second,
-               although the WWP never “coded to the tool” in the sense of altering our data to match
-               what a
-               given tool could or could not do, our publication tools have definitely put their
-               stamp on
-               what Women Writers Online as a publication could express about that data. The centrality
-               of
-               the KWIC display in DynaWeb, the excellent division-level context-sensitive searching
-               in
-               Philologic, and the dynamic relationship between global and local reading views in
-               the current
-               interface all reflect, at a macroscopic level, the platform’s understanding of what
-               “XML
-               publishing” means (inflected as well by the WWP’s own intentions for the data).</p>
-         </div>
-         <div class="section" id="d2e108">
-            <h2 class="title" style="clear: both">Project sustainability</h2>
-            <p id="d2e110">In July 2023, the Women Writers Project staff held a retreat to discuss plans for
-               the next
-               ten years of the WWP — what would the Project need in order to continue on indefinitely,
-               in
-               areas such as staffing, technology, and administration. The retreat focused on staff
-               analysis of
-               various aspects of the Project. Our markup and publication processes seemed stable
-               for the
-               moment, but analysis revealed that these systems were potentially at risk to events
-               for which
-               we had no contingency or recovery plan.</p>
-            <p id="d2e111">For example, many of the WWP’s web resources (WWO, WWiC, WWiR, WW:IN and others) are
-               dependent on eXist-DB. The eXist database has its own divergent implementations of
-               XQuery
-               standards, such as XQuery Update and output serialization. The eXist-specific code
-               requires
-               eXist-specific knowledge to use and maintain it — a high barrier to entry and a high
-               barrier
-               to exiting. Thus, the WWP’s dependency on eXist means a dependence on continued staffing
-               with
-               eXist-specific skills.<sup class="fn-label"><a href="#d2e113" class="footnoteref" id="d2e113-ref">[2]</a></sup></p>
-            <p id="d2e115">By the close of the retreat, we decided it would be prudent to familiarize ourselves
-               with
-               the outcomes of the Endings Project. The Endings Project was convened in 2016 by the
-               University of Victoria’s Humanities Computing and Media Centre (HCMC), with the goal
-               of
-               developing methods towards the longevity of their digital artifacts. In 2018, the
-               team
-               released their first version of the “Endings Principles for Digital Longevity”. These
-               principles describe the foundations of a digital project which can be
-               used, cited, reproduced, and archived. By building for open use, the Endings Project
-               argues,
-               the digital products are far more likely to be reused and maintained, and thus, more
-               likely to
-               survive.</p>
-            <p id="d2e116">The Endings Project promotes the use of standalone, static websites, with no server-side
-               processing or backend components. The HTML markup is not programmatically built out
-               after the
-               page loads; all content is available and all dependencies are satisfied simply by
-               accessing
-               the file. (<a class="xref" href="#endings" id="d2e118">Endings Principles 2023</a>) This greatly aids those who intentionally set out to archive the project materials,
-               such as a digital repository or the Internet Archive’s Wayback Machine. The static
-               site
-               approach also makes it easy for researchers and other users to become casual archivists.
-               It is
-               not necessary to use extensions or software to generate a WARC file from the page;
-               saving the
-               page as an HTML file is enough to obtain your own working copy.</p>
-            <p id="d2e120">Though the WWP puts much of our emphasis on the markup — without which, there would
-               be no
-               publication — the Endings Project counsels against considering our data alone as enough
-               for
-               project preservation. Dynamic “products” such as website interfaces are “arguably
-               the most
-               recognizable and least preservable part of a digital project” (<a class="xref" href="#holmes2023a" id="d2e122">Holmes, Jenstad, and Huculak 2023</a>).
-               A website is the most public expression of a project’s data, and an invitation for
-               users to
-               participate in the products’ use and reuse. 
-               <div class="blockquote">
-                  <blockquote class="blockquote">
-                     <p id="d2e125">Just as we offer repurposable XML versions of our documents, we try to provide HTML
-                        pages which can also be pulled out of the project and reused easily. While TEI XML
-                        is a
-                        widely-used and trusted archival format for digital scholarly work, compared with
-                        HTML,
-                        its audience is tiny. As we have noted elsewhere, the many billions of HTML pages
-                        already
-                        created constitute many times the number of printed books produced in the entire history
-                        of humanity, and the variety of purposes already served by HTML (not only websites
+                        evolution of the WWP’s theory and practice of markup, from its pre-TEI origins to
+                        our
+                        present-day usage; as well as the evolution of the project’s publication systems,
+                        from its
+                        first forays into digital publication through DynaWeb to our planned implementation
+                        of a
+                        static-site framework that responds to the recommendations of the Endings Principles.
+                        We
+                        will also consider the reciprocal pressure that tools and markup exert on each other,
+                        and
+                        the nuanced ways in which markup responds to the changing intellectual paradigms proposed
+                        by
+                        successive generations of tools and technologies (and vice versa).</p>
+                  </details>
+                  <details class="toc">
+                     <summary>
+                        <h2 class="inline-heading">Table of Contents</h2>
+                     </summary>
+                     <dl>
+                        <dt><span class="section"><a href="#d3e30" class="toc">Evolution of the WWP’s theory and practice of markup</a></span></dt>
+                        <dt><span class="section"><a href="#d3e54" class="toc">Evolution of toolsets</a></span></dt>
+                        <dt><span class="section"><a href="#d3e114" class="toc">Project sustainability</a></span></dt>
+                     </dl>
+                  </details>
+               </div>
+            </nav>
+            <main id="main" role="main" aria-label="Main Content">
+               <div class="article">
+                  <h1 class="article-title" id="d3e5">Balisage Paper: Synthesis and Sustainability: The Evolution of Markup and Toolsets in the Women Writers
+                     Project</h1>
+                  <div class="note" id="d3e28">
+                     <h3 class="title">Note</h3>
+                     <p id="d3e29">The introduction to this paper will include a brief backstory on the history and mission
+                        of the WWP, and will signal the topics and issues this paper is going to focus on.</p>
+                  </div>
+                  <div class="section" id="d3e30">
+                     <h2 class="title" style="clear: both">Evolution of the WWP’s theory and practice of markup</h2>
+                     <p id="d3e33">The WWP’s earliest markup practices were anchored in typesetting tools: student encoders
+                        starting in 1988 used Waterloo Script to capture functional textual units and formatting
+                        details. This approach was not guided by an explicit theory of markup, but it did
+                        embody
+                        certain assumptions about the role that markup could play in representing primary
+                        source
+                        documents (still a somewhat novel role for markup at that time). The now fundamental
+                        idea that
+                        markup should emphasize semantics rather than solely formatting was already present
+                        in the
+                        ways that Waterloo Script supported the identification of textual components (headings,
+                        paragraphs, etc.) in a way that was separable from their appearance, and this was
+                        especially
+                        crucial for primary source materials whose actual appearance on the page might vary
+                        considerably from text to text. And although this first stage of the WWP’s practice
+                        did not at
+                        all anticipate what the TEI would come to be, it did lay a groundwork that was at
+                        least
+                        amenable to an eventual transition to the TEI once P1 and P2 were available to demonstrate
+                        what a more thoroughly semantic approach could look like.</p>
+                     <p id="d3e34">Paradoxically, however, some of the earliest encoding debates within the project concerned
+                        the representation of the appearance of the source, and specifically the question
+                        of whether a
+                        glyph in the source text should be represented using a character that resembles it
+                        visually,
+                        or represents it informationally. Examples include the numeral 1 (which in many older
+                        sources
+                        resembles a capital I and may even have been printed using that piece of type), the
+                        letters
+                        “u” and “n” (which when inverted are often indistinguishable from each other), and
+                        the
+                        characters for zero and capital O. The WWP’s thinking about these kinds of cases was
+                        shaped by
+                        concerns among humanities scholars about loss of information about the physical source,
+                        and a
+                        resulting desire for visual fidelity to the text. Seen from that perspective (and
+                        in the
+                        absence of Unicode), the use of a capital I to represent a numeral 1 could appear
+                        defensible
+                        on visual grounds. But very early on, the project identified that resemblance (unsurprisingly)
+                        as a fallacy—dependent on typeface and likely to lead to all sorts of future practical
+                        and
+                        conceptual problems. The idea of markup as a “digital facsimile” gave way quickly
+                        to the idea
+                        of markup as a more informational representation of document structure. The project
+                        continued
+                        to be concerned with ways of representing the material aspects of documents, with
+                        each encoded
+                        transcription derived from an identifiable physical copy, and capturing aspects of
+                        formatting
+                        and material structure. But the TEI model demonstrated how that could be done explicitly
+                        through the markup itself: for example, through the <code class="code">@rend</code> attribute or through
+                        mechanisms like <code class="code">&lt;sic&gt;</code> (the example uses P3-era TEI):</p>
+                     <pre class="programlisting" id="d3e40"><!--language: xml-->&lt;sic corr="O"&gt;0&lt;/sic&gt;</pre>
+                     <p id="d3e42">The WWP’s early work on rendition ladders provided an opportunity to explore how far
+                        the
+                        material and visual properties of texts could be formalized for descriptive (rather
+                        than
+                        output) purposes.</p>
+                     <p id="d3e43">In the early days of the TEI in the 1990s, the WWP was a typical early adopter in
+                        two
+                        senses. With its mission of creating a large collection of early women’s writing in
+                        English,
+                        the project emphasized both comprehensiveness and the recovery of inaccessible materials.
+                        But
+                        these two goals proved over time to pull in different directions, as the evolution
+                        of the TEI
+                        as a <span class="ital">scholarly</span> technology revealed different ways for digital
+                        resources to function as research objects. The idea of creating reference corpora
+                        or
+                        comprehensive research collections was an early and significant driver for the TEI
+                        and is
+                        exemplified by projects like Perseus, ARTFL, and the early documentary editing projects
+                        that
+                        constituted the Model Editions Partnership. Such efforts signalled the importance
+                        of data
+                        interoperability and of markup systems that could work towards that end: schemas that
+                        could
+                        strongly reinforce consistency and “conformance” and provide a clear model for tools
+                        to
+                        operate on. The WWP’s work was certainly animated to some degree by motivations towards
+                        interoperability; the project explored collaborative approaches to the encoding of
+                        personal
+                        names with several other projects focused on women’s writing, and placed a high value
+                        on
+                        following emerging standard practices when possible. But an important early element
+                        of the
+                        project’s mission was to treat early women’s writing and early printed books as potential
+                        sources of complication and resistance to standardization.</p>
+                     <p id="d3e48">With the release of P5, the function of customization changed fundamentally: no longer
+                        as
+                        a laborious way of departing from the standard, but as a more or less required aspect
+                        of using
+                        the Guidelines, a tool that was in everyone’s hands. This shift coincided exactly
+                        with an
+                        increased visibility of “digital humanities” within traditional scholarly spaces,
+                        and an
+                        interest in interpretive and critical uses of data modeling. For the WWP, the question
+                        of
+                        where early women’s writing might depart from canonical or standard models shifted
+                        at this
+                        point to become: how does the modeling of early women’s writing constitute a scholarly
+                        argument about that writing? And, by extension, the project took an approach to pedagogy
+                        (through its encoding seminars) that asked participants to undertake TEI encoding
+                        as an
+                        exercise in scholarly interpretation and reciprocal communication, rather than an
+                        effort to
+                        follow an established model in a strictly conformant manner.</p>
+                     <p id="d3e49">Another crucial step in the evolution of the WWP’s use of markup—also connected with
+                        the
+                        release of TEI P5—was the availability of markup structures akin to linked open data:
+                        the
+                        ‘ographies and their relationship to the emergence of RDF and technologies like XPath
+                        that
+                        enabled linking to precise locations within XML documents. For the WWP, this launched
+                        a shift
+                        away from a sole emphasis on documents, to representing a larger universe of entities
+                        in which
+                        those documents are one meaningful component. The WWP had already begun using internal
+                        authority control to manage a database of persons referenced in WWP texts, starting
+                        in 1996
+                        with a formal keying system developed by Syd Bauman. In 2008 the WWP received an NEH
+                        Digital
+                        Humanities Start-up grant to explore the complexities of managing personographies
+                        in the
+                        context of early modern women’s writing (see <a class="xref" id="d3e51" href="javascript:showcite('cite-melson2010','d3e51')">Melson and Flanders 2010</a>). Over time, the WWP
+                        has developed systematic data on people (with particular emphasis on authors and periodical
+                        reviewers, featured in Women Writers in Review), texts (featured in Women Writers:
+                        Intertextual Networks), and even to some extent events (which are featured in timelines
+                        as
+                        part of Women Writers in Context). This work diversifies the role of markup for the
+                        WWP, going
+                        beyond modeling documents to creating data structures that are independent of documents
                         but
-                        mobile applications, archival storage, and others) will ensure that if anything from
+                        constitute an important contextualization mechanism for them.</p>
+                     <p id="d3e53">The final niche in the WWP’s evolving use of markup brings us full circle to the roots
+                        of
+                        SGML as a way of modeling data in which “text” faces Janus-like towards the domains
+                        of
+                        document and data and operates effectively in both spaces. Over time the WWP has found
+                        important uses for lightweight, systematic, highly consistent, “data-like” markup
+                        that
+                        anticipates interfaces that are focused on retrieval and analysis rather than on “reading”
+                        in
+                        the traditional sense (as in Women Writers Online’s presentation of primary sources).
+                        The
+                        project uses TEI for its encoding documentation, for the periodical review documents
+                        in Women
+                        Writers in Review, and for the essays in Women Writers in Context, and in all three
+                        cases the
+                        approach is minimalist and functionalist rather than being animated by a research-oriented
+                        philosophy of full textual representation (as in the WWP textbase). The markup of
+                        the textual
+                        content focuses on a selection of high-value features (such as element names or quotations)
+                        that are specifically relevant to the rhetorical context of the materials, and the
+                        metadata
+                        carries more of the burden of representing features of the content that will be valuable
+                        for
+                        retrieval. In the case of encoding documentation, that includes including topic keywords
+                        and
+                        an inventory of elements and attributes referenced. In the case of WWiR, it includes
+                        thematic
+                        keywords and an inventory of authors and texts mentioned in the review. Shifting these
+                        aspects
+                        of content into metadata (rather than tagging them in the running prose of the review
+                        or
+                        documentation entry) serves the pragmatic purpose of streamlining the encoding process,
+                        but it
+                        also acknowledges that these informational aspects are intended to function as retrieval
+                        hooks
+                        rather than as an activity of analysis or textual representation. In other words,
+                        it posits a
+                        different rhetorical framing for this information.</p>
+                  </div>
+                  <div class="section" id="d3e54">
+                     <h2 class="title" style="clear: both">Evolution of toolsets</h2>
+                     <p id="d3e57">The WWP has had an unusually long history that traverses many generations of SGML
+                        and XML
+                        publication tools, and the project’s data has presented some valuable challenges and
+                        edge
+                        cases that have tested and revealed the limits of the tools it has used. The project’s
+                        main
+                        publication, Women Writers Online, has used four different platforms since its first
+                        publication in 1999:
+                        <div class="itemizedlist" id="d3e59">
+                           <ul>
+                              <li id="d3e60">
+                                 <p id="d3e61">DynaWeb: 1999–2006 (by 2004 this system was no longer supported)</p>
+                              </li>
+                              <li id="d3e62">
+                                 <p id="d3e63">Philologic: 2005–2012 (by 2012 this system would not run on a modern server)</p>
+                              </li>
+                              <li id="d3e64">
+                                 <p id="d3e66">An in-house, modular publication system served out of XTF: 2012–2025 (by 2019 XTF
+                                    was
+                                    getting harder to maintain)</p>
+                              </li>
+                              <li id="d3e67">
+                                 <p id="d3e68">A redesign of the publication backend for eXist-DB: 2025–present</p>
+                              </li>
+                           </ul>
+                        </div>
+                     </p>
+                     <p id="d3e69">The initial digital publication of Women Writers Online in 1999 showcased Renaissance
+                        Women Online (RWO), a subset of WWO representing works originally published between
+                        1500 and
+                        1670. RWO consisted of two complementary forms of interface. At the time, WWP Electronic
+                        Publications Editor Paul Caton described these interfaces:
+                        <div class="blockquote">
+                           <blockquote class="blockquote">
+                              <p id="d3e72">A plain HTML version allows relatively quick access but no searching, which suits
+                                 the
+                                 user who wants simply to read or look over a work. The other form uses Inso Corporation’s
+                                 DynaWeb software, which dynamically translates an SGML version to HTML for the browser
+                                 while retaining access to the SGML; this allows users to perform searches on the
+                                 SGML-encoded texts, at the cost of somewhat slower access.</p>
+                           </blockquote>
+                        </div> (<a class="xref" id="d3e74" href="javascript:showcite('cite-caton1998','d3e74')">Caton 1998</a>)</p>
+                     <p id="d3e76">The initial WWO and RWO collections were further defined by robust search with
+                        keywords-in-context; tables of contents for user navigation within a given work; as
+                        well as
+                        contextual materials such as short summaries, scholarly introductions to works, and
+                        essays on
+                        topics and collections.<sup class="fn-label"><a href="#d3e78" class="footnoteref" id="d3e78-ref">[1]</a></sup></p>
+                     <p id="d3e80">By 2003 the WWP began seeking a successor to DynaWeb for both technical and administrative
+                        reasons. The Inso Corporation had been bought by another company, which altered both
+                        the level
+                        of support and also the license terms in ways that made it increasingly untenable
+                        to use
+                        DynaWeb for a small academic project. In 2004 the project began experimenting with
+                        Philologic,
+                        developed by Mark Olsen at the University of Chicago, and an updated WWO running on
+                        Philologic
+                        was released in 2005. Philologic placed its emphasis on speed and power; it was
+                        database-driven and selective in its indexing, so that it was able to provide very
+                        fast search
+                        results as well as context-sensitive searching. Its search also included fuzzy matching,
+                        which
+                        made it good at handling the highly variable spelling in older WWO texts. This system
+                        served
+                        us well for several years, but by 2011 the project was seeking a more modern XML framework
+                        that would support more flexible experimentation with interface, responding to the
+                        significant
+                        expansion of interface paradigms as “digital humanities” became a widespread academic
+                        domain.</p>
+                     <p id="d3e81">Starting in 2012, Women Writers Online was served out of XTF (eXtensible Text Framework),
+                        a Java- and XSLT-based publication system created by the California Digital Library.
+                        The WWP
+                        staff heavily customized XTF's stylesheets in order to produce indexable versions
+                        of the WWO
+                        documents, as well as HTML representations for display. On the front end, Women Writers
+                        Online
+                        was reimagined as a dynamic, three-pane interface, with users seamlessly flowing from
+                        browsing
+                        to searching to reading a document. Within this design, WWO offered users a sense
+                        that
+                        searching/filtering, visualizing, and reading are really three manifestations or framings
+                        of
+                        the same thing, at different levels of scale. This approach contrasted strongly with
                         the
-                        current era of digital communication survives, it will be HTML. So our HTML is more
-                        likely
-                        to be reused than our XML in the long term.</p>
-                  </blockquote>
-               </div> (<a class="xref" href="#holmes2023b" id="d2e127">Holmes and Takeda 2023</a>).</p>
-            <p id="d2e129">In our pursuit of maintainability, the WWP is working towards greater synthesis between
-               markup, documentation, and website, especially for Women Writers Online. The interface
-               can
-               make greater use of the markup, for instance. We have plans to add more user control
-               over what
-               they see in the interface, such as a toggle to show the lineation of the original
-               publication.
-               With careful design, the interface can demonstrate the capabilities of the markup,
-               as well as
-               catering to those who just want a clean, readable text. We also intend to make it
-               easier for
-               users to download the WWO TEI files.</p>
-            <p id="d2e130">However, the highest priority for the WWP is refactoring our current publication processes
-               for sustainability, and to produce static websites. Step one is to migrate our apps
-               from eXist
-               to BaseX. Because the code will be specification-standard XQuery, its maintenance
-               and upkeep can be undertaken by more people.<sup class="fn-label"><a href="#d2e132" class="footnoteref" id="d2e132-ref">[3]</a></sup> We will document the
-               process of publication via BaseX and automate as much of the publication processes
-               as
-               possible.</p>
-            <p id="d2e139">For WWiR and WWiC, step two will be to shift away from single-page Javascript applications
-               and towards giving the user a complete HTML page on request.<sup class="fn-label"><a href="#d2e141" class="footnoteref" id="d2e141-ref">[4]</a></sup> We will adjust the site for web accessibility and universal design features,
-               limiting Javascript to facilitating interaction. This will also require updating existing
-               URLs, since Backbone.js applications previously maintained the browser’s history once
-               the user
-               entered the site. Women Writers Online already went through this process during the
-               migration
-               to eXist.</p>
-            <p id="d2e148">Step three is to generate static HTML. The current hope is that we will use the migrated
-               XQuery code to generate HTML out of BaseX. Each page will be saved as a separate HTML
-               file, in
-               directories mapping onto the URL paths. When a user requests a web page, the server
-               responds
-               with the static HTML, rather than initiating a request to BaseX. We may still incorporate
-               search through BaseX.</p>
-            <p id="d2e149">The WWP is at the beginning of step one. This step mostly consists of rewriting XQuery
-               code so that a BaseX environment can produce the same JSON output that eXist currently
-               does.
-               However, where possible, we are also trying to make it easier to accomplish steps
-               two and
-               three. For example, some web content generated in Javascript can be extricated and
-               placed in
-               either an XQuery response, or the HTML page.</p>
-            <p id="d2e151">Throughout the process, we are also working to make our web content more accessible.
-               For
-               example, the Women Writers Online interface includes a standard “Search” feature,
-               implemented
-               as a form. When a user clicked the “Search” button, the Backbone.js application would
-               prevent
-               the browser from navigating the user to a new page with their query parameters applied.
-               Instead, the application requested the search results and populated the current page
-               with
-               them. From a sighted user’s standpoint, this was convenient and useful. From a blind
-               user’s
-               perspective, however, nothing would happen after they clicked the button; the WWO
-               application
-               did not alert them that the page had changed. If the request had been allowed to go
-               through
-               the browser, a screen reader would have informed the blind user that they had gone
-               to a new
-               page as a result of their request, with the search results found within the content
-               of the
-               page.</p>
-            <p id="d2e152">By removing usability barriers such as low color contrast, we extend our invitation
-               for
-               use and reuse further, to people of all abilities. And by preferring semantic HTML
-               markup over
-               CSS formatting, we bring the full semantics of the markup into focus.</p>
-         </div>
-         <div class="bibliography" id="d2e154">
-            <h2 class="title">References</h2>
-            <p class="bibliomixed" id="caton1998"><a href="#d2e68">[Caton 1998] </a>Caton, Paul. “Putting Renaissance Women Online.” <span class="ital">WWP
-                  Newsletter</span>, vol. 4, no. 1, 1998, Women Writers Project. <a href="https://wwp.northeastern.edu/about/history/archive/newsletter/vol04num01/RWO041.html" class="link">wwp.northeastern.edu/about/history/archive/newsletter/vol04num01/RWO041.html</a>.</p>
-            <p class="bibliomixed" id="endings"><a href="#d2e118">[Endings Principles 2023] </a>Endings Project Team. “Endings Principles for Digital Longevity.” Version 2.2.1.
-               <span class="ital">The Endings Project</span>, University of Victoria, 3 Mar. 2023. <a href="https://endings.uvic.ca/principles.html" class="link">endings.uvic.ca/principles.html</a>.</p>
-            <p class="bibliomixed" id="holmes2023a"><a href="#d2e122">[Holmes, Jenstad, and Huculak 2023] </a>Holmes, Martin, Janelle Jenstad, and J. Matthew Huculak. “Introduction to Special
-               Issue: Project Resiliency in the Digital Humanities.” <span class="ital">Digital Humanities
-                  Quarterly</span>, vol. 17, no. 1, 2023, <a href="https://doi.org/10.63744/g7c3rkvm5bzr" class="link">https://doi.org/10.63744/g7c3rkvm5bzr</a>.</p>
-            <p class="bibliomixed" id="holmes2023b"><a href="#d2e127">[Holmes and Takeda 2023] </a>Holmes, Martin, and Joey Takeda. “From Tamagotchis to Pet Rocks: On Learning to
-               Love Simplicity through the Endings Principles.” <span class="ital">Digital Humanities
-                  Quarterly</span>, vol. 17, no. 1, 2023, <a href="https://doi.org/10.63744/dr2uaqdau4tz" class="link">https://doi.org/10.63744/dr2uaqdau4tz</a>.</p>
-            <p class="bibliomixed" id="melson2010"><a href="#d2e47">[Melson and Flanders 2010] </a>Melson, John, and Julia Flanders. “Not Just One of Your Holiday Games: Names and
-               Name Encoding in the Women Writers Project Textbase.” Women Writers Project, Jan.
-               2010, <a href="https://wwp.northeastern.edu/research/publications/reports/neh_2008/WWP_Names_White_Paper.pdf" class="link">wwp.northeastern.edu/research/publications/reports/neh_2008/WWP_Names_White_Paper.pdf</a>.</p>
-            <p class="bibliomixed" id="ramsay2010"><a href="#d2e77">[Ramsay 2010] </a>Ramsay, Stephen. “The Hermeneutics of Screwing Around; or What You Do with a
-               Million Books.” In <span class="ital">Pastplay: Teaching and Learning History with
-                  Technology</span>, edited by Kevin Kee, 111-20. Ann Arbor: University of Michigan Press,
-               2014. Originally presented as a talk at Brown University, April 17, 2010.</p>
-         </div>
-         <div class="footnotes"><br><hr width="100" align="left">
-            <div id="d2e72" class="footnote">
-               <p><sup class="fn-label"><a href="#d2e72-ref" class="footnoteref">[1]</a></sup> Later, these contextual essays were republished in Women Writers in Context.</p>
-            </div>
-            <div id="d2e113" class="footnote">
-               <p><sup class="fn-label"><a href="#d2e113-ref" class="footnoteref">[2]</a></sup> Northeastern’s Digital Scholarship Group — of which the Women Writers Project is a
-                  part — had
-                  already adopted BaseX as its XML database of choice for TEI and other XML projects,
-                  due to
-                  BaseX’s lightweight footprint, excellent documentation, and adherence to the XQuery
-                  standard. At this time, the WWP is the only DSG project which uses eXist.</p>
-            </div>
-            <div id="d2e132" class="footnote">
-               <p><sup class="fn-label"><a href="#d2e132-ref" class="footnoteref">[3]</a></sup> See the <a href="https://www.exist-db.org/exist/apps/doc/xquery#unsupported-features" class="link">“XQuery
-                     in eXist-db” documentation page</a> for a list of XQuery features unsupported by
-                  eXist, and features which have eXist-specific implementations.</p>
-            </div>
-            <div id="d2e141" class="footnote">
-               <p><sup class="fn-label"><a href="#d2e141-ref" class="footnoteref">[4]</a></sup> Women Writers in Review and Women Writers in Context each have a single index page.
-                  On
-                  page load, their <a href="https://backbonejs.org/" class="link">Backbone.js</a> apps request and consume data
-                  from the XQuery API in eXist. That data is used to construct a web page to match the
-                  user’s request. As a user navigates one of these sites, its Javascript application
-                  builds
-                  and rebuilds the Document Object Model within the browser, adjusting the URL address
-                  as
-                  new “pages” load.</p>
-            </div>
-         </div>
-      </div>
+                        traditional (at the time) search model in which users would first specify a set of
+                        search
+                        parameters and then execute a search to receive results—with the need to go back to
+                        the start
+                        of the process if the results were not what the user wanted. (A few years later, Stephen
+                        Ramsay’s essay on “The Hermeneutics of Screwing Around” [<a class="xref" id="d3e83" href="javascript:showcite('cite-ramsay2010','d3e83')">Ramsay 2010</a>]
+                        captured the element of play and exploration that such “pipeline” systems foreclose.)
+                        By
+                        searching and filtering across WWO, one can “read” the corpus as a whole as a spread
+                        of dots
+                        on a timeline, or as a list of matching search results — keywords in context for multiple
+                        WWO
+                        documents. One can then focus in on a more specific area (e.g. a specific genre or
+                        time
+                        period) and finally on a specific text. Although this interface doesn’t fully implement
+                        this
+                        idea, it introduces it and makes it possible.</p>
+                     <p id="d3e85">Around the same time, the WWP universe began to expand beyond Women Writers Online.
+                        The
+                        WWP produced Women Writers in Context (WWiC), a collection of modern scholarly essays
+                        providing crucial background for the documents, authors, and genres found in WWO.
+                        Later, Women
+                        Writers in Review (WWiR) made contemporary reviews of WWO authors’ works available,
+                        and
+                        referenceable from WWO itself. These two endeavors aim to flesh out the milieu of
+                        WWO authors.
+                        The sites link to each other to aid users’ exploration, but are not integrated directly
+                        into a
+                        single interface. Unlike WWO, the sister sites are public resources, available to
+                        anyone,
+                        regardless of WWO subscription. Their documents are lightly customized TEI, much more
+                        geared
+                        towards supporting collection-level metadata, presentation and quick publication turnaround
+                        than research artifacts. Their interfaces in turn prioritize findability and the ability
+                        of
+                        users to follow connections between resources.</p>
+                     <p id="d3e86">Women Writers: Intertextual Networks sought to compile significant amounts of data
+                        from
+                        TEI sources for exploration and research. The data was drawn from two primary sources:
+                        (1) the
+                        WWO documents, which were marked-up to add references to (2) entries within a separate,
+                        TEI-encoded bibliography. Unlike its sister sites, however, the WW:IN interface was
+                        designed
+                        to do much more work on the server-side, with Javascript limited to functions that
+                        would make
+                        the site more interactive. An EXPath application, housed in eXist-DB, would apply
+                        users’
+                        desired filters to return customized datasets in full HTML responses. The same API
+                        that
+                        returned JSON or XML would also serve out the webpages, putting far less pressure
+                        on users’
+                        devices.</p>
+                     <p id="d3e87">This succession of different tools has been challenging, in that it has required periodic
+                        episodes of substantial redevelopment. However, those transitions have also given
+                        the project
+                        an important push at each point to rethink how the interface could best serve readers
+                        and best
+                        express the capacities of the data. And they also prevented the project from experiencing
+                        the
+                        publication platform as a fixed horizon of possibility to which the data should adapt.
+                        Instead, the project has developed an extensive set of pre-publication processes that
+                        take the
+                        WWP’s source data and transform it as necessary for the specific foibles and requirements
+                        of
+                        the current tool.</p>
+                     <p id="d3e88">For example, like many TEI projects, the WWP makes frequent use of intra-word markup
+                        in
+                        Women Writers Online. One example of this is the WWP’s <code class="code">&lt;vuji&gt;</code> tag, which is
+                        used to encode letterforms commonly substituted for each other in early typesetting,
+                        such as
+                        an “j” represented with an “i”. The <code class="code">&lt;vuji&gt;</code> element is a useful shorthand for a
+                        TEI <code class="code">&lt;choice&gt;</code>: 
+                        
+                        <pre class="programlisting" id="d3e96"><!--language: xml-->in&lt;vuji&gt;i&lt;/vuji&gt;urious</pre>
+                        <pre class="programlisting" id="d3e98"><!--language: xml-->in&lt;choice&gt;&lt;orig&gt;i&lt;/orig&gt;&lt;reg&gt;j&lt;/reg&gt;&lt;/choice&gt;urious</pre>
+                        XML publishing software consistently treats element tags as distinct words. Our
+                        pre-publication stylesheets adapt our markup as needed to avoid this problem. Originally,
+                        the
+                        original letterform represented in <code class="code">&lt;vuji&gt;</code> was converted to its modern
+                        equivalent, and the tag itself was removed.</p>
+                     <p id="d3e104">More recently, when WWO introduced a feature allowing users to toggle between modern
+                        and
+                        original typography, the pre-publication stylesheets retained <code class="code">&lt;vuji&gt;</code>. This had
+                        the unfortunate side effect of reducing XTF’s ability to index older documents, because
+                        a
+                        single word would be broken up by tags:
+                        
+                        <pre class="programlisting" id="d3e108">in j urious</pre>
+                        In order to retain both the toggle feature and the collection’s searchability, Women
+                        Writers Online was moved out of the XTF platform and into an eXist-DB database. While
+                        eXist-DB’s index also treats tags as word boundaries by default, eXist does provide
+                        a way to
+                        define elements like  <code class="code">&lt;vuji&gt;</code>as “inline,” or, implying no word break. As such,
+                        a search in eXist for the word “injurious” will lead to Jane Anger
+                        Her Protection For Women (1589), where XTF would have come up short.</p>
+                     <p id="d3e112">The relationship between the markup and the publication tool is thus very indirect.
+                        The
+                        markup represents a durable, evolving expression of our analysis of the source texts,
+                        based on
+                        the project’s editorial principles and expectations about the kinds of research questions
+                        this
+                        data should support in the very long term. The publication platform, on the other
+                        hand,
+                        represents a particular manifestation of the potential of that data, under particular
+                        circumstances of resource constraints and technological capability. Even in the WWP’s
+                        other
+                        publications (Women Writers in Review, Women Writers in Context, and Women Writers:
+                        Intertextual Networks, and our encoding documentation) where the encoding is more
+                        deliberately
+                        aimed at producing a specific kind of outcome, the source markup remains tool-agnostic
+                        and
+                        could be published through varied systems to produce varied user experiences.</p>
+                     <p id="d3e113">Read broadly, this history reveals several important points. First, the lifespan of
+                        monolithic tools was comparatively short: the first two iterations of Women Writers
+                        Online
+                        (DynaWeb and Philologic) each lasted about six years, whereas our current system has
+                        evolved
+                        more or less gracefully over the past 14 years with incremental modifications. Second,
+                        although the WWP never “coded to the tool” in the sense of altering our data to match
+                        what a
+                        given tool could or could not do, our publication tools have definitely put their
+                        stamp on
+                        what Women Writers Online as a publication could express about that data. The centrality
+                        of
+                        the KWIC display in DynaWeb, the excellent division-level context-sensitive searching
+                        in
+                        Philologic, and the dynamic relationship between global and local reading views in
+                        the current
+                        interface all reflect, at a macroscopic level, the platform’s understanding of what
+                        “XML
+                        publishing” means (inflected as well by the WWP’s own intentions for the data).</p>
+                  </div>
+                  <div class="section" id="d3e114">
+                     <h2 class="title" style="clear: both">Project sustainability</h2>
+                     <p id="d3e116">In July 2023, the Women Writers Project staff held a retreat to discuss plans for
+                        the next
+                        ten years of the WWP — what would the Project need in order to continue on indefinitely,
+                        in
+                        areas such as staffing, technology, and administration. The retreat focused on staff
+                        analysis of
+                        various aspects of the Project. Our markup and publication processes seemed stable
+                        for the
+                        moment, but analysis revealed that these systems were potentially at risk to events
+                        for which
+                        we had no contingency or recovery plan.</p>
+                     <p id="d3e117">For example, many of the WWP’s web resources (WWO, WWiC, WWiR, WW:IN and others) are
+                        dependent on eXist-DB. The eXist database has its own divergent implementations of
+                        XQuery
+                        standards, such as XQuery Update and output serialization. The eXist-specific code
+                        requires
+                        eXist-specific knowledge to use and maintain it — a high barrier to entry and a high
+                        barrier
+                        to exiting. Thus, the WWP’s dependency on eXist means a dependence on continued staffing
+                        with
+                        eXist-specific skills.<sup class="fn-label"><a href="#d3e121" class="footnoteref" id="d3e121-ref">[2]</a></sup></p>
+                     <p id="d3e125">By the close of the retreat, we decided it would be prudent to familiarize ourselves
+                        with
+                        the outcomes of the Endings Project. The Endings Project was convened in 2016 by the
+                        University of Victoria’s Humanities Computing and Media Centre (HCMC), with the goal
+                        of
+                        developing methods towards the longevity of their digital artifacts. In 2018, the
+                        team
+                        released their first version of the “Endings Principles for Digital Longevity”. These
+                        principles describe the foundations of a digital project which can be
+                        used, cited, reproduced, and archived. By building for open use, the Endings Project
+                        argues,
+                        the digital products are far more likely to be reused and maintained, and thus, more
+                        likely to
+                        survive.</p>
+                     <p id="d3e126">The Endings Project promotes the use of standalone, static websites, with no server-side
+                        processing or backend components. The HTML markup is not programmatically built out
+                        after the
+                        page loads; all content is available and all dependencies are satisfied simply by
+                        accessing
+                        the file. (<a class="xref" id="d3e128" href="javascript:showcite('cite-endings','d3e128')">Endings Principles 2023</a>) This greatly aids those who intentionally set out to archive the project materials,
+                        such as a digital repository or the Internet Archive’s Wayback Machine. The static
+                        site
+                        approach also makes it easy for researchers and other users to become casual archivists.
+                        It is
+                        not necessary to use extensions or software to generate a WARC file from the page;
+                        saving the
+                        page as an HTML file is enough to obtain your own working copy.</p>
+                     <p id="d3e130">Though the WWP puts much of our emphasis on the markup — without which, there would
+                        be no
+                        publication — the Endings Project counsels against considering our data alone as enough
+                        for
+                        project preservation. Dynamic “products” such as website interfaces are “arguably
+                        the most
+                        recognizable and least preservable part of a digital project” (<a class="xref" id="d3e132" href="javascript:showcite('cite-holmes2023a','d3e132')">Holmes, Jenstad, and Huculak 2023</a>).
+                        A website is the most public expression of a project’s data, and an invitation for
+                        users to
+                        participate in the products’ use and reuse. 
+                        <div class="blockquote">
+                           <blockquote class="blockquote">
+                              <p id="d3e135">Just as we offer repurposable XML versions of our documents, we try to provide HTML
+                                 pages which can also be pulled out of the project and reused easily. While TEI XML
+                                 is a
+                                 widely-used and trusted archival format for digital scholarly work, compared with
+                                 HTML,
+                                 its audience is tiny. As we have noted elsewhere, the many billions of HTML pages
+                                 already
+                                 created constitute many times the number of printed books produced in the entire history
+                                 of humanity, and the variety of purposes already served by HTML (not only websites
+                                 but
+                                 mobile applications, archival storage, and others) will ensure that if anything from
+                                 the
+                                 current era of digital communication survives, it will be HTML. So our HTML is more
+                                 likely
+                                 to be reused than our XML in the long term.</p>
+                           </blockquote>
+                        </div> (<a class="xref" id="d3e137" href="javascript:showcite('cite-holmes2023b','d3e137')">Holmes and Takeda 2023</a>).</p>
+                     <p id="d3e139">In our pursuit of maintainability, the WWP is working towards greater synthesis between
+                        markup, documentation, and website, especially for Women Writers Online. The interface
+                        can
+                        make greater use of the markup, for instance. We have plans to add more user control
+                        over what
+                        they see in the interface, such as a toggle to show the lineation of the original
+                        publication.
+                        With careful design, the interface can demonstrate the capabilities of the markup,
+                        as well as
+                        catering to those who just want a clean, readable text. We also intend to make it
+                        easier for
+                        users to download the WWO TEI files.</p>
+                     <p id="d3e140">However, the highest priority for the WWP is refactoring our current publication processes
+                        for sustainability, and to produce static websites. Step one is to migrate our apps
+                        from eXist
+                        to BaseX. Because the code will be specification-standard XQuery, its maintenance
+                        and upkeep can be undertaken by more people.<sup class="fn-label"><a href="#d3e142" class="footnoteref" id="d3e142-ref">[3]</a></sup> We will document the
+                        process of publication via BaseX and automate as much of the publication processes
+                        as
+                        possible.</p>
+                     <p id="d3e149">For WWiR and WWiC, step two will be to shift away from single-page Javascript applications
+                        and towards giving the user a complete HTML page on request.<sup class="fn-label"><a href="#d3e151" class="footnoteref" id="d3e151-ref">[4]</a></sup> We will adjust the site for web accessibility and universal design features,
+                        limiting Javascript to facilitating interaction. This will also require updating existing
+                        URLs, since Backbone.js applications previously maintained the browser’s history once
+                        the user
+                        entered the site. Women Writers Online already went through this process during the
+                        migration
+                        to eXist.</p>
+                     <p id="d3e158">Step three is to generate static HTML. The current hope is that we will use the migrated
+                        XQuery code to generate HTML out of BaseX. Each page will be saved as a separate HTML
+                        file, in
+                        directories mapping onto the URL paths. When a user requests a web page, the server
+                        responds
+                        with the static HTML, rather than initiating a request to BaseX. We may still incorporate
+                        search through BaseX.</p>
+                     <p id="d3e160">The WWP is at the beginning of step one. This step mostly consists of rewriting XQuery
+                        code so that a BaseX environment can produce the same JSON output that eXist currently
+                        does.
+                        However, where possible, we are also trying to make it easier to accomplish steps
+                        two and
+                        three. For example, some web content generated in Javascript can be extricated and
+                        placed in
+                        either an XQuery response, or the HTML page.</p>
+                     <p id="d3e161">Throughout the process, we are also working to make our web content more accessible.
+                        For
+                        example, the Women Writers Online interface includes a standard “Search” feature,
+                        implemented
+                        as a form. When a user clicked the “Search” button, the Backbone.js application would
+                        prevent
+                        the browser from navigating the user to a new page with their query parameters applied.
+                        Instead, the application requested the search results and populated the current page
+                        with
+                        them. From a sighted user’s standpoint, this was convenient and useful. From a blind
+                        user’s
+                        perspective, however, nothing would happen after they clicked the button; the WWO
+                        application
+                        did not alert them that the page had changed. If the request had been allowed to go
+                        through
+                        the browser, a screen reader would have informed the blind user that they had gone
+                        to a new
+                        page as a result of their request, with the search results found within the content
+                        of the
+                        page.</p>
+                     <p id="d3e162">By removing usability barriers such as low color contrast, we extend our invitation
+                        for
+                        use and reuse further, to people of all abilities. And by preferring semantic HTML
+                        markup over
+                        CSS formatting, we bring the full semantics of the markup into focus.</p>
+                  </div>
+                  <div class="bibliography" id="d3e166">
+                     <h2 class="title">References</h2>
+                     <p class="bibliomixed" id="caton1998"><a href="#d3e74">[Caton 1998] </a>Caton, Paul. “Putting Renaissance Women Online.” <span class="ital">WWP
+                           Newsletter</span>, vol. 4, no. 1, 1998, Women Writers Project. <a href="https://wwp.northeastern.edu/about/history/archive/newsletter/vol04num01/RWO041.html" class="link">wwp.northeastern.edu/about/history/archive/newsletter/vol04num01/RWO041.html</a>.</p>
+                     <p class="bibliomixed" id="endings"><a href="#d3e128">[Endings Principles 2023] </a>Endings Project Team. “Endings Principles for Digital Longevity.” Version 2.2.1.
+                        <span class="ital">The Endings Project</span>, University of Victoria, 3 Mar. 2023. <a href="https://endings.uvic.ca/principles.html" class="link">endings.uvic.ca/principles.html</a>.</p>
+                     <p class="bibliomixed" id="holmes2023a"><a href="#d3e132">[Holmes, Jenstad, and Huculak 2023] </a>Holmes, Martin, Janelle Jenstad, and J. Matthew Huculak. “Introduction to Special
+                        Issue: Project Resiliency in the Digital Humanities.” <span class="ital">Digital Humanities
+                           Quarterly</span>, vol. 17, no. 1, 2023, <a href="https://doi.org/10.63744/g7c3rkvm5bzr" class="link">https://doi.org/10.63744/g7c3rkvm5bzr</a>.</p>
+                     <p class="bibliomixed" id="holmes2023b"><a href="#d3e137">[Holmes and Takeda 2023] </a>Holmes, Martin, and Joey Takeda. “From Tamagotchis to Pet Rocks: On Learning to
+                        Love Simplicity through the Endings Principles.” <span class="ital">Digital Humanities
+                           Quarterly</span>, vol. 17, no. 1, 2023, <a href="https://doi.org/10.63744/dr2uaqdau4tz" class="link">https://doi.org/10.63744/dr2uaqdau4tz</a>.</p>
+                     <p class="bibliomixed" id="melson2010"><a href="#d3e51">[Melson and Flanders 2010] </a>Melson, John, and Julia Flanders. “Not Just One of Your Holiday Games: Names and
+                        Name Encoding in the Women Writers Project Textbase.” Women Writers Project, Jan.
+                        2010, <a href="https://wwp.northeastern.edu/research/publications/reports/neh_2008/WWP_Names_White_Paper.pdf" class="link">wwp.northeastern.edu/research/publications/reports/neh_2008/WWP_Names_White_Paper.pdf</a>.</p>
+                     <p class="bibliomixed" id="ramsay2010"><a href="#d3e83">[Ramsay 2010] </a>Ramsay, Stephen. “The Hermeneutics of Screwing Around; or What You Do with a
+                        Million Books.” In <span class="ital">Pastplay: Teaching and Learning History with
+                           Technology</span>, edited by Kevin Kee, 111-20. Ann Arbor: University of Michigan Press,
+                        2014. Originally presented as a talk at Brown University, April 17, 2010.</p>
+                  </div>
+                  <div class="footnotes"><br><hr width="100" align="left">
+                     <div id="d3e78" class="footnote">
+                        <p><sup class="fn-label"><a href="#d3e78-ref" class="footnoteref">[1]</a></sup> Later, these contextual essays were republished in Women Writers in Context.</p>
+                     </div>
+                     <div id="d3e121" class="footnote">
+                        <p><sup class="fn-label"><a href="#d3e121-ref" class="footnoteref">[2]</a></sup> Northeastern’s Digital Scholarship Group — of which the Women Writers Project is a
+                           part — had
+                           already adopted BaseX as its XML database of choice for TEI and other XML projects,
+                           due to
+                           BaseX’s lightweight footprint, excellent documentation, and adherence to the XQuery
+                           standard. At this time, the WWP is the only DSG project which uses eXist.</p>
+                     </div>
+                     <div id="d3e142" class="footnote">
+                        <p><sup class="fn-label"><a href="#d3e142-ref" class="footnoteref">[3]</a></sup> See the <a href="https://www.exist-db.org/exist/apps/doc/xquery#unsupported-features" class="link">“XQuery
+                              in eXist-db” documentation page</a> for a list of XQuery features unsupported by
+                           eXist, and features which have eXist-specific implementations.</p>
+                     </div>
+                     <div id="d3e151" class="footnote">
+                        <p><sup class="fn-label"><a href="#d3e151-ref" class="footnoteref">[4]</a></sup> Women Writers in Review and Women Writers in Context each have a single index page.
+                           On
+                           page load, their <a href="https://backbonejs.org/" class="link">Backbone.js</a> apps request and consume data
+                           from the XQuery API in eXist. That data is used to construct a web page to match the
+                           user’s request. As a user navigates one of these sites, its Javascript application
+                           builds
+                           and rebuilds the Document Object Model within the browser, adjusting the URL address
+                           as
+                           new “pages” load.</p>
+                     </div>
+                  </div>
+                  <div class="inline-citation" id="cite-caton1998"><a class="quiet" href="javascript:hidecite('cite-caton1998')" aria-label="Close Citation Box">×</a><p>Caton, Paul. “Putting Renaissance Women Online.” <span class="ital">WWP
+                           Newsletter</span>, vol. 4, no. 1, 1998, Women Writers Project. <a href="https://wwp.northeastern.edu/about/history/archive/newsletter/vol04num01/RWO041.html" class="link">wwp.northeastern.edu/about/history/archive/newsletter/vol04num01/RWO041.html</a>.</p>
+                  </div>
+                  <div class="inline-citation" id="cite-endings"><a class="quiet" href="javascript:hidecite('cite-endings')" aria-label="Close Citation Box">×</a><p>Endings Project Team. “Endings Principles for Digital Longevity.” Version 2.2.1.
+                        <span class="ital">The Endings Project</span>, University of Victoria, 3 Mar. 2023. <a href="https://endings.uvic.ca/principles.html" class="link">endings.uvic.ca/principles.html</a>.</p>
+                  </div>
+                  <div class="inline-citation" id="cite-holmes2023a"><a class="quiet" href="javascript:hidecite('cite-holmes2023a')" aria-label="Close Citation Box">×</a><p>Holmes, Martin, Janelle Jenstad, and J. Matthew Huculak. “Introduction to Special
+                        Issue: Project Resiliency in the Digital Humanities.” <span class="ital">Digital Humanities
+                           Quarterly</span>, vol. 17, no. 1, 2023, <a href="https://doi.org/10.63744/g7c3rkvm5bzr" class="link">https://doi.org/10.63744/g7c3rkvm5bzr</a>.</p>
+                  </div>
+                  <div class="inline-citation" id="cite-holmes2023b"><a class="quiet" href="javascript:hidecite('cite-holmes2023b')" aria-label="Close Citation Box">×</a><p>Holmes, Martin, and Joey Takeda. “From Tamagotchis to Pet Rocks: On Learning to
+                        Love Simplicity through the Endings Principles.” <span class="ital">Digital Humanities
+                           Quarterly</span>, vol. 17, no. 1, 2023, <a href="https://doi.org/10.63744/dr2uaqdau4tz" class="link">https://doi.org/10.63744/dr2uaqdau4tz</a>.</p>
+                  </div>
+                  <div class="inline-citation" id="cite-melson2010"><a class="quiet" href="javascript:hidecite('cite-melson2010')" aria-label="Close Citation Box">×</a><p>Melson, John, and Julia Flanders. “Not Just One of Your Holiday Games: Names and
+                        Name Encoding in the Women Writers Project Textbase.” Women Writers Project, Jan.
+                        2010, <a href="https://wwp.northeastern.edu/research/publications/reports/neh_2008/WWP_Names_White_Paper.pdf" class="link">wwp.northeastern.edu/research/publications/reports/neh_2008/WWP_Names_White_Paper.pdf</a>.</p>
+                  </div>
+                  <div class="inline-citation" id="cite-ramsay2010"><a class="quiet" href="javascript:hidecite('cite-ramsay2010')" aria-label="Close Citation Box">×</a><p>Ramsay, Stephen. “The Hermeneutics of Screwing Around; or What You Do with a
+                        Million Books.” In <span class="ital">Pastplay: Teaching and Learning History with
+                           Technology</span>, edited by Kevin Kee, 111-20. Ann Arbor: University of Michigan Press,
+                        2014. Originally presented as a talk at Brown University, April 17, 2010.</p>
+                  </div>
+               </div>
+               <div id="balisage-footer">
+                  <h3>Balisage Series on Markup Technologies</h3>
+               </div>
+            </main>
+         </body>
+      </html>
       <div id="balisage-footer">
          <h3><!--* balisage-html.xsl 519.38 *--><i>Balisage:</i>&nbsp;<small>The Markup Conference</small></h3>
       </div>

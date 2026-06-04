@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="balisage-1-5.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-stylesheet type="text/css" href="style/balisage-author.css"?>
-<?xml-stylesheet type="text/xsl" href="style/balisage-html.xsl"?>
+<?xml-stylesheet type="text/xsl" href="style/balisage-proceedings-html.xsl"?>
 <article xmlns="http://docbook.org/ns/docbook">
   <title>Synthesis and Sustainability: The Evolution of Markup and Toolsets in the Women Writers
     Project</title>

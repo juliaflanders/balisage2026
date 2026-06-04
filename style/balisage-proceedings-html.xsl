@@ -59,7 +59,7 @@
 
   <xsl:output method="html" encoding="UTF-8" version="5" />
 
-  <xsl:param name="css-file" select="'balisage-proceedings.css'"/>
+  <xsl:param name="css-file" select="'style/balisage-proceedings.css'"/>
 
   <xsl:param name="balisage-logo"
     select="'icons/BalisageSeries-logo.png'"/>
