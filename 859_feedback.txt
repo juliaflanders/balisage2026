@@ -1,0 +1,34 @@
+Reviewer's Comments, paper 859
+
+
+
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+ This is a lovely paper, and particularly fitting on the occasion of the final Balisage conference.
+Something that is perhaps a matter more for discussion at Balisage than a reviewer comment - but I would love to know more about the (so commendable) sustainability strategy -- much is to be gained by a strategy of persistence via static (HTML) pages -- but it would be good to hear more about how all the contextual enrichment described in the body of the paper is to be preserved -- and also to hear if WWP has investigated the more extensive long-term preservation strategies, tools, & techniques in development that employ sophisticated web-harvesting and emulation.
+
+
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+An edit for brevity would be appreciated; the history lesson in particular should be shorter, in my opinion.
+
+I'd also appreciate a clear mission statement (for the paper) early on. I had no clue about where the paper was heading when I started reading. Only close to the end did it improve. A history lesson without a message is difficult to follow.
+
+Shorter paragraphs would make it easier to read, at least for yours truly.
+
+But paradoxically I felt some explanations were missing. For example, the paper assumes TEI is a fully known quantity.
+
+The various toolset descriptions could use UI illustrations or similar, because that would provide the reader with an idea of the various eras.
+
+And I found the few markup examples to be refreshing but too few. 
+
+I find it interesting that eXist-db is described as "nonstandard" in terms of XQuery and therefore a risk, when the only real nonstandard feature is XUpdate. But sure, it depends on what you use it for.
+
+The many abbreviations also had me rereading earlier pages to remind myself of what they meant. I was left wondering if they were all a must when mentioned. 
+     
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+The reflection on the journey of a longstanding XML project is a fitting successor to 2025's offering by Cayless, on TEI's website. That is, the paper lets us reflect on the relationship between markup and technologies, across recent computing history. I expect the paper to draw a lot of attention and interest. 
+
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
