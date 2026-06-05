@@ -2,7 +2,7 @@
 <?xml-model href="balisage-1-5.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-stylesheet type="text/css" href="style/balisage-author.css"?>
 <?xml-stylesheet type="text/xsl" href="style/balisage-proceedings-html.xsl"?>
-<article xmlns="http://docbook.org/ns/docbook">
+<article xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
   <title>Synthesis and Sustainability: The Evolution of Markup and Toolsets in the Women Writers
     Project</title>
   <info>
@@ -41,8 +41,8 @@
         <firstname>Ash</firstname>
         <surname>Clark</surname>
       </personname>
-      <personblurb><!-- Ash blurb -->
-        <para>Ash Clark is the XML Applications Developer for the WWP and the DSG.</para>
+      <personblurb>
+        <para>Ash Clark (e/em/eir or they/them) serves as XML Applications Developer for the Women Writers Project and the Digital Scholarship Group. Ash uses XQuery, XSLT, and XML databases to create data-gathering tools, generate metadata, and serve out websites. Eir current focus is on designing sites that are easily maintainable and accessible to all kinds of users.</para>
       </personblurb>
       <affiliation>
         <orgname>Northeastern University</orgname>
@@ -68,6 +68,7 @@
       all anticipate what the TEI would come to be, it did lay a groundwork that was at least
       amenable to an eventual transition to the TEI once P1 and P2 were available to demonstrate
       what a more thoroughly semantic approach could look like.</para>
+    <!-- @ Julia: In the paragraph below, it might help to focus on one example throughout, as a way to make the historical background more tangible and concrete. 0/O would make sense, since the sample encoding uses it. The other examples could be mentioned later, or put in a note or footnote. ~Ash -->
     <para>Paradoxically, however, some of the earliest encoding debates within the project concerned
       the representation of the appearance of the source, and specifically the question of whether a
       glyph in the source text should be represented using a character that resembles it visually,
@@ -86,8 +87,16 @@
       transcription derived from an identifiable physical copy, and capturing aspects of formatting
       and material structure. But the TEI model demonstrated how that could be done explicitly
       through the markup itself: for example, through the <code>@rend</code> attribute or through
-      mechanisms like <code>&lt;sic></code> (the example uses P3-era TEI):</para>
-    <programlisting language="xml">&lt;sic corr="O">0&lt;/sic></programlisting>
+      mechanisms like <code>&lt;sic></code>:</para>
+    <figure>
+      <programlisting language="xml">&lt;sic corr="O">0&lt;/sic></programlisting>
+      <caption>
+        <para>This <link xlink:href="https://tei-c.org/Vault/GL/P3/CO.htm#COEDCOR">P3-era TEI encoding</link> indicates that the typesetter used the zero character in error (or out of necessity). The transcriber indicates that the correct character is the captial letter “O”.</para>
+      </caption>
+    </figure>
+    <!-- @ Julia: We could probably get some leverage out of Syd's early descriptions of rendition ladders, e.g. https://wwp.northeastern.edu/about/history/archive/training/old/p3guide.html "The TEI rend attribute: the Renditional Ladders solution". I especially like this bit:
+        "There are two important things to keep in mind. The first is that we record renditional, not presentational information. Renditional refers to how the OT looks; this is in contrast to presentational, which refers to how the electronic text should be printed or presented — the two are often different. The second point is that renditional information is secondarily descriptive of an element, rather than being the element's most inherent quality. That is, like all information on attributes, renditional information is not the defining characteristic of an element. Otherwise we'd simply use tag names like <italic>, which conveys far less information about the meaning and structure of the document."
+      ~Ash -->
     <para>The WWP’s early work on rendition ladders provided an opportunity to explore how far the
       material and visual properties of texts could be formalized for descriptive (rather than
       output) purposes.</para>
@@ -98,8 +107,8 @@
       as a <emphasis role="ital">scholarly</emphasis> technology revealed different ways for digital
       resources to function as research objects. The idea of creating reference corpora or
       comprehensive research collections was an early and significant driver for the TEI and is
-      exemplified by projects like Perseus, ARTFL, and the early documentary editing projects that
-      constituted the Model Editions Partnership. Such efforts signalled the importance of data
+      exemplified by projects like <link xlink:href="https://www.perseus.tufts.edu/hopper/">Perseus</link>, <link xlink:href="https://artfl-project.uchicago.edu/">ARTFL</link>, and the early documentary editing projects that
+      constituted the <link xlink:href="https://tei-c.org/activities/projects/model-editions-partnership-historical-editions-in-the-digital-age/">Model Editions Partnership</link>. Such efforts signalled the importance of data
       interoperability and of markup systems that could work towards that end: schemas that could
       strongly reinforce consistency and “conformance” and provide a clear model for tools to
       operate on. The WWP’s work was certainly animated to some degree by motivations towards
@@ -108,9 +117,13 @@
       following emerging standard practices when possible. But an important early element of the
       project’s mission was to treat early women’s writing and early printed books as potential
       sources of complication and resistance to standardization.</para>
-    <para>With the release of P5, the function of customization changed fundamentally: no longer as
+    <para>With the release of TEI P5 in 2007, the function of customization changed fundamentally: no longer as
       a laborious way of departing from the standard, but as a more or less required aspect of using
-      the Guidelines, a tool that was in everyone’s hands. This shift coincided exactly with an
+      the Guidelines, a tool that was in everyone’s hands. 
+      <!-- @Julia: I added the sentence and quote below to give fuller context for the P5 change; feel free to cut or munge. ~Ash -->
+      As the “Design Principles” section of <xref linkend="teip5about"/> describes the shift:<blockquote>
+        <para>In brief, the TEI Guidelines define a general-purpose encoding scheme which makes it possible to encode different views of text, possibly intended for different applications, serving the majority of scholarly purposes of text studies in the humanities. Because no predefined encoding scheme can possibly serve all research purposes, the TEI scheme is designed to facilitate both selection from a wide range of predefined markup choices, and the addition of new (non-TEI) markup options. By providing a formally verifiable means of extending the TEI recommendations, the TEI makes it simple for such user-identified modifications to be incorporated into future releases of these Guidelines as they evolve.</para>
+      </blockquote> This shift coincided exactly with an
       increased visibility of “digital humanities” within traditional scholarly spaces, and an
       interest in interpretive and critical uses of data modeling. For the WWP, the question of
       where early women’s writing might depart from canonical or standard models shifted at this
@@ -129,8 +142,7 @@
       with a formal keying system developed by Syd Bauman. In 2008 the WWP received an NEH Digital
       Humanities Start-up grant to explore the complexities of managing personographies in the
       context of early modern women’s writing (see <xref linkend="melson2010"/>). Over time, the WWP
-      has developed systematic data on people (with particular emphasis on authors and periodical
-      reviewers, featured in Women Writers in Review), texts (featured in Women Writers:
+      has developed systematic data on people (with particular emphasis on authors featured in Women Writers in Review and Women Writers in Context), texts (featured in Women Writers:
       Intertextual Networks), and even to some extent events (which are featured in timelines as
       part of Women Writers in Context). This work diversifies the role of markup for the WWP, going
       beyond modeling documents to creating data structures that are independent of documents but
@@ -144,7 +156,21 @@
       project uses TEI for its encoding documentation, for the periodical review documents in Women
       Writers in Review, and for the essays in Women Writers in Context, and in all three cases the
       approach is minimalist and functionalist rather than being animated by a research-oriented
-      philosophy of full textual representation (as in the WWP textbase). The markup of the textual
+      philosophy of full textual representation (as in the WWP textbase).
+      <note><!-- Added note to provide important context without our having to describe the endeavors in the narrative. In the HTML it will visibly break up the paragraph. ~Ash -->
+        <itemizedlist>
+          <listitem>
+            <para><emphasis role="bold"><link xlink:href="https://wwp.northeastern.edu/review/">Women Writers in Review</link> (WWiR)</emphasis> is the WWP’s public collection of 18th- and 19th-century reviews and other texts which respond to the works of early women writers.</para>
+          </listitem>
+          <listitem>
+            <para><emphasis role="bold"><link xlink:href="https://wwp.northeastern.edu/context/">Women Writers in Context</link> (WWiC)</emphasis> is a collection of modern scholarly essays which provide context and create connections between works in the WWO textbase.</para>
+          </listitem>
+          <listitem>
+            <para><emphasis role="bold"><link xlink:href="https://wwp.northeastern.edu/intertextual-networks">Women Writers: Intertextual Networks</link> (WW:IN)</emphasis> surfaces the sources of quotations, allusions, and citations in the Women Writers Online textbase.</para>
+          </listitem>
+        </itemizedlist>
+      </note>
+      The markup of the textual
       content focuses on a selection of high-value features (such as element names or quotations)
       that are specifically relevant to the rhetorical context of the materials, and the metadata
       carries more of the burden of representing features of the content that will be valuable for
@@ -201,16 +227,16 @@
       reasons. The Inso Corporation had been bought by another company, which altered both the level
       of support and also the license terms in ways that made it increasingly untenable to use
       DynaWeb for a small academic project. In 2004 the project began experimenting with Philologic,
-      developed by Mark Olsen at the University of Chicago, and an updated WWO running on Philologic
-      was released in 2005. Philologic placed its emphasis on speed and power; it was
+      developed by Mark Olsen at the University of Chicago, and in 2005, the WWP released an updated 
+      WWO running on Philologic. Philologic placed its emphasis on speed and power; it was
       database-driven and selective in its indexing, so that it was able to provide very fast search
       results as well as context-sensitive searching. Its search also included fuzzy matching, which
-      made it good at handling the highly variable spelling in older WWO texts. This system served
+      made it adept at handling the highly variable spelling in older WWO texts. This system served
       us well for several years, but by 2011 the project was seeking a more modern XML framework
       that would support more flexible experimentation with interface, responding to the significant
       expansion of interface paradigms as “digital humanities” became a widespread academic
       domain.</para>
-    <para>Starting in 2012, Women Writers Online was served out of XTF (eXtensible Text Framework),
+    <para>Starting in 2012, Women Writers Online was served out of <link xlink:href="https://xtf.cdlib.org/">XTF</link> (eXtensible Text Framework),
       a Java- and XSLT-based publication system created by the California Digital Library. The WWP
       staff heavily customized XTF's stylesheets in order to produce indexable versions of the WWO
       documents, as well as HTML representations for display. On the front end, Women Writers Online
@@ -239,12 +265,12 @@
       towards supporting collection-level metadata, presentation and quick publication turnaround
       than research artifacts. Their interfaces in turn prioritize findability and the ability of
       users to follow connections between resources.</para>
-    <para>Women Writers: Intertextual Networks sought to compile significant amounts of data from
+    <para>Women Writers: Intertextual Networks (WW:IN) sought to compile significant amounts of data from
       TEI sources for exploration and research. The data was drawn from two primary sources: (1) the
       WWO documents, which were marked-up to add references to (2) entries within a separate,
       TEI-encoded bibliography. Unlike its sister sites, however, the WW:IN interface was designed
       to do much more work on the server-side, with Javascript limited to functions that would make
-      the site more interactive. An EXPath application, housed in eXist-DB, would apply users’
+      the site more interactive. An EXPath application, housed in the XML database <link xlink:href="https://www.exist-db.org/exist/apps/homepage/index.html">eXist-DB</link>, would apply users’
       desired filters to return customized datasets in full HTML responses. The same API that
       returned JSON or XML would also serve out the webpages, putting far less pressure on users’
       devices.</para>
@@ -260,11 +286,11 @@
       Women Writers Online. One example of this is the WWP’s <code>&lt;vuji></code> tag, which is
       used to encode letterforms commonly substituted for each other in early typesetting, such as
       an “j” represented with an “i”. The <code>&lt;vuji></code> element is a useful shorthand for a
-      TEI <code>&lt;choice></code>.
+      TEI <code>&lt;choice></code>.</para>
       <figure>
         <programlisting language="xml">in&lt;choice>&lt;orig>i&lt;/orig>&lt;reg>j&lt;/reg>&lt;/choice>urious</programlisting>
         <caption>
-          <para>The word “injurious” transcribed using standard TEI elements <code>&lt;choice></code>, <code>&lt;orig></code>, and <code>&lt;reg></code>. The encoding indicates that the word was originally printed with an “i” where modern readers would expect a “j”.</para>
+          <para>The word “injurious” transcribed using <link xlink:href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COEDREG">standard TEI elements <code>&lt;choice></code>, <code>&lt;orig></code>, and <code>&lt;reg></code></link>. The encoding indicates that the word was originally printed with an “i” where modern readers would expect a “j”.</para>
         </caption>
       </figure>
       <figure xml:id="injurious-vuji">
@@ -273,27 +299,49 @@
           <para>The same word, transcribed using the WWP’s shorthand element <code>&lt;vuji></code>. Only the originally-printed letter is transcribed. When encoded this way, the letter “i” will only ever be regularized to the letter “j” (and vice versa).</para>
         </caption>
       </figure>
-XML publishing software consistently treats element tags as distinct words. Our
+    <para>XML publishing software consistently treats element tags as distinct words. Our
       pre-publication stylesheets adapt our markup as needed to avoid this problem. Originally, the
       original letterform represented in <code>&lt;vuji></code> was converted to its modern
       equivalent, and the tag itself was removed.</para>
     <para>More recently, when WWO introduced a feature allowing users to toggle between modern and
-      original typography, the pre-publication stylesheets retained <code>&lt;vuji></code>. This had
-      the unfortunate side effect of reducing XTF’s ability to index older documents, because a
-      single word would be broken up by tags:
+      original typography, the pre-publication stylesheets retained <code>&lt;vuji></code>.
+      When the TEI was transformed into HTML, <code>&lt;vuji></code> became an HTML <code>&lt;span></code>, and its text content flipped to the modern version.</para>
       <figure>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="img/Bal2026clar041601_injurious.png" width="700"/>
+          </imageobject>
+        </mediaobject>
+        <caption>
+          <para>Screenshot of <emphasis>Jane Anger Her Protection for Women</emphasis>, as it first appears in Women Writers Online. The word “injurious” has been highlighted. The browser’s Inspector tool shows that the letter “j” is encoded in HTML as <code>&lt;span class="icor icor-reg">j&lt;/span></code>.</para>
+        </caption>
+      </figure>
+      <figure>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="img/Bal2026clar041602_iniurious.png" width="850"/>
+          </imageobject>
+        </mediaobject>
+        <caption>
+          <para>Screenshot of <emphasis>Jane Anger Her Protection for Women</emphasis> in Women Writers Online, with the “Show original typographical features” preference toggled on. The highlighted word now reads “iniurious”, as it did in the 1589 publication. The browser’s Inspector tool shows that the letter “j” was changed to <code>&lt;span class="icor icor-reg" data-wwo-orig="i">i&lt;/span></code> in the Document Object Model.</para>
+        </caption>
+      </figure>
+      <para>Unfortunately, the new feature had the unfortunate side effect of reducing XTF’s ability to index and search older documents, because a
+      single word would be broken up by tags.
+        <figure>
         <programlisting>in j urious</programlisting>
         <caption>
-          <para>A plain-text representation of how XTF would parse the word encoded in <xref linkend="injurious-vuji"/>. XTF would introduce spaces in place of the start and end tags of <code>&lt;vuji></code>.</para>
+          <para>A plain-text representation of how XTF would parse the word “injurious” as encoded in <xref linkend="injurious-vuji"/>. XTF would introduce spaces in place of the start and end tags of <code>&lt;vuji></code>.</para>
         </caption>
       </figure>
 In order to retain both the toggle feature and the collection’s searchability, Women
       Writers Online was moved out of the XTF platform and into an eXist-DB database. While
-      eXist-DB’s index also treats tags as word boundaries by default, eXist does provide a way to
-      define elements like  <code>&lt;vuji></code>as “inline,” or, implying no word break. As such,
-      a search in eXist for the word “injurious” will lead to Jane Anger
-        Her Protection For Women (1589), where XTF would have come up short.</para>
-    <para>The relationship between the markup and the publication tool is thus very indirect. The
+      eXist-DB’s Lucene index also treats tags as word boundaries by default, eXist does provide a way to
+      define elements like <code>&lt;vuji></code> as <link xlink:href="https://www.exist-db.org/exist/apps/doc/lucene#inline">“inline,”</link> or, implying no word break. As such,
+      a search in eXist for the word “injurious” will lead to <emphasis>Jane Anger
+        Her Protection For Women</emphasis>, where XTF would have come up short.</para>
+    <para>Importantly, while the code for the WWO site was updated and adapted for use in eXist, the WWO documents themselves stayed the same.
+      The relationship between the markup and the publication tool is thus very indirect. The
       markup represents a durable, evolving expression of our analysis of the source texts, based on
       the project’s editorial principles and expectations about the kinds of research questions this
       data should support in the very long term. The publication platform, on the other hand,
@@ -310,7 +358,7 @@ In order to retain both the toggle feature and the collection’s searchability,
       although the WWP never “coded to the tool” in the sense of altering our data to match what a
       given tool could or could not do, our publication tools have definitely put their stamp on
       what Women Writers Online as a publication could express about that data. The centrality of
-      the KWIC display in DynaWeb, the excellent division-level context-sensitive searching in
+      the keywords-in-context display in DynaWeb, the excellent division-level context-sensitive searching in
       Philologic, and the dynamic relationship between global and local reading views in the current
       interface all reflect, at a macroscopic level, the platform’s understanding of what “XML
       publishing” means (inflected as well by the WWP’s own intentions for the data).</para>
@@ -323,20 +371,28 @@ In order to retain both the toggle feature and the collection’s searchability,
       various aspects of the Project. Our markup and publication processes seemed stable for the
       moment, but analysis revealed that these systems were potentially at risk to events for which
       we had no contingency or recovery plan.</para>
-    <para>For example, many of the WWP’s web resources (WWO, WWiC, WWiR, WW:IN and others) are<!-- "WW-" overload? -->
-      dependent on eXist-DB. The eXist database has its own divergent implementations of XQuery
-      standards, such as XQuery Update and output serialization. The eXist-specific code requires
+    <para>For example, many of the WWP’s web resources are
+      dependent on eXist-DB. For years, the eXist database had its own divergent implementations of XQuery
+      standards, such as XPath functions, XQuery Update, and output serialization.<footnote>
+        <para>See the <link
+            xlink:href="https://www.exist-db.org/exist/apps/doc/xquery#unsupported-features">“XQuery
+            in eXist-db” documentation page</link> for a list of XQuery features currently unsupported by
+          eXist, and features which have eXist-specific implementations.</para>
+      </footnote> eXist-specific code requires
       eXist-specific knowledge to use and maintain it — a high barrier to entry and a high barrier
-      to exiting. Thus, the WWP’s dependency on eXist means a dependence on continued staffing with
-      eXist-specific skills.<footnote>
-        <!-- Ash: explain eXist's historical relationship with the XQuery specs -->
-        <para>Northeastern’s Digital Scholarship Group — of which the Women Writers Project is a part — had
+      to exiting. Northeastern’s Digital Scholarship Group — of which the Women Writers Project is a part — had
           already adopted BaseX as its XML database of choice for TEI and other XML projects, due to
           BaseX’s lightweight footprint, excellent documentation, and adherence to the XQuery
-          standard. At this time, the WWP is the only DSG project which uses eXist.</para></footnote></para>
+          standard. At this time, the WWP is the only DSG project which uses eXist. The WWP’s dependency on eXist is also a dependence on continued staffing with
+      eXist-specific skills.</para>
+    <note>
+      <para>To their credit, eXist’s development team has also identified specification compliance as a significant goal, and they have been making incremental progress since at least 2016.<footnote>
+          <para>In a 2019 eXist issue thread, Joe Wicentowski posted <link xlink:href="https://github.com/eXist-db/exist/issues/2626#issuecomment-480319383">this summary of eXist-specific functions</link> which were deprecated in eXist version 4, and which would be removed in version 5 — many in favor of spec-compliant versions. Wicentowski had been tracking <link xlink:href="https://gist.github.com/joewiz/acb0558f078c0576a5e7?permalink_comment_id=1568552#gistcomment-1568552">eXist’s compliance with the Functions and Operators specification</link> since 2015, and helping the team improve eXist.</para>
+      </footnote> As we prepared to revise our paper in June 2026, they announced a beta version of 7.0.0, the next major version of eXist — and with it, a 90% success rate against 31,815 tests, a commendable increase from version 6.4.1’s 80% success rate. (<xref linkend="exist7beta"/>)</para>
+    </note>
     <!-- Ash: Make sure Endings Project is given more explanation, URL? -->
     <para>By the close of the retreat, we decided it would be prudent to familiarize ourselves with
-      the outcomes of the <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://endings.uvic.ca/">Endings Project</link>. The Endings Project was convened in 2016 by the
+      the outcomes of the <link xlink:href="https://endings.uvic.ca/">Endings Project</link>. The Endings Project was convened in 2016 by the
       University of Victoria’s Humanities Computing and Media Centre (HCMC), with the goal of
       developing methods towards the longevity of their digital artifacts. In 2018, the team
       released their first version of the “Endings Principles for Digital Longevity” (<xref linkend="endings"/>). These principles describe the foundations of a digital project which can be
@@ -377,18 +433,13 @@ In order to retain both the toggle feature and the collection’s searchability,
       users to download the WWO TEI files.</para>
     <para>However, the highest priority for the WWP is refactoring our current publication processes
       for sustainability, and to produce static websites. Step one is to migrate our apps from eXist
-      to BaseX. Because the code will be specification-standard XQuery, its maintenance and upkeep can be undertaken by more people.<footnote>
-        <para>See the <link xmlns:xlink="http://www.w3.org/1999/xlink"
-            xlink:href="https://www.exist-db.org/exist/apps/doc/xquery#unsupported-features">“XQuery
-            in eXist-db” documentation page</link> for a list of XQuery features unsupported by
-          eXist, and features which have eXist-specific implementations.</para>
-      </footnote> We will document the
+      to BaseX. Because the code will be specification-standard XQuery, its maintenance and upkeep can be undertaken by more people. We will document the
       process of publication via BaseX and automate as much of the publication processes as
       possible.</para>
     <para>For WWiR and WWiC, step two will be to shift away from single-page Javascript applications
       and towards giving the user a complete HTML page on request.<footnote>
         <para>Women Writers in Review and Women Writers in Context each have a single index page. On
-          page load, their <link xmlns:xlink="http://www.w3.org/1999/xlink"
+          page load, their <link
             xlink:href="https://backbonejs.org/">Backbone.js</link> apps request and consume data
           from the XQuery API in eXist. That data is used to construct a web page to match the
           user’s request. As a user navigates one of these sites, its Javascript application builds
@@ -441,32 +492,34 @@ In order to retain both the toggle feature and the collection’s searchability,
     <title>Works Cited</title>
     <bibliomixed xml:id="caton1998" xreflabel="Caton 1998">Caton, Paul. “Putting Renaissance Women Online.” <emphasis>WWP
         Newsletter</emphasis>, vol. 4, no. 1, 1998, Women Writers Project. <link
-        xmlns:xlink="http://www.w3.org/1999/xlink"
+       
         xlink:href="https://wwp.northeastern.edu/about/history/archive/newsletter/vol04num01/RWO041.html"
         >wwp.northeastern.edu/about/history/archive/newsletter/vol04num01/RWO041.html</link>.</bibliomixed>
     <bibliomixed xml:id="endings" xreflabel="Endings Principles 2023">Endings Project Team. “Endings Principles for Digital Longevity.” Version 2.2.1.
         <emphasis>The Endings Project</emphasis>, University of Victoria, 3 Mar. 2023. <link
-        xmlns:xlink="http://www.w3.org/1999/xlink"
+       
         xlink:href="https://endings.uvic.ca/principles.html"
         >endings.uvic.ca/principles.html</link>.</bibliomixed>
+    <bibliomixed xml:id="exist7beta" xreflabel="eXist-db release 7.0.0-beta3">eXist-db authors. “Release eXist-7.0.0-beta3.” eXist-db/exist repository, 2 Jun. 2026. <link xlink:href="https://github.com/eXist-db/exist/releases/tag/eXist-7.0.0-beta3">github.com/eXist-db/exist/releases/tag/eXist-7.0.0-beta3</link>.</bibliomixed>
     <bibliomixed xml:id="holmes2023a" xreflabel="Holmes, Jenstad, and Huculak 2023">Holmes, Martin, Janelle Jenstad, and J. Matthew Huculak. “Introduction to Special
       Issue: Project Resiliency in the Digital Humanities.” <emphasis>Digital Humanities
-        Quarterly</emphasis>, vol. 17, no. 1, 2023, <link xmlns:xlink="http://www.w3.org/1999/xlink"
+        Quarterly</emphasis>, vol. 17, no. 1, 2023, <link
         xlink:href="https://doi.org/10.63744/g7c3rkvm5bzr"
         >https://doi.org/10.63744/g7c3rkvm5bzr</link>.</bibliomixed>
     <bibliomixed xml:id="holmes2023b" xreflabel="Holmes and Takeda 2023">Holmes, Martin, and Joey Takeda. “From Tamagotchis to Pet Rocks: On Learning to
       Love Simplicity through the Endings Principles.” <emphasis>Digital Humanities
-        Quarterly</emphasis>, vol. 17, no. 1, 2023, <link xmlns:xlink="http://www.w3.org/1999/xlink"
+        Quarterly</emphasis>, vol. 17, no. 1, 2023, <link
         xlink:href="https://doi.org/10.63744/dr2uaqdau4tz"
         >https://doi.org/10.63744/dr2uaqdau4tz</link>.</bibliomixed>
     <bibliomixed xml:id="melson2010" xreflabel="Melson and Flanders 2010">Melson, John, and Julia Flanders. “Not Just One of Your Holiday Games: Names and
       Name Encoding in the Women Writers Project Textbase.” Women Writers Project, Jan. 2010, <link
-        xmlns:xlink="http://www.w3.org/1999/xlink"
+       
         xlink:href="https://wwp.northeastern.edu/research/publications/reports/neh_2008/WWP_Names_White_Paper.pdf"
         >wwp.northeastern.edu/research/publications/reports/neh_2008/WWP_Names_White_Paper.pdf</link>.</bibliomixed>
     <bibliomixed xml:id="ramsay2010" xreflabel="Ramsay 2010">Ramsay, Stephen. “The Hermeneutics of Screwing Around; or What You Do with a
       Million Books.” In <emphasis>Pastplay: Teaching and Learning History with
         Technology</emphasis>, edited by Kevin Kee, 111-20. Ann Arbor: University of Michigan Press,
       2014. Originally presented as a talk at Brown University, April 17, 2010.</bibliomixed>
+    <bibliomixed xml:id="teip5about" xreflabel="TEI Guidelines, “About These Guidelines”">TEI Consortium. “iv. About These Guidelines.” In <emphasis>TEI: Guidelines for Electronic Text Encoding and Interchange</emphasis>, P5 Version 4.11.0, 18 Feb. 2026. <link xlink:href="https://tei-c.org/release/doc/tei-p5-doc/en/html/AB.html#ABTEI">tei-c.org/release/doc/tei-p5-doc/en/html/AB.html#ABTEI</link>.</bibliomixed>
   </bibliography>
 </article>
