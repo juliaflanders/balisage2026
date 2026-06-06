@@ -53,6 +53,7 @@
        First mention of TEI will need a brief gloss
     -->
   <note><para>The introduction to this paper will include a brief backstory on the history and mission of the WWP, and will signal the topics and issues this paper is going to focus on.</para></note>
+  
   <section><!-- When editing, look for things to cut for brevity, conciseness -->
     <title>Evolution of the WWP’s theory and practice of markup</title>
     <para>The WWP’s earliest markup practices were anchored in typesetting tools: student encoders
@@ -157,18 +158,8 @@
       Writers in Review, and for the essays in Women Writers in Context, and in all three cases the
       approach is minimalist and functionalist rather than being animated by a research-oriented
       philosophy of full textual representation (as in the WWP textbase).
-      <note><!-- Added note to provide important context without our having to describe the endeavors in the narrative. In the HTML it will visibly break up the paragraph. ~Ash -->
-        <itemizedlist>
-          <listitem>
-            <para><emphasis role="bold"><link xlink:href="https://wwp.northeastern.edu/review/">Women Writers in Review</link> (WWiR)</emphasis> is the WWP’s public collection of 18th- and 19th-century reviews and other texts which respond to the works of early women writers.</para>
-          </listitem>
-          <listitem>
-            <para><emphasis role="bold"><link xlink:href="https://wwp.northeastern.edu/context/">Women Writers in Context</link> (WWiC)</emphasis> is a collection of modern scholarly essays which provide context and create connections between works in the WWO textbase.</para>
-          </listitem>
-          <listitem>
-            <para><emphasis role="bold"><link xlink:href="https://wwp.northeastern.edu/intertextual-networks">Women Writers: Intertextual Networks</link> (WW:IN)</emphasis> surfaces the sources of quotations, allusions, and citations in the Women Writers Online textbase.</para>
-          </listitem>
-        </itemizedlist>
+      <note>
+        <para>See <xref linkend="wwp-pubs"/> for more information on WWP publications.</para>
       </note>
       The markup of the textual
       content focuses on a selection of high-value features (such as element names or quotations)
@@ -183,7 +174,8 @@
       rather than as an activity of analysis or textual representation. In other words, it posits a
       different rhetorical framing for this information.</para>
   </section>
-  <section>
+  
+  <section xml:id="evolution-of-toolsets" xreflabel="Evolution of Toolsets">
     <!-- Julia: look for screenshots of the various tools
         Ash: ask Syd too
       -->
@@ -347,8 +339,7 @@ In order to retain both the toggle feature and the collection’s searchability,
       data should support in the very long term. The publication platform, on the other hand,
       represents a particular manifestation of the potential of that data, under particular
       circumstances of resource constraints and technological capability. Even in the WWP’s other
-      publications (Women Writers in Review, Women Writers in Context, and Women Writers:
-      Intertextual Networks, and our encoding documentation) where the encoding is more deliberately
+      publications (see <xref linkend="wwp-pubs"/>) where the encoding is more deliberately
       aimed at producing a specific kind of outcome, the source markup remains tool-agnostic and
       could be published through varied systems to produce varied user experiences.</para>
     <para>Read broadly, this history reveals several important points. First, the lifespan of
@@ -363,6 +354,7 @@ In order to retain both the toggle feature and the collection’s searchability,
       interface all reflect, at a macroscopic level, the platform’s understanding of what “XML
       publishing” means (inflected as well by the WWP’s own intentions for the data).</para>
   </section>
+  
   <section>
     <title>Project sustainability</title>
     <para>In July 2023, the Women Writers Project staff held a retreat to discuss plans for the next
@@ -387,10 +379,9 @@ In order to retain both the toggle feature and the collection’s searchability,
       eXist-specific skills.</para>
     <note>
       <para>To their credit, eXist’s development team has also identified specification compliance as a significant goal, and they have been making incremental progress since at least 2016.<footnote>
-          <para>In a 2019 eXist issue thread, Joe Wicentowski posted <link xlink:href="https://github.com/eXist-db/exist/issues/2626#issuecomment-480319383">this summary of eXist-specific functions</link> which were deprecated in eXist version 4, and which would be removed in version 5 — many in favor of spec-compliant versions. Wicentowski had been tracking <link xlink:href="https://gist.github.com/joewiz/acb0558f078c0576a5e7?permalink_comment_id=1568552#gistcomment-1568552">eXist’s compliance with the Functions and Operators specification</link> since 2015, and helping the team improve eXist.</para>
+          <para>In a 2019 eXist issue thread, Joe Wicentowski posted <link xlink:href="https://github.com/eXist-db/exist/issues/2626#issuecomment-480319383">this summary of eXist-specific functions</link> which were deprecated in eXist version 4, and which would be removed in version 5 — many in favor of spec-compliant versions. Wicentowski had been tracking <link xlink:href="https://gist.github.com/joewiz/acb0558f078c0576a5e7?permalink_comment_id=1568552#gistcomment-1568552">eXist’s compliance with the Functions and Operators specification</link> since 2015, as well as helping the team improve eXist.</para>
       </footnote> As we prepared to revise our paper in June 2026, they announced a beta version of 7.0.0, the next major version of eXist — and with it, a 90% success rate against 31,815 tests, a commendable increase from version 6.4.1’s 80% success rate. (<xref linkend="exist7beta"/>)</para>
     </note>
-    <!-- Ash: Make sure Endings Project is given more explanation, URL? -->
     <para>By the close of the retreat, we decided it would be prudent to familiarize ourselves with
       the outcomes of the <link xlink:href="https://endings.uvic.ca/">Endings Project</link>. The Endings Project was convened in 2016 by the
       University of Victoria’s Humanities Computing and Media Centre (HCMC), with the goal of
@@ -406,8 +397,9 @@ In order to retain both the toggle feature and the collection’s searchability,
         linkend="endings"/>) This greatly aids those who intentionally set out to archive the project materials,
       such as a digital repository or the Internet Archive’s Wayback Machine. The static site
       approach also makes it easy for researchers and other users to become casual archivists. It is
-      not necessary to use extensions or software to generate a WARC file from the page; saving the
+      not necessary to use extensions or software to generate a <link xlink:href="https://iipc.github.io/warc-specifications/specifications/warc-format/warc-1.1-annotated/">WARC file</link> from the page; saving the
       page as an HTML file is enough to obtain your own working copy.</para>
+    <!-- Ash: need to explain here that making static sites makes it easier for classic web archiving to do its thing, and for us to be able to hand the products off to someone else to host -->
     <para>Though the WWP puts much of our emphasis on the markup — without which, there would be no
       publication — the Endings Project counsels against considering our data alone as enough for
       project preservation. Dynamic “products” such as website interfaces are “arguably the most
@@ -436,7 +428,7 @@ In order to retain both the toggle feature and the collection’s searchability,
       to BaseX. Because the code will be specification-standard XQuery, its maintenance and upkeep can be undertaken by more people. We will document the
       process of publication via BaseX and automate as much of the publication processes as
       possible.</para>
-    <para>For WWiR and WWiC, step two will be to shift away from single-page Javascript applications
+    <para>For Women Writers in Review and Women Writers in Context, step two will be to shift away from single-page Javascript applications
       and towards giving the user a complete HTML page on request.<footnote>
         <para>Women Writers in Review and Women Writers in Context each have a single index page. On
           page load, their <link
@@ -475,6 +467,7 @@ In order to retain both the toggle feature and the collection’s searchability,
       use and reuse further, to people of all abilities. And by preferring semantic HTML markup over
       CSS formatting, we bring the full semantics of the markup into focus.</para>
   </section>
+  
   <!-- Ash: Bring static sites into conversation with enriched data and interfaces 
        Engaging readers with the static site powered interface
        Loop back around from process to impact, synthesis
@@ -487,7 +480,46 @@ In order to retain both the toggle feature and the collection’s searchability,
     <para>…explore the consequences of this idea</para>
     <para>Next steps, research questions, Onward!</para>
   </section>
-  <!-- Could include an appendix listing the WWP’s publications, and/or a timeline of WWP encoding/publication history -->
+  
+  <!-- Could include an appendix timeline of WWP encoding/publication history -->
+  <appendix xml:id="wwp-pubs">
+    <title>Women Writers Project Publications</title>
+    <variablelist>
+      <varlistentry>
+        <term><link xlink:href="https://wwp.northeastern.edu/wwo/">Women Writers Online</link> (WWO)</term>
+        <listitem>
+          <para>The WWP’s flagship publication, a collection of transcribed works by women which were originally published between 1526 and 1850.</para>
+          <para>WWO was first published in 1999. “<xref linkend="evolution-of-toolsets"/>” provides details about WWO’s publication history.</para>
+          <para>Access is limited to subscribers.</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term><link xlink:href="https://wwp.northeastern.edu/context/">Women Writers in Context</link> (WWiC)</term>
+        <listitem>
+          <para>A collection of modern “exhibits” — scholarly publications which provide context and create connections between works in the WWO textbase.</para>
+          <para>The WWP’s first call for submissions went online in March 2009.</para><!-- When was WWiC first published? Was it always in eXist? ~Ash -->
+          <para>Open access.</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term><link xlink:href="https://wwp.northeastern.edu/review/">Women Writers in Review</link> (WWiR)</term>
+        <listitem>
+          <para>The WWP’s collection of 18th- and 19th-century reviews and other texts which respond to the works of early women writers.</para>
+          <para>WWiR is the product of “<link xlink:href="https://wwp.northeastern.edu/research/projects/reception/">Cultures of Reception</link>,” a 2011–2015 research project funded by the National Endowment for the Humanities.</para>
+          <para>Open access.</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term><link xlink:href="https://wwp.northeastern.edu/intertextual-networks">Women Writers: Intertextual Networks</link> (WW:IN)</term>
+        <listitem>
+          <para>A bibliography and extracts from WWO, surfacing the sources of quotations, allusions, and citations in the Women Writers Online textbase.</para>
+          <para>WW:IN came out of the grant-funded research project <link xlink:href="https://wwp.northeastern.edu/research/projects/intertextuality/index.html">Intertextual Networks</link>, which began in 2016 by augmenting the WWO markup. WW:IN was first published in 2022. Since its launch, it has been taken down periodically due to overzealous scraping.</para>
+          <para>Open access.</para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </appendix>
+  
   <bibliography>
     <title>Works Cited</title>
     <bibliomixed xml:id="caton1998" xreflabel="Caton 1998">Caton, Paul. “Putting Renaissance Women Online.” <emphasis>WWP
