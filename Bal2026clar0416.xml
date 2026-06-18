@@ -49,12 +49,13 @@
       </affiliation>
     </author>
   </info>
-  <!-- Julia: backstory and roadmap for the paper 
-       First mention of TEI will need a brief gloss
-    -->
-  <note><para>The introduction to this paper will include a brief backstory on the history and mission of the WWP, and will signal the topics and issues this paper is going to focus on.</para></note>
-  
-  <section><!-- When editing, look for things to cut for brevity, conciseness -->
+
+  <section>
+  	<title>Introduction</title>
+  	<para>The Women Writers Project (WWP) has been working with text markup for nearly 40 years, as part of its founding mission to recover and republish the works of early women writers. Founded at nearly the same time as the establishment of the SGML standard and of the Text Encoding Initiative (TEI), the WWP has by necessity treated its work as long-term active research undertaking that concerns not only these evolving markup systems but also the complex web of tools through which text markup can be created, assessed, and put into practical use for publication and analysis. The WWP has sought not only to build a stable, sustainable working system, but also to keep pace with new developments in both markup and tools, and explore their implications for research on early women’s writing. The intertwined history and co-evolution of these two sets of practices within the WWP’s many decades of work thus far offers a valuable perspective on the history of scholarly usage of markup in the humanities. This paper will explore the evolution of the WWP’s theory and practice of markup, from its pre-TEI origins to our present-day usage; as well as the evolution of the project’s publication systems, from its first forays into digital publication through DynaWeb to our planned implementation of a static-site framework that responds to the recommendations of the Endings Principles. We also consider the reciprocal pressure that tools and markup exert on each other, and the nuanced ways in which markup responds to the changing intellectual paradigms proposed by successive generations of tools and technologies (and vice versa).</para>
+
+  </section>
+	<section><!-- When editing, look for things to cut for brevity, conciseness -->
     <title>Evolution of the WWP’s theory and practice of markup</title>
     <para>The WWP’s earliest markup practices were anchored in typesetting tools: student encoders
       starting in 1988 used Waterloo Script to capture functional textual units and formatting
@@ -70,20 +71,18 @@
       amenable to an eventual transition to the TEI once P1 and P2 were available to demonstrate
       what a more thoroughly semantic approach could look like.</para>
     <!-- @ Julia: In the paragraph below, it might help to focus on one example throughout, as a way to make the historical background more tangible and concrete. 0/O would make sense, since the sample encoding uses it. The other examples could be mentioned later, or put in a note or footnote. ~Ash -->
-    <para>Paradoxically, however, some of the earliest encoding debates within the project concerned
-      the representation of the appearance of the source, and specifically the question of whether a
+		<!-- I think there are really two different issues here (0/O being on the other side of the question from I/1) so we need to illustrate that complexity. (Julia) -->
+		
+    <para>We can see early traces of this shift from typesetting (and an initial orientation towards ideas of a "digital facsimile" in the WWP's initial debates about whether a
       glyph in the source text should be represented using a character that resembles it visually,
-      or represents it informationally. Examples include the numeral 1 (which in many older sources
-      resembles a capital I and may even have been printed using that piece of type), the letters
-      “u” and “n” (which when inverted are often indistinguishable from each other), and the
-      characters for zero and capital O. The WWP’s thinking about these kinds of cases was shaped by
+      or represents it informationally. For instance, the earliest WWP transcriptions used the letter I to represent the numeral 1 (which in older typography has horizontal serifs) on the theory of greater visual correspondence to the original. This practice, which was quickly discarded, yielded a valuable clarification that seems obvious in retrospect: the appearance of the original glyph is separable from (and for the WWP, less informationally important than) the meaning of that glyph within the overall notational system. Interestingly, early modern typesetters themselves sometimes used a character that resembled the one intended—either accidentally (if a piece of type had made its way into the wrong box), or deliberately if they had run out of the appropriate character: for instance, the letters “u” and “n” (which when inverted are often indistinguishable from each other), the substitution of zero for a capital O, or the use of "vv" for "w". In these cases, the WWP chose to retain the original glyphs (even though they were in effect a "facsimile" of something else) while also providing a regularized transcription reflecting the intended meaning. The WWP’s thinking about these kinds of cases was shaped by
       concerns among humanities scholars about loss of information about the physical source, and a
       resulting desire for visual fidelity to the text. Seen from that perspective (and in the
       absence of Unicode), the use of a capital I to represent a numeral 1 could appear defensible
       on visual grounds. But very early on, the project identified that resemblance (unsurprisingly)
       as a fallacy—dependent on typeface and likely to lead to all sorts of future practical and
       conceptual problems. The idea of markup as a “digital facsimile” gave way quickly to the idea
-      of markup as a more informational representation of document structure. The project continued
+      of markup as a more informational representation of document structure—an approach which has served us well in the longer term because of its greater robustness of display and behavior. The project continued
       to be concerned with ways of representing the material aspects of documents, with each encoded
       transcription derived from an identifiable physical copy, and capturing aspects of formatting
       and material structure. But the TEI model demonstrated how that could be done explicitly
@@ -92,12 +91,14 @@
     <figure>
       <programlisting language="xml">&lt;sic corr="O">0&lt;/sic></programlisting>
       <caption>
-        <para>This <link xlink:href="https://tei-c.org/Vault/GL/P3/CO.htm#COEDCOR">P3-era TEI encoding</link> indicates that the typesetter used the zero character in error (or out of necessity). The transcriber indicates that the correct character is the captial letter “O”.</para>
+        <para>This <link xlink:href="https://tei-c.org/Vault/GL/P3/CO.htm#COEDCOR">P3-era TEI encoding</link> indicates that the typesetter used the zero character in error (or out of necessity). The transcriber indicates that the correct character is the capital letter “O”.</para>
       </caption>
     </figure>
     <!-- @ Julia: We could probably get some leverage out of Syd's early descriptions of rendition ladders, e.g. https://wwp.northeastern.edu/about/history/archive/training/old/p3guide.html "The TEI rend attribute: the Renditional Ladders solution". I especially like this bit:
         "There are two important things to keep in mind. The first is that we record renditional, not presentational information. Renditional refers to how the OT looks; this is in contrast to presentational, which refers to how the electronic text should be printed or presented — the two are often different. The second point is that renditional information is secondarily descriptive of an element, rather than being the element's most inherent quality. That is, like all information on attributes, renditional information is not the defining characteristic of an element. Otherwise we'd simply use tag names like <italic>, which conveys far less information about the meaning and structure of the document."
       ~Ash -->
+		
+		<!-- NB our approach served us well in the longer term because it better captured the "truth" of the informational text; greater robustness of display and behavior -->
     <para>The WWP’s early work on rendition ladders provided an opportunity to explore how far the
       material and visual properties of texts could be formalized for descriptive (rather than
       output) purposes.</para>
@@ -122,6 +123,7 @@
       a laborious way of departing from the standard, but as a more or less required aspect of using
       the Guidelines, a tool that was in everyone’s hands. 
       <!-- @Julia: I added the sentence and quote below to give fuller context for the P5 change; feel free to cut or munge. ~Ash -->
+    	<!-- Love it! -JHF -->
       As the “Design Principles” section of <xref linkend="teip5about"/> describes the shift:<blockquote>
         <para>In brief, the TEI Guidelines define a general-purpose encoding scheme which makes it possible to encode different views of text, possibly intended for different applications, serving the majority of scholarly purposes of text studies in the humanities. Because no predefined encoding scheme can possibly serve all research purposes, the TEI scheme is designed to facilitate both selection from a wide range of predefined markup choices, and the addition of new (non-TEI) markup options. By providing a formally verifiable means of extending the TEI recommendations, the TEI makes it simple for such user-identified modifications to be incorporated into future releases of these Guidelines as they evolve.</para>
       </blockquote> This shift coincided exactly with an
@@ -214,7 +216,42 @@
       contextual materials such as short summaries, scholarly introductions to works, and essays on
       topics and collections.<footnote>
         <para>Later, these contextual essays were republished in Women Writers in Context.</para>
-      </footnote></para>
+      </footnote> The following screenshots show some of the details of these interface features:
+      <figure>
+      	<mediaobject>
+      		<alt>A screenshot of the table of contents of the first iteration of Women Writers Online.</alt>
+      		<imageobject>
+      			<imagedata fileref="./images/1999Dyna_3TOC.png"/>
+      		</imageobject>
+      		<caption>
+      			<para>The first version of WWO had a table of contents with expandable items showing the major sections of each work.</para>
+      		</caption>
+      	</mediaobject>
+      </figure>
+    	<figure>
+      	<mediaobject>
+      		<alt>A screenshot of the search interface of the first iteration of Women Writers Online.</alt>
+      		<imageobject>
+      			<imagedata fileref="./images/1999Dyna_6Gendersearch.png"/>
+      		</imageobject>
+      		<caption>
+      			<para>The search interface for the first version of WWO included context-sensitivity and wildcards.</para>
+      		</caption>
+      	</mediaobject>
+      </figure>
+    <figure>
+      	<mediaobject>
+      		<alt>A screenshot of the search results interface of the first iteration of Women Writers Online.</alt>
+      		<imageobject>
+      			<imagedata fileref="./images/1999Dyna_7bGenderresults.png"/>
+      		</imageobject>
+      		<caption>
+      			<para>The early WWO search results included a keyword-in-context option, with links to both the inidividual hit and the text as a whole.</para>
+      		</caption>
+      	</mediaobject>
+      </figure>	
+    	
+    	</para>
     <para>By 2003 the WWP began seeking a successor to DynaWeb for both technical and administrative
       reasons. The Inso Corporation had been bought by another company, which altered both the level
       of support and also the license terms in ways that made it increasingly untenable to use
@@ -227,7 +264,30 @@
       us well for several years, but by 2011 the project was seeking a more modern XML framework
       that would support more flexible experimentation with interface, responding to the significant
       expansion of interface paradigms as “digital humanities” became a widespread academic
-      domain.</para>
+      domain. The screenshots below illustrate some of these features:
+    <figure>
+      	<mediaobject>
+      		<alt>A screenshot of the search results interface of the second iteration of Women Writers Online, showing fuzzy matching and search refinement options.</alt>
+      		<imageobject>
+      			<imagedata fileref="./images/2005Philo_fuzzy_match.jpg"/>
+      		</imageobject>
+      		<caption>
+      			<para>The second iteration of the WWO search offered fuzzy matching and the ability to refine search results.</para>
+      		</caption>
+      	</mediaobject>
+      </figure>
+    	<figure>
+      	<mediaobject>
+      		<alt>A screenshot of the collocation results from the second iteration of Women Writers Online.</alt>
+      		<imageobject>
+      			<imagedata fileref="./images/2005Philo_wwo_her_collocates.tiff"/>
+      		</imageobject>
+      		<caption>
+      			<para>The second iteration of WWO also offered collocations.</para>
+      		</caption>
+      	</mediaobject>
+      </figure>
+    </para>
     <para>Starting in 2012, Women Writers Online was served out of <link xlink:href="https://xtf.cdlib.org/">XTF</link> (eXtensible Text Framework),
       a Java- and XSLT-based publication system created by the California Digital Library. The WWP
       staff heavily customized XTF's stylesheets in order to produce indexable versions of the WWO
