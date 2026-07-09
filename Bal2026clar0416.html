@@ -1085,7 +1085,7 @@
                               user’s request. As a user navigates one of these sites, its Javascript application
                               builds
                               and rebuilds the Document Object Model within the browser, adjusting the URL address
-                              as
+                              and browser history as
                               new “pages” load.</p>
                         </div> We will adjust the site for web accessibility and universal design features,
                         limiting Javascript to facilitating interaction. This will also require updating existing
@@ -1097,12 +1097,14 @@
                         extricated and placed in
                         either an XQuery response, or the HTML page.</p>
                      <p id="d3e347">Step three is to generate static HTML. The current hope is that we will use the migrated
-                        XQuery code to generate HTML out of BaseX. Each page will be saved as a separate HTML
-                        file, in
+                        XQuery code to generate HTML out of BaseX. Rather than serving the BaseX endpoint
+                        directly, 
+                        we will save each page as a separate HTML file, in
                         directories mapping onto the URL paths. When a user requests a web page, the server
-                        responds
-                        with the static HTML, rather than initiating a request to BaseX. We may still incorporate
-                        search through BaseX.</p>
+                        will respond
+                        with the static HTML file. We may still incorporate search through BaseX, but because
+                        it will no longer be required to respond to all requests, its workload (and perhaps
+                        response time) will be lessened.</p>
                      <p id="d3e348">Throughout the process, we are also working to make our web content more accessible.
                         For
                         example, the Women Writers Online interface includes a standard “Search” feature,
@@ -1132,7 +1134,7 @@
                   <div class="section" id="d3e351">
                      <h2 class="title" style="clear: both">Synthesis</h2>
                      <p id="d3e354">Michael Sperberg-McQueen, in his 2012 keynote at the Knowledge Organization and Data
-                        Modeling conference, said that <q>modeling is a way to make explicit our assumptions about the nature of a text/artefact</q> <a href="https://www.youtube.com/watch?v=2F98I3bbOVM" class="link">https://www.youtube.com/watch?v=2F98I3bbOVM</a>.
+                        Modeling conference, said that <q>modeling is a way to make explicit our assumptions about the nature of a text/artefact</q> (<a class="xref" id="d3e358" href="javascript:showcite('cite-sperbergmcqueen2012','d3e358')">Sperberg-McQueen 2012</a>).
                         These assumptions are often complexly layered and may even represent divergent perspectives
                         or possibilities in the text. The tools that express the potential of our modeling
                         also participate in making those assumptions explicit, by enacting some of the practical
@@ -1233,6 +1235,8 @@
                         Million Books.” In <span class="ital">Pastplay: Teaching and Learning History with
                            Technology</span>, edited by Kevin Kee, 111-20. Ann Arbor: University of Michigan Press,
                         2014. Originally presented as a talk at Brown University, April 17, 2010.</p>
+                     <p class="bibliomixed" id="sperbergmcqueen2012"><a href="#d3e358">[Sperberg-McQueen 2012] </a>Sperberg-McQueen, C. M. Keynote Address. Knowledge Organization and Data Modeling
+                        in the Humanities, 16 March 2012, Brown University, Providence, RI. <a href="https://youtu.be/2F98I3bbOVM" class="link">youtu.be/2F98I3bbOVM</a></p>
                      <p class="bibliomixed" id="teip5about"><a href="#d3e74">[TEI Guidelines, “About These Guidelines”] </a>TEI Consortium. “iv. About These Guidelines.” In <span class="ital">TEI: Guidelines for Electronic Text Encoding and Interchange</span>, P5 Version 4.11.0, 18 Feb. 2026. <a href="https://tei-c.org/release/doc/tei-p5-doc/en/html/AB.html#ABTEI" class="link">tei-c.org/release/doc/tei-p5-doc/en/html/AB.html#ABTEI</a>.</p>
                   </div>
                   <div class="footnotes"><br><hr width="100" align="left">
@@ -1274,6 +1278,9 @@
                         Million Books.” In <span class="ital">Pastplay: Teaching and Learning History with
                            Technology</span>, edited by Kevin Kee, 111-20. Ann Arbor: University of Michigan Press,
                         2014. Originally presented as a talk at Brown University, April 17, 2010.</p>
+                  </div>
+                  <div class="inline-citation" id="cite-sperbergmcqueen2012"><a class="quiet" href="javascript:hidecite('cite-sperbergmcqueen2012')" aria-label="Close Citation Box">×</a><p>Sperberg-McQueen, C. M. Keynote Address. Knowledge Organization and Data Modeling
+                        in the Humanities, 16 March 2012, Brown University, Providence, RI. <a href="https://youtu.be/2F98I3bbOVM" class="link">youtu.be/2F98I3bbOVM</a></p>
                   </div>
                   <div class="inline-citation" id="cite-teip5about"><a class="quiet" href="javascript:hidecite('cite-teip5about')" aria-label="Close Citation Box">×</a><p>TEI Consortium. “iv. About These Guidelines.” In <span class="ital">TEI: Guidelines for Electronic Text Encoding and Interchange</span>, P5 Version 4.11.0, 18 Feb. 2026. <a href="https://tei-c.org/release/doc/tei-p5-doc/en/html/AB.html#ABTEI" class="link">tei-c.org/release/doc/tei-p5-doc/en/html/AB.html#ABTEI</a>.</p>
                   </div>

@@ -70,9 +70,6 @@
       all anticipate what the TEI would come to be, it did lay a groundwork that was at least
       amenable to an eventual transition to the TEI once P1 and P2 were available to demonstrate
       what a more thoroughly semantic approach could look like.</para>
-    <!-- @ Julia: In the paragraph below, it might help to focus on one example throughout, as a way to make the historical background more tangible and concrete. 0/O would make sense, since the sample encoding uses it. The other examples could be mentioned later, or put in a note or footnote. ~Ash -->
-		<!-- I think there are really two different issues here (0/O being on the other side of the question from I/1) so we need to illustrate that complexity. (Julia) -->
-		
     <para>We can see early traces of this shift from typesetting (and an initial orientation towards ideas of a "digital facsimile") in the WWP's initial debates about whether a
       glyph in the source text should be represented using a character that resembles it visually,
       or represents it informationally. For instance, the earliest WWP transcriptions used the letter I to represent the numeral 1 (which in older typography has horizontal serifs) on the theory of greater visual correspondence to the original. This practice, which was quickly discarded, yielded a valuable clarification that seems obvious in retrospect: the appearance of the original glyph is separable from (and for the WWP, less informationally important than) the meaning of that glyph within the overall notational system. Interestingly, early modern typesetters themselves sometimes used a character that resembled the one intended—either accidentally (if a piece of type had made its way into the wrong box), or deliberately if they had run out of the appropriate character: for instance, the letters “u” and “n” (which when inverted are often indistinguishable from each other), the substitution of zero for a capital O, or the use of "vv" for "w". In these cases, the WWP chose to retain the original glyphs (even though they were in effect a "facsimile" of something else) while also providing a regularized transcription reflecting the intended meaning. The WWP’s thinking about these kinds of cases was shaped by
@@ -94,10 +91,6 @@
         <para>This <link xlink:href="https://tei-c.org/Vault/GL/P3/CO.htm#COEDCOR">P3-era TEI encoding</link> indicates that the typesetter used the zero character in error (or out of necessity). The transcriber indicates that the correct character is the capital letter “O”.</para>
       </caption>
     </figure>
-    <!-- @ Julia: We could probably get some leverage out of Syd's early descriptions of rendition ladders, e.g. https://wwp.northeastern.edu/about/history/archive/training/old/p3guide.html "The TEI rend attribute: the Renditional Ladders solution". I especially like this bit:
-        "There are two important things to keep in mind. The first is that we record renditional, not presentational information. Renditional refers to how the OT looks; this is in contrast to presentational, which refers to how the electronic text should be printed or presented — the two are often different. The second point is that renditional information is secondarily descriptive of an element, rather than being the element's most inherent quality. That is, like all information on attributes, renditional information is not the defining characteristic of an element. Otherwise we'd simply use tag names like <italic>, which conveys far less information about the meaning and structure of the document."
-      ~Ash -->
-		
 		<!-- NB our approach served us well in the longer term because it better captured the "truth" of the informational text; greater robustness of display and behavior -->
     <para>The WWP’s early work on rendition ladders provided an opportunity to explore how far the
       material and visual properties of texts could be formalized for descriptive (rather than
@@ -122,8 +115,6 @@
     <para>With the release of TEI P5 in 2007, the function of customization changed fundamentally: no longer as
       a laborious way of departing from the standard, but as a more or less required aspect of using
       the Guidelines, a tool that was in everyone’s hands. 
-      <!-- @Julia: I added the sentence and quote below to give fuller context for the P5 change; feel free to cut or munge. ~Ash -->
-    	<!-- Love it! -JHF -->
       As the “Design Principles” section of <xref linkend="teip5about"/> describes the shift:<blockquote>
         <para>In brief, the TEI Guidelines define a general-purpose encoding scheme which makes it possible to encode different views of text, possibly intended for different applications, serving the majority of scholarly purposes of text studies in the humanities. Because no predefined encoding scheme can possibly serve all research purposes, the TEI scheme is designed to facilitate both selection from a wide range of predefined markup choices, and the addition of new (non-TEI) markup options. By providing a formally verifiable means of extending the TEI recommendations, the TEI makes it simple for such user-identified modifications to be incorporated into future releases of these Guidelines as they evolve.</para>
       </blockquote> This shift coincided exactly with an
@@ -548,7 +539,7 @@ In order to retain both the toggle feature and the collection’s searchability,
   <section>
     <!-- Both: stronger conclusion -->
     <title>Synthesis</title>
-  	<para>Michael Sperberg-McQueen, in his 2012 keynote at the Knowledge Organization and Data Modeling conference, said that <quote>modeling is a way to make explicit our assumptions about the nature of a text/artefact</quote> <link xlink:href="https://www.youtube.com/watch?v=2F98I3bbOVM"></link>.
+  	<para>Michael Sperberg-McQueen, in his 2012 keynote at the Knowledge Organization and Data Modeling conference, said that <quote>modeling is a way to make explicit our assumptions about the nature of a text/artefact</quote> (<xref linkend="sperbergmcqueen2012"/>).
 These assumptions are often complexly layered and may even represent divergent perspectives or possibilities in the text. The tools that express the potential of our modeling also participate in making those assumptions explicit, by enacting some of the practical or analytical consequences of those assumptions: if the modeling tells us that certain passages are endnotes, our page generation can gather them at the end of the text; if the modeling tells us that certain readings are typographical errors, our search tool can ignore them. We might thus think of tools as an intensification of the rhetorical aspect of markup: the space where the provisional, suspended _potential_ of descriptive markup for action is realized, within a specific set of rhetorical conditions: audience, purpose, XXX. Because of its long history, the WWP has had an unusual opportunity to express the potential of its markup in a changing set of rhetorical contexts, and through tools that realize the basic activities of reading, searching, and analysis in somewhat different ways. What these experiments have revealed is the durability and adequacy of the TEI's general approach, and of the WWP's particular implementation of that approach. </para>
     <para>Markup and tools have co-evolved</para>
     <para>It turns out that they really are two dialogic/dialectical parts of the same modeling ecology; tools not just a kind of sea anchor or gaudy temptation, but something that also contributes to our understanding of what a model of text is</para>
@@ -627,6 +618,7 @@ These assumptions are often complexly layered and may even represent divergent p
       Million Books.” In <emphasis>Pastplay: Teaching and Learning History with
         Technology</emphasis>, edited by Kevin Kee, 111-20. Ann Arbor: University of Michigan Press,
       2014. Originally presented as a talk at Brown University, April 17, 2010.</bibliomixed>
+    <bibliomixed xml:id="sperbergmcqueen2012" xreflabel="Sperberg-McQueen 2012">Sperberg-McQueen, C. M. Keynote Address. Knowledge Organization and Data Modeling in the Humanities, 16 March 2012, Brown University, Providence, RI. <link xlink:href="https://youtu.be/2F98I3bbOVM">youtu.be/2F98I3bbOVM</link></bibliomixed>
     <bibliomixed xml:id="teip5about" xreflabel="TEI Guidelines, “About These Guidelines”">TEI Consortium. “iv. About These Guidelines.” In <emphasis>TEI: Guidelines for Electronic Text Encoding and Interchange</emphasis>, P5 Version 4.11.0, 18 Feb. 2026. <link xlink:href="https://tei-c.org/release/doc/tei-p5-doc/en/html/AB.html#ABTEI">tei-c.org/release/doc/tei-p5-doc/en/html/AB.html#ABTEI</link>.</bibliomixed>
   </bibliography>
 </article>
