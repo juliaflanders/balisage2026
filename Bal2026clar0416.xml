@@ -169,9 +169,6 @@
   </section>
   
   <section xml:id="evolution-of-toolsets" xreflabel="Evolution of Toolsets">
-    <!-- Julia: look for screenshots of the various tools
-        Ash: ask Syd too
-      -->
     <title>Evolution of toolsets</title>
     <para>The WWP has had an unusually long history that traverses many generations of SGML and XML
       publication tools, and the project’s data has presented some valuable challenges and edge
@@ -184,7 +181,7 @@
         <listitem>
           <para>Philologic: 2005–2012 (by 2012 this system would not run on a modern server)</para>
         </listitem>
-        <listitem><!-- Ash: fire up old copy of XTF and get screenshots -->
+        <listitem>
           <para>An in-house, modular publication system served out of XTF: 2012–2025 (by 2019 XTF was
             getting harder to maintain)</para>
         </listitem>
@@ -535,6 +532,9 @@ In order to retain both the toggle feature and the collection’s searchability,
   </section>
   
   <!-- Ash: Bring static sites into conversation with enriched data and interfaces 
+          Philosophy pivot to Endings Principles
+          Things that look like technical practice are an enactment of a philosophical framework
+       We agree with the Principles but have additions on it
        Engaging readers with the static site powered interface
        Loop back around from process to impact, synthesis
   -->
@@ -542,7 +542,7 @@ In order to retain both the toggle feature and the collection’s searchability,
     <!-- Both: stronger conclusion -->
     <title>Synthesis</title>
   	<para>Michael Sperberg-McQueen, in his 2012 keynote at the Knowledge Organization and Data Modeling conference, said that <quote>modeling is a way to make explicit our assumptions about the nature of a text/artefact</quote> (<xref linkend="sperbergmcqueen2012"/>).
-These assumptions are often complexly layered and may even represent divergent perspectives or possibilities in the text. The tools that express the potential of our modeling also participate in making those assumptions explicit, by enacting some of the practical or analytical consequences of those assumptions: if the modeling tells us that certain passages are endnotes, our page generation can gather them at the end of the text; if the modeling tells us that certain readings are typographical errors, our search tool can ignore them. We might thus think of tools as an intensification of the rhetorical aspect of markup: the space where the provisional, suspended _potential_ of descriptive markup for action is realized, within a specific set of rhetorical conditions: audience, purpose, XXX. Because of its long history, the WWP has had an unusual opportunity to express the potential of its markup in a changing set of rhetorical contexts, and through tools that realize the basic activities of reading, searching, and analysis in somewhat different ways. What these experiments have revealed is the durability and adequacy of the TEI's general approach, and of the WWP's particular implementation of that approach. </para>
+These assumptions are often complexly layered and may even represent divergent perspectives or possibilities in the text. The tools that express the potential of our modeling also participate in making those assumptions explicit, by enacting some of the practical or analytical consequences of those assumptions: if the modeling tells us that certain passages are endnotes, our page generation can gather them at the end of the text; if the modeling tells us that certain readings are typographical errors, our search tool can ignore them. We might thus think of tools as an intensification of the rhetorical aspect of markup: the space where the provisional, suspended <emphasis>potential</emphasis> of descriptive markup for action is realized, within a specific set of rhetorical conditions: audience, purpose, XXX. Because of its long history, the WWP has had an unusual opportunity to express the potential of its markup in a changing set of rhetorical contexts, and through tools that realize the basic activities of reading, searching, and analysis in somewhat different ways. What these experiments have revealed is the durability and adequacy of the TEI's general approach, and of the WWP's particular implementation of that approach. </para>
   	<para>Interfaces as manifestations of markup; an invitation to the user to interact; 
   	- an important part of our history is the Renear/Sperberg/Caton line of thinking about formalism, where markup is where the real intellectual action is (logic, testable propositions)
   	- we're drawing on that, but at the same time we're aware that for our users, the role of markup (though no less important) is elsewhere: manifesting/transacting a relationship between material artifacts of the past and usable manifestations via interfaces in the present
