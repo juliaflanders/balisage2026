@@ -368,7 +368,7 @@
           <para>Screenshot of <emphasis>Jane Anger Her Protection for Women</emphasis>, as it first appears in Women Writers Online. The word “injurious” has been highlighted. The browser’s Inspector tool shows that the letter “j” is encoded in HTML as <code>&lt;span class="icor icor-reg">j&lt;/span></code>.</para>
         </caption>
       </figure>
-      <figure>
+      <figure xml:id="wwo-original-type">
         <mediaobject>
           <imageobject>
             <imagedata fileref="img/Bal2026clar041602_iniurious.png" width="850"/>
@@ -440,13 +440,15 @@ In order to retain both the toggle feature and the collection’s searchability,
     <note>
       <para>To their credit, eXist’s development team has also identified specification compliance as a significant goal, and they have been making incremental progress since at least 2016.<footnote>
           <para>In a 2019 eXist issue thread, Joe Wicentowski posted <link xlink:href="https://github.com/eXist-db/exist/issues/2626#issuecomment-480319383">this summary of eXist-specific functions</link> which were deprecated in eXist version 4, and which would be removed in version 5 — many in favor of spec-compliant versions. Wicentowski had been tracking <link xlink:href="https://gist.github.com/joewiz/acb0558f078c0576a5e7?permalink_comment_id=1568552#gistcomment-1568552">eXist’s compliance with the Functions and Operators specification</link> since 2015, as well as helping the team improve eXist.</para>
-      </footnote> As we prepared to revise our paper in June 2026, they announced a beta version of 7.0.0, the next major version of eXist — and with it, a 90% success rate against 31,815 tests, a commendable increase from version 6.4.1’s 80% success rate. (<xref linkend="exist7beta"/>)</para>
+      </footnote> 
+        As we prepared to revise our paper in June 2026, they announced a beta version of 7.0.0, the next major version of eXist — and with it, a 90% success rate against 31,815 tests, a commendable increase from version 6.4.1’s 80% success rate. (<xref linkend="exist7beta"/>)</para>
     </note>
     <para>By the close of the retreat, we decided it would be prudent to familiarize ourselves with
-      the outcomes of the <link xlink:href="https://endings.uvic.ca/">Endings Project</link>. The Endings Project was convened in 2016 by the
-      University of Victoria’s Humanities Computing and Media Centre (HCMC), with the goal of
-      developing methods towards the longevity of their digital artifacts. In 2018, the team
-      released their first version of the “Endings Principles for Digital Longevity” (<xref linkend="endings"/>). These principles describe the foundations of a digital project which can be
+      the outcomes of the <link xlink:href="https://endings.uvic.ca/">Endings Project</link>. Convened in 2016 by the
+      University of Victoria’s Humanities Computing and Media Centre (HCMC), the Endings Project’s goal was to
+      develop and recommend practices that would aid the longevity of their digital artifacts. In 2018, the team
+      released their first version of the “Endings Principles for Digital Longevity” (<xref linkend="endings"/>). 
+      These principles describe the foundations of a digital project which can be
       used, cited, reproduced, and archived. By building for open use, the Endings Project argues,
       the digital products are far more likely to be reused and maintained, and thus, more likely to
       survive.</para>
@@ -459,11 +461,22 @@ In order to retain both the toggle feature and the collection’s searchability,
       approach also makes it easy for researchers and other users to become casual archivists. It is
       not necessary to use extensions or software to generate a <link xlink:href="https://iipc.github.io/warc-specifications/specifications/warc-format/warc-1.1-annotated/">WARC file</link> from the page; saving the
       page as an HTML file is enough to obtain your own working copy.</para>
-    <!-- Ash: need to explain here that making static sites makes it easier for classic web archiving to do its thing, and for us to be able to hand the products off to someone else to host -->
+    <para>Crucially, the Endings Project does not intend for digital humanities projects to pursue 
+      archival solutions on their own. The survival of the original publication 
+      <emphasis>on the web</emphasis> is paramount. As Ending Project technical leads Martin Holmes 
+      and Joey Takeda explained, <quote>We have therefore focused on building digital editions which 
+      can run on any web server, anywhere, without any specific dependencies. If spinning up a new site 
+      requires nothing more than copying a collection of files to a server and circulating the URL, 
+      there is a far greater chance that functional copies of the products of your work will survive in 
+      a usable form. Every server-side dependency is a barrier to replication and therefore to 
+      survival</quote> (<xref linkend="holmes2023b"/>). It is important for the Internet Archive to be 
+      able to create WARC files from a digital humanities project’s site, but it is just as important 
+      for the project to be able to transfer ownership of the site to a repository or library for 
+      hosting and long-term maintenance.</para>
     <para>Though the WWP puts much of our emphasis on the markup — without which, there would be no
       publication — the Endings Project counsels against considering our data alone as enough for
-      project preservation. Dynamic “products” such as website interfaces are “arguably the most
-      recognizable and least preservable part of a digital project” (<xref linkend="holmes2023a"/>).
+      project preservation. Dynamic <quote>products</quote> such as website interfaces are <quote>arguably the most
+      recognizable and least preservable part of a digital project</quote> (<xref linkend="holmes2023a"/>).
       A website is the most public expression of a project’s data, and an invitation for users to
       participate in the products’ use and reuse. <blockquote>
         <para>Just as we offer repurposable XML versions of our documents, we try to provide HTML
@@ -475,43 +488,43 @@ In order to retain both the toggle feature and the collection’s searchability,
           mobile applications, archival storage, and others) will ensure that if anything from the
           current era of digital communication survives, it will be HTML. So our HTML is more likely
           to be reused than our XML in the long term.</para>
-      </blockquote> (<xref linkend="holmes2023b"/>).</para>
+      </blockquote> (<xref linkend="holmes2023b"/>)</para>
     <para>In our pursuit of maintainability, the WWP is working towards greater synthesis between
-      markup, documentation, and website, especially for Women Writers Online. The interface can
-      make greater use of the markup, for instance. We have plans to add more user control over what
-      they see in the interface, such as a toggle to show the lineation of the original publication.
-      With careful design, the interface can demonstrate the capabilities of the markup, as well as
-      catering to those who just want a clean, readable text. We also intend to make it easier for
-      users to download the WWO TEI files.</para>
+      markup, documentation, and website, especially for Women Writers Online. We intend to make it
+      easier for users to download WWO’s TEI, packaging the files as part of the interface.
+      With careful design, the WWO interface can demonstrate the capabilities of the markup, as well as
+      catering to those who just want a clean, readable text. 
+      For instance, we plan to give users more control over how features of the markup are presented
+      in the interface. The “original typographic features” toggle (<xref linkend="wwo-original-type"/>) 
+      is one example. Another toggle could show the lineation of the original publication, making 
+      <code>&lt;lb&gt;</code>s (line beginnings) and <code>&lt;pb&gt;</code>s (page beginnings) visible as HTML <code>&lt;br&gt;</code>s.</para>
     <para>However, the highest priority for the WWP is refactoring our current publication processes
-      for sustainability, and to produce static websites. Step one is to migrate our apps from eXist
-      to BaseX. Because the code will be specification-standard XQuery, its maintenance and upkeep can be undertaken by more people. We will document the
-      process of publication via BaseX and automate as much of the publication processes as
-      possible.</para>
-    <para>For Women Writers in Review and Women Writers in Context, step two will be to shift away from single-page Javascript applications
-      and towards giving the user a complete HTML page on request.<footnote>
+      for sustainability, and to produce static websites. Step one — currently in progress — is to migrate our apps from eXist-db
+      to BaseX, as well as documenting and automating the publication processes. 
+      This step mostly consists of rewriting XQuery code so that a BaseX environment can produce the same JSON output that eXist currently does. The goal of this step is to ensure more people can publish new records and maintain the site, but where possible, we are also trying to make it easier to accomplish the work to come.
+    </para>
+    <para>
+      </para>
+    <para>For Women Writers in Review and Women Writers in Context, the next step will be to shift away from single-page Javascript applications
+      and towards giving the user a complete HTML page on request.<note>
         <para>Women Writers in Review and Women Writers in Context each have a single index page. On
           page load, their <link
             xlink:href="https://backbonejs.org/">Backbone.js</link> apps request and consume data
           from the XQuery API in eXist. That data is used to construct a web page to match the
           user’s request. As a user navigates one of these sites, its Javascript application builds
-          and rebuilds the Document Object Model within the browser, adjusting the URL address as
+          and rebuilds the Document Object Model within the browser, adjusting the URL address and browser history as
           new “pages” load.</para>
-      </footnote> We will adjust the site for web accessibility and universal design features,
+      </note> We will adjust the site for web accessibility and universal design features,
       limiting Javascript to facilitating interaction. This will also require updating existing
       URLs, since Backbone.js applications previously maintained the browser’s history once the user
       entered the site. Women Writers Online already went through this process during the migration
-      to eXist.</para>
-    <para>Step three is to generate static HTML. The current hope is that we will use the migrated
-      XQuery code to generate HTML out of BaseX. Each page will be saved as a separate HTML file, in
-      directories mapping onto the URL paths. When a user requests a web page, the server responds
-      with the static HTML, rather than initiating a request to BaseX. We may still incorporate
-      search through BaseX.</para>
-    <para>The WWP is at the beginning of step one. This step mostly consists of rewriting XQuery
-      code so that a BaseX environment can produce the same JSON output that eXist currently does.
-      However, where possible, we are also trying to make it easier to accomplish steps two and
-      three. For example, some web content generated in Javascript can be extricated and placed in
+      to eXist. As preparation for this step, web content generated in Javascript may be extricated and placed in
       either an XQuery response, or the HTML page.</para>
+    <para>Step three is to generate static HTML. The current hope is that we will use the migrated
+      XQuery code to generate HTML out of BaseX. Rather than serving the BaseX endpoint directly, 
+      we will save each page as a separate HTML file, in
+      directories mapping onto the URL paths. When a user requests a web page, the server will respond
+      with the static HTML file. We may still incorporate search through BaseX, but because it will no longer be required to respond to all requests, its workload (and perhaps response time) will be lessened.</para>
     <para>Throughout the process, we are also working to make our web content more accessible. For
       example, the Women Writers Online interface includes a standard “Search” feature, implemented
       as a form. When a user clicked the “Search” button, the Backbone.js application would prevent
@@ -543,23 +556,23 @@ These assumptions are often complexly layered and may even represent divergent p
     <para>Next steps, research questions, Onward!</para>
   </section>
   
-  <!-- Could include an appendix timeline of WWP encoding/publication history -->
   <appendix xml:id="wwp-pubs">
     <title>Women Writers Project Publications</title>
+    <para>All publications below make use of TEI encoding.</para>
     <variablelist>
       <varlistentry>
         <term><link xlink:href="https://wwp.northeastern.edu/wwo/">Women Writers Online</link> (WWO)</term>
         <listitem>
-          <para>The WWP’s flagship publication, a collection of transcribed works by women which were originally published between 1526 and 1850.</para>
+          <para>The WWP’s flagship publication, a collection of works by women which were originally published between 1526 and 1850.</para>
           <para>WWO was first published in 1999. “<xref linkend="evolution-of-toolsets"/>” provides details about WWO’s publication history.</para>
-          <para>Access is limited to subscribers.</para>
+          <para><link xlink:href="https://wwp.northeastern.edu/wwo/license/">Access is limited to subscribers.</link></para>
         </listitem>
       </varlistentry>
       <varlistentry>
         <term><link xlink:href="https://wwp.northeastern.edu/context/">Women Writers in Context</link> (WWiC)</term>
         <listitem>
           <para>A collection of modern “exhibits” — scholarly publications which provide context and create connections between works in the WWO textbase.</para>
-          <para>The WWP’s first call for submissions went online in March 2009.</para><!-- When was WWiC first published? Was it always in eXist? ~Ash -->
+          <para><link xlink:href="https://wwp.northeastern.edu/about/announcements_archive.html#wwic_2013-04-30">WWiC was first published in 2013</link> as an eXist-based API and a Backbone.js web application.</para>
           <para>Open access.</para>
         </listitem>
       </varlistentry>
@@ -567,7 +580,7 @@ These assumptions are often complexly layered and may even represent divergent p
         <term><link xlink:href="https://wwp.northeastern.edu/review/">Women Writers in Review</link> (WWiR)</term>
         <listitem>
           <para>The WWP’s collection of 18th- and 19th-century reviews and other texts which respond to the works of early women writers.</para>
-          <para>WWiR is the product of “<link xlink:href="https://wwp.northeastern.edu/research/projects/reception/">Cultures of Reception</link>,” a 2011–2015 research project funded by the National Endowment for the Humanities.</para>
+          <para>WWiR is the product of “<link xlink:href="https://wwp.northeastern.edu/research/projects/reception/">Cultures of Reception</link>,” a 2011–2015 research project funded by the National Endowment for the Humanities. <link xlink:href="https://wwp.northeastern.edu/about/announcements_archive.html#review-2016-11-16">WWiR was first published in 2016</link> as an eXist-based API and a Backbone.js web application.</para>
           <para>Open access.</para>
         </listitem>
       </varlistentry>
@@ -575,7 +588,7 @@ These assumptions are often complexly layered and may even represent divergent p
         <term><link xlink:href="https://wwp.northeastern.edu/intertextual-networks">Women Writers: Intertextual Networks</link> (WW:IN)</term>
         <listitem>
           <para>A bibliography and extracts from WWO, surfacing the sources of quotations, allusions, and citations in the Women Writers Online textbase.</para>
-          <para>WW:IN came out of the grant-funded research project <link xlink:href="https://wwp.northeastern.edu/research/projects/intertextuality/index.html">Intertextual Networks</link>, which began in 2016 by augmenting the WWO markup. WW:IN was first published in 2022. Since its launch, it has been taken down periodically due to overzealous scraping.</para>
+          <para>WW:IN came out of the grant-funded research project <link xlink:href="https://wwp.northeastern.edu/research/projects/intertextuality/index.html">Intertextual Networks</link>, which began in 2016 by augmenting the WWO markup. <link xlink:href="https://wwp.northeastern.edu/about/announcements_archive.html#wwin-2022-05-25">WW:IN was first published in 2022</link> as an application hosted entirely from an eXist-db instance. Since its launch, it has been taken down periodically due to overzealous scraping.</para>
           <para>Open access.</para>
         </listitem>
       </varlistentry>
