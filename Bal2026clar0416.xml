@@ -351,22 +351,24 @@
       When the TEI was transformed into HTML, <code>&lt;vuji></code> became an HTML <code>&lt;span></code>, and its text content flipped to the modern version.</para>
       <figure>
         <mediaobject>
+          <alt>Zoomed-in screenshot of a Women Writers Online document next to the browser’s Inspector tool.</alt>
           <imageobject>
             <imagedata fileref="img/Bal2026clar041601_injurious.png" width="700"/>
           </imageobject>
         </mediaobject>
         <caption>
-          <para>Screenshot of <emphasis>Jane Anger Her Protection for Women</emphasis>, as it first appears in Women Writers Online. The word “injurious” has been highlighted. The browser’s Inspector tool shows that the letter “j” is encoded in HTML as <code>&lt;span class="icor icor-reg">j&lt;/span></code>.</para>
+          <para><emphasis>Jane Anger Her Protection for Women</emphasis>, as it first appears in Women Writers Online. The word “injurious” has been highlighted. The browser’s Inspector tool shows that the letter “j” is encoded in HTML as <code>&lt;span class="icor icor-reg">j&lt;/span></code>.</para>
         </caption>
       </figure>
       <figure xml:id="wwo-original-type">
         <mediaobject>
+          <alt>Fuller screenshot of the same document in WWO. To the left of the document reader are panes for search, preferences, and contextual metadata.</alt>
           <imageobject>
             <imagedata fileref="img/Bal2026clar041602_iniurious.png" width="850"/>
           </imageobject>
         </mediaobject>
         <caption>
-          <para>Screenshot of <emphasis>Jane Anger Her Protection for Women</emphasis> in Women Writers Online, with the “Show original typographical features” preference toggled on. The highlighted word now reads “iniurious”, as it did in the 1589 publication. The browser’s Inspector tool shows that the letter “j” was changed to <code>&lt;span class="icor icor-reg" data-wwo-orig="i">i&lt;/span></code> in the Document Object Model.</para>
+          <para><emphasis>Jane Anger Her Protection for Women</emphasis> with the “Show original typographical features” preference toggled on. The highlighted word now reads “iniurious”, as it did in the 1589 publication. The browser’s Inspector tool shows that the letter “j” was changed to <code>&lt;span class="icor icor-reg" data-wwo-orig="i">i&lt;/span></code> in the Document Object Model.</para>
         </caption>
       </figure>
       <para>Unfortunately, the new feature had the unfortunate side effect of reducing XTF’s ability to index and search older documents, because a
