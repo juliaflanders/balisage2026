@@ -525,21 +525,22 @@ In order to retain both the toggle feature and the collection’s searchability,
       did not alert them that the page had changed. If the request had been allowed to go through
       the browser, a screen reader would have informed the blind user that they had gone to a new
       page as a result of their request, with the search results found within the content of the
-      page.</para>
-    <para>By removing usability barriers such as low color contrast, we extend our invitation for
-      use and reuse further, to people of all abilities. And by preferring semantic HTML markup over
-      CSS formatting, we bring the full semantics of the markup into focus.</para>
+      page. By removing usability barriers, we extend our invitation for use and reuse to people of
+      all abilities. And by preferring semantic HTML markup over CSS formatting, we bring the full
+      semantics of the markup into focus.</para>
+    <para>It is worth situating this work against the Principles that we are using as our
+      foundation. The Endings Principles are written in technical language: prescriptions for each
+      component of a digital project. The Principles are also an enactment of a philosophical
+      framework designed by the UVic Humanities Computing and Media Centre. As we considered the
+      Endings Principles, we sought to understand the framework behind the Principles, and to map
+      that framework onto the WWP’s own ethos. There are no accompanying Endings Principles for the
+      accessibility of the interface, and the UVic team may have taken it for granted that the data
+      should be embodied in the design and features of the interface, not just served alongside.
+      These ideas are, however, natural extensions of Endings Project’s philosophical framework, and
+      part of the WWP’s framework. As publications and user-facing tools, web interfaces are the
+      most prominent manifestation of our markup.</para>
   </section>
-  
-  <!-- Ash: Bring static sites into conversation with enriched data and interfaces 
-          Philosophy pivot to Endings Principles
-          Things that look like technical practice are an enactment of a philosophical framework
-       We agree with the Principles but have additions on it
-       Engaging readers with the static site powered interface
-       Loop back around from process to impact, synthesis
-  -->
   <section>
-    <!-- Both: stronger conclusion -->
     <title>Synthesis</title>
   	<para>Michael Sperberg-McQueen, in his 2012 keynote at the Knowledge Organization and Data Modeling conference, said that <quote>modeling is a way to make explicit our assumptions about the nature of a text/artefact</quote> (<xref linkend="sperbergmcqueen2012"/>).
 These assumptions are often complexly layered and may even represent divergent perspectives or possibilities in the text. The tools that express the potential of our modeling also participate in making those assumptions explicit, by enacting some of the practical or analytical consequences of those assumptions: if the modeling tells us that certain passages are endnotes, our page generation can gather them at the end of the text; if the modeling tells us that certain readings are typographical errors, our search tool can ignore them. We might thus think of tools as an intensification of the rhetorical aspect of markup: the space where the provisional, suspended <emphasis>potential</emphasis> of descriptive markup for action is realized, within a specific set of rhetorical conditions: audience, purpose, XXX. Because of its long history, the WWP has had an unusual opportunity to express the potential of its markup in a changing set of rhetorical contexts, and through tools that realize the basic activities of reading, searching, and analysis in somewhat different ways. What these experiments have revealed is the durability and adequacy of the TEI's general approach, and of the WWP's particular implementation of that approach. </para>
@@ -566,7 +567,7 @@ These assumptions are often complexly layered and may even represent divergent p
         <listitem>
           <para>The WWP’s flagship publication, a collection of works by women which were originally published between 1526 and 1850.</para>
           <para>WWO was first published in 1999. “<xref linkend="evolution-of-toolsets"/>” provides details about WWO’s publication history.</para>
-          <para><link xlink:href="https://wwp.northeastern.edu/wwo/license/">Access is limited to subscribers.</link></para>
+          <para><link xlink:href="https://wwp.northeastern.edu/wwo/license/">Access to WWO is limited to subscribers.</link></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -574,7 +575,7 @@ These assumptions are often complexly layered and may even represent divergent p
         <listitem>
           <para>A collection of modern “exhibits” — scholarly publications which provide context and create connections between works in the WWO textbase.</para>
           <para><link xlink:href="https://wwp.northeastern.edu/about/announcements_archive.html#wwic_2013-04-30">WWiC was first published in 2013</link> as an eXist-based API and a Backbone.js web application.</para>
-          <para>Open access.</para>
+          <para>WWiC is open access.</para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -582,7 +583,7 @@ These assumptions are often complexly layered and may even represent divergent p
         <listitem>
           <para>The WWP’s collection of 18th- and 19th-century reviews and other texts which respond to the works of early women writers.</para>
           <para>WWiR is the product of “<link xlink:href="https://wwp.northeastern.edu/research/projects/reception/">Cultures of Reception</link>,” a 2011–2015 research project funded by the National Endowment for the Humanities. <link xlink:href="https://wwp.northeastern.edu/about/announcements_archive.html#review-2016-11-16">WWiR was first published in 2016</link> as an eXist-based API and a Backbone.js web application.</para>
-          <para>Open access.</para>
+          <para>WWiR is open access.</para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -590,7 +591,7 @@ These assumptions are often complexly layered and may even represent divergent p
         <listitem>
           <para>A bibliography and extracts from WWO, surfacing the sources of quotations, allusions, and citations in the Women Writers Online textbase.</para>
           <para>WW:IN came out of the grant-funded research project <link xlink:href="https://wwp.northeastern.edu/research/projects/intertextuality/index.html">Intertextual Networks</link>, which began in 2016 by augmenting the WWO markup. <link xlink:href="https://wwp.northeastern.edu/about/announcements_archive.html#wwin-2022-05-25">WW:IN was first published in 2022</link> as an application hosted entirely from an eXist-db instance. Since its launch, it has been taken down periodically due to overzealous scraping.</para>
-          <para>Open access.</para>
+          <para>WW:IN is open access.</para>
         </listitem>
       </varlistentry>
     </variablelist>
