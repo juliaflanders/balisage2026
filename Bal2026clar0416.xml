@@ -55,7 +55,7 @@
   	<para>The Women Writers Project (WWP) has been working with text markup for nearly 40 years, as part of its founding mission to recover and republish the works of early women writers. Founded at nearly the same time as the establishment of the SGML standard and of the Text Encoding Initiative (TEI), the WWP has by necessity treated its work as long-term active research undertaking that concerns not only these evolving markup systems but also the complex web of tools through which text markup can be created, assessed, and put into practical use for publication and analysis. The WWP has sought not only to build a stable, sustainable working system, but also to keep pace with new developments in both markup and tools, and explore their implications for research on early women’s writing. The intertwined history and co-evolution of these two sets of practices within the WWP’s many decades of work thus far offers a valuable perspective on the history of scholarly usage of markup in the humanities. This paper will explore the evolution of the WWP’s theory and practice of markup, from its pre-TEI origins to our present-day usage; as well as the evolution of the project’s publication systems, from its first forays into digital publication through DynaWeb to our planned implementation of a static-site framework that responds to the recommendations of the Endings Principles. We also consider the reciprocal pressure that tools and markup exert on each other, and the nuanced ways in which markup responds to the changing intellectual paradigms proposed by successive generations of tools and technologies (and vice versa).</para>
 
   </section>
-	<section><!-- When editing, look for things to cut for brevity, conciseness -->
+	<section>
     <title>Evolution of the WWP’s theory and practice of markup</title>
     <para>The WWP’s earliest markup practices were anchored in typesetting tools: student encoders
       starting in 1988 used Waterloo Script to capture functional textual units and formatting
@@ -209,7 +209,7 @@
       	<mediaobject>
       		<alt>A screenshot of the table of contents of the first iteration of Women Writers Online.</alt>
       		<imageobject>
-      			<imagedata fileref="./images/1999Dyna_3TOC.png"/>
+      			<imagedata fileref="./img/Bal2026clar041601.png"/>
       		</imageobject>
       		<caption>
       			<para>The first version of WWO had a table of contents with expandable items showing the major sections of each work.</para>
@@ -220,7 +220,7 @@
       	<mediaobject>
       		<alt>A screenshot of the search interface of the first iteration of Women Writers Online.</alt>
       		<imageobject>
-      			<imagedata fileref="./images/1999Dyna_6Gendersearch.png"/>
+      			<imagedata fileref="./img/Bal2026clar041602.png"/>
       		</imageobject>
       		<caption>
       			<para>The search interface for the first version of WWO included context-sensitivity and wildcards.</para>
@@ -231,7 +231,7 @@
       	<mediaobject>
       		<alt>A screenshot of the search results interface of the first iteration of Women Writers Online.</alt>
       		<imageobject>
-      			<imagedata fileref="./images/1999Dyna_7bGenderresults.png"/>
+      			<imagedata fileref="./img/Bal2026clar041603.png"/>
       		</imageobject>
       		<caption>
       			<para>The early WWO search results included a keyword-in-context option, with links to both the inidividual hit and the text as a whole.</para>
@@ -257,7 +257,7 @@
       	<mediaobject>
       		<alt>A screenshot of the search results interface of the second iteration of Women Writers Online, showing fuzzy matching and search refinement options.</alt>
       		<imageobject>
-      			<imagedata fileref="./images/2005Philo_fuzzy_match.jpg"/>
+      			<imagedata fileref="./img/Bal2026clar041604.jpg"/>
       		</imageobject>
       		<caption>
       			<para>The second iteration of the WWO search offered fuzzy matching and the ability to refine search results.</para>
@@ -268,7 +268,7 @@
       	<mediaobject>
       		<alt>A screenshot of the collocation results from the second iteration of Women Writers Online.</alt>
       		<imageobject>
-      			<imagedata fileref="./images/2005Philo_wwo_her_collocates.png"/>
+      			<imagedata fileref="./img/Bal2026clar041605.png"/>
       		</imageobject>
       		<caption>
       			<para>The second iteration of WWO also offered collocations.</para>
@@ -350,7 +350,7 @@
         <mediaobject>
           <alt>Zoomed-in screenshot of a Women Writers Online document next to the browser’s Inspector tool.</alt>
           <imageobject>
-            <imagedata fileref="img/Bal2026clar041601_injurious.png" width="700"/>
+            <imagedata fileref="img/Bal2026clar041606.png" width="700"/>
           </imageobject>
         </mediaobject>
         <caption>
@@ -361,7 +361,7 @@
         <mediaobject>
           <alt>Fuller screenshot of the same document in WWO. To the left of the document reader are panes for search, preferences, and contextual metadata.</alt>
           <imageobject>
-            <imagedata fileref="img/Bal2026clar041602_iniurious.png" width="850"/>
+            <imagedata fileref="img/Bal2026clar041607.png" width="850"/>
           </imageobject>
         </mediaobject>
         <caption>
