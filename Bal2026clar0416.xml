@@ -28,9 +28,9 @@
         <firstname>Julia</firstname>
         <surname>Flanders</surname>
       </personname>
-      <personblurb><!-- Julia blurb -->
-        <para>Julia Flanders is the Director of the Women Writers Project and Director of the
-          Northeastern University Library’s Digital Scholarship Group.</para>
+      <personblurb>
+        <para>Julia Flanders (she/her/hers) is the Director of the Women Writers Project and Director of the
+          Northeastern University Library’s Digital Scholarship Group. She has long-standing research interests in markup systems and in the role they play in mediating cultural heritage and literary history. </para>
       </personblurb>
       <affiliation>
         <orgname>Northeastern University</orgname>
@@ -55,7 +55,7 @@
   	<para>The Women Writers Project (WWP) has been working with text markup for nearly 40 years, as part of its founding mission to recover and republish the works of early women writers. Founded at nearly the same time as the establishment of the SGML standard and of the Text Encoding Initiative (TEI), the WWP has by necessity treated its work as long-term active research undertaking that concerns not only these evolving markup systems but also the complex web of tools through which text markup can be created, assessed, and put into practical use for publication and analysis. The WWP has sought not only to build a stable, sustainable working system, but also to keep pace with new developments in both markup and tools, and explore their implications for research on early women’s writing. The intertwined history and co-evolution of these two sets of practices within the WWP’s many decades of work thus far offers a valuable perspective on the history of scholarly usage of markup in the humanities. This paper will explore the evolution of the WWP’s theory and practice of markup, from its pre-TEI origins to our present-day usage; as well as the evolution of the project’s publication systems, from its first forays into digital publication through DynaWeb to our planned implementation of a static-site framework that responds to the recommendations of the Endings Principles. We also consider the reciprocal pressure that tools and markup exert on each other, and the nuanced ways in which markup responds to the changing intellectual paradigms proposed by successive generations of tools and technologies (and vice versa).</para>
 
   </section>
-	<section><!-- When editing, look for things to cut for brevity, conciseness -->
+	<section>
     <title>Evolution of the WWP’s theory and practice of markup</title>
     <para>The WWP’s earliest markup practices were anchored in typesetting tools: student encoders
       starting in 1988 used Waterloo Script to capture functional textual units and formatting
@@ -91,7 +91,6 @@
         <para>This <link xlink:href="https://tei-c.org/Vault/GL/P3/CO.htm#COEDCOR">P3-era TEI encoding</link> indicates that the typesetter used the zero character in error (or out of necessity). The transcriber indicates that the correct character is the capital letter “O”.</para>
       </caption>
     </figure>
-		<!-- NB our approach served us well in the longer term because it better captured the "truth" of the informational text; greater robustness of display and behavior -->
     <para>The WWP’s early work on rendition ladders provided an opportunity to explore how far the
       material and visual properties of texts could be formalized for descriptive (rather than
       output) purposes.</para>
@@ -293,7 +292,7 @@
       on a timeline, or as a list of matching search results — keywords in context for multiple WWO
       documents. One can then focus in on a more specific area (e.g. a specific genre or time
       period) and finally on a specific text. Although this interface doesn’t fully implement this
-      idea, it introduces it and makes it possible.</para>
+      idea, it introduces it and makes it possible. And within this interactive paradigm of usage, markup has a very significant role to play: it makes all features of the text potentially discoverable and operable ("addressable" to use Michael Witmore's term) [<xref linkend="witmore2012"/>], not only as hooks for formatting and presentation but also as informational filters and points of correlation. However, for the WWP, the challenge has been to anticipate and present those opportunities to users without requiring them, in effect, to write XPath expressions.</para>
     <para>Around the same time, the WWP universe began to expand beyond Women Writers Online. The
       WWP produced Women Writers in Context (WWiC), a collection of modern scholarly essays
       providing crucial background for the documents, authors, and genres found in WWO. Later, Women
@@ -541,8 +540,9 @@ In order to retain both the toggle feature and the collection’s searchability,
   <section>
     <!-- Both: stronger conclusion -->
     <title>Synthesis</title>
-  	<para>Michael Sperberg-McQueen, in his 2012 keynote at the Knowledge Organization and Data Modeling conference, said that <quote>modeling is a way to make explicit our assumptions about the nature of a text/artefact</quote> (<xref linkend="sperbergmcqueen2012"/>).
-These assumptions are often complexly layered and may even represent divergent perspectives or possibilities in the text. The tools that express the potential of our modeling also participate in making those assumptions explicit, by enacting some of the practical or analytical consequences of those assumptions: if the modeling tells us that certain passages are endnotes, our page generation can gather them at the end of the text; if the modeling tells us that certain readings are typographical errors, our search tool can ignore them. We might thus think of tools as an intensification of the rhetorical aspect of markup: the space where the provisional, suspended <emphasis>potential</emphasis> of descriptive markup for action is realized, within a specific set of rhetorical conditions: audience, purpose, XXX. Because of its long history, the WWP has had an unusual opportunity to express the potential of its markup in a changing set of rhetorical contexts, and through tools that realize the basic activities of reading, searching, and analysis in somewhat different ways. What these experiments have revealed is the durability and adequacy of the TEI's general approach, and of the WWP's particular implementation of that approach. </para>
+  	<para>Michael Sperberg-McQueen, in his 2012 keynote at the Knowledge Organization and Data Modeling conference, said that <quote>modeling is a way to make explicit our assumptions about the nature of a text/artefact</quote> (<xref linkend="sperbergmcqueen2012"/>). These assumptions are often complexly layered and may even represent divergent perspectives or possibilities in the text. The tools that express the potential of our modeling also participate in making those assumptions explicit, by enacting some of the practical or analytical consequences of those assumptions: if the modeling tells us that certain passages are endnotes, our page generation can gather them at the end of the text; if the modeling tells us that certain readings are typographical errors, our search tool can ignore them. We might thus think of tools as an intensification of the rhetorical aspect of markup: the space where the provisional, suspended <emphasis>potential</emphasis> of descriptive markup for action is realized, within a specific set of rhetorical conditions: audience, purpose, context. Because of its long history, the WWP has had an unusual opportunity to express the potential of its markup in a changing set of rhetorical contexts, and through tools that realize the basic activities of reading, searching, and analysis in somewhat different ways. What these experiments have revealed is the durability and adequacy of the TEI's general approach, and of the WWP's particular implementation of that approach. </para>
+  	<para>The WWP's history draws on lines of research by researchers including Allen Renear, Michael Sperberg-McQueen, and Paul Caton that focuses strongly on markup as the essence of textual meaning</para>
+
   	<para>Interfaces as manifestations of markup; an invitation to the user to interact; 
   	- an important part of our history is the Renear/Sperberg/Caton line of thinking about formalism, where markup is where the real intellectual action is (logic, testable propositions)
   	- we're drawing on that, but at the same time we're aware that for our users, the role of markup (though no less important) is elsewhere: manifesting/transacting a relationship between material artifacts of the past and usable manifestations via interfaces in the present
@@ -630,5 +630,6 @@ These assumptions are often complexly layered and may even represent divergent p
       2014. Originally presented as a talk at Brown University, April 17, 2010.</bibliomixed>
     <bibliomixed xml:id="sperbergmcqueen2012" xreflabel="Sperberg-McQueen 2012">Sperberg-McQueen, C. M. Keynote Address. Knowledge Organization and Data Modeling in the Humanities, 16 March 2012, Brown University, Providence, RI. <link xlink:href="https://youtu.be/2F98I3bbOVM">youtu.be/2F98I3bbOVM</link></bibliomixed>
     <bibliomixed xml:id="teip5about" xreflabel="TEI Guidelines, “About These Guidelines”">TEI Consortium. “iv. About These Guidelines.” In <emphasis>TEI: Guidelines for Electronic Text Encoding and Interchange</emphasis>, P5 Version 4.11.0, 18 Feb. 2026. <link xlink:href="https://tei-c.org/release/doc/tei-p5-doc/en/html/AB.html#ABTEI">tei-c.org/release/doc/tei-p5-doc/en/html/AB.html#ABTEI</link>.</bibliomixed>
+  	<bibliomixed xml:id="witmore2012">Witmore, Michael. “Text: A Massively Addressable Object,” in <emphasis>Debates in Digital Humanities</emphasis>, edited by Matthew Gold. University of Minnesota Press, 2012. <link xlink:href="https://dhdebates.gc.cuny.edu/read/untitled-88c11800-9446-469b-a3be-3fdb36bfbd1e/section/402e7e9a-359b-4b11-8386-a1b48e40425a#p4b3"></link></bibliomixed>
   </bibliography>
 </article>
