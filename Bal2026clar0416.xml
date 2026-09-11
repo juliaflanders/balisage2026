@@ -436,7 +436,10 @@ In order to retain both the toggle feature and the collection’s searchability,
       </footnote> 
         As we prepared to revise our paper in June 2026, they announced a beta version of 7.0.0, the next major version of eXist — and with it, a 90% success rate against 31,815 tests, a commendable increase from version 6.4.1’s 80% success rate. (<xref linkend="exist7beta"/>)</para>
     </note>
-    <para>By the close of the retreat, we decided it would be prudent to familiarize ourselves with
+    
+  <section>
+    <title>The Endings Principles</title>
+    <para>By the close of our retreat, we decided it would be prudent to familiarize ourselves with
       the outcomes of the <link xlink:href="https://endings.uvic.ca/">Endings Project</link>. Convened in 2016 by the
       University of Victoria’s Humanities Computing and Media Centre, the Endings Project’s goal was to
       develop and recommend practices that would aid the longevity of their digital artifacts. In 2018, the team
@@ -445,7 +448,24 @@ In order to retain both the toggle feature and the collection’s searchability,
       used, cited, reproduced, and archived. By building for open use, the Endings Project argues,
       the digital products are far more likely to be reused and maintained, and thus, more likely to
       survive.</para>
-    <para>The Endings Project promotes the use of standalone, static websites, with no server-side
+    
+    <para>The Endings Principles assume:
+      <itemizedlist>
+        <listitem>
+          <para>that your tools and data are really part of the same ecosystem, and that they are being generated and updated in tandem, in mutual responsiveness;</para>
+        </listitem>
+        <listitem>
+          <para>that you have a very direct role in developing and maintaining your tool set;</para>
+        </listitem>
+        <listitem>
+          <para>that for limited sectors of your audience, reusing and repurposing the source data may be as important as interacting with the site itself; and</para>
+        </listitem>
+        <listitem>
+          <para>that tools and code, being <quote>necessarily impermanent</quote> (<xref linkend="holmes2023b"/>), should produce products which can be used independently of further processing.</para>
+        </listitem>
+      </itemizedlist>
+    </para>
+    <para>The Principles lay out prescriptions for a project’s data, documentation, processing, products, and release management. Each principle works toward the goal of granting digital longevity to the project’s products. To that end, the Endings Project promotes the use of standalone, static websites, with no server-side
       processing or backend components. The HTML markup is not programmatically built out after the
       page loads; all content is available and all dependencies are satisfied simply by accessing
       the file. (<xref
@@ -464,8 +484,13 @@ In order to retain both the toggle feature and the collection’s searchability,
       a usable form. Every server-side dependency is a barrier to replication and therefore to 
       survival</quote> (<xref linkend="holmes2023b"/>). It is important for the Internet Archive to be 
       able to create WARC files from a digital humanities project’s site, but it is just as important 
-      for the project to be able to transfer ownership of the site to a repository or library for 
+      for the project to be able to transfer ownership of the site (with its incorporated data, documentation, and code) to a repository or library for 
       hosting and long-term maintenance.</para>
+  </section>
+    
+  <section>
+    <title>Synthesis of tools and data</title>
+    <!--<para>The Endings Principles themselves are hugely influential and important, and they speak to an important turn in discussions and theorizations of tools within the digital humanities project ecology.</para>-->
     <para>Though the WWP puts much of our emphasis on the markup — without which, there would be no
       publication — the Endings Project counsels against considering our data alone as enough for
       project preservation. Dynamic <quote>products</quote> such as website interfaces are <quote>arguably the most
@@ -496,8 +521,6 @@ In order to retain both the toggle feature and the collection’s searchability,
       to BaseX, as well as documenting and automating the publication processes. 
       This step mostly consists of rewriting XQuery code so that a BaseX environment can produce the same JSON output that eXist currently does. The goal of this step is to ensure more people can publish new records and maintain the site, but where possible, we are also trying to make it easier to accomplish the work to come.
     </para>
-    <para>
-      </para>
     <para>For Women Writers in Review and Women Writers in Context, the next step will be to shift away from single-page Javascript applications
       and towards giving the user a complete HTML page on request.<note>
         <para>Women Writers in Review and Women Writers in Context each have a single index page. On
@@ -542,6 +565,7 @@ In order to retain both the toggle feature and the collection’s searchability,
       These ideas are, however, natural extensions of Endings Project’s philosophical framework, and
       part of the WWP’s framework. As publications and user-facing tools, web interfaces are the
       most prominent manifestation of our markup.</para>
+  </section>
   </section>
   <section>
     <title>Conclusions and Next Steps</title>
