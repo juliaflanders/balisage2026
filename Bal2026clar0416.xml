@@ -468,39 +468,26 @@ In order to retain both the toggle feature and the collection’s searchability,
   <section>
     <title>The Endings Principles</title>
     <para>By the close of our retreat, we decided it would be prudent to familiarize ourselves with
-      the outcomes of the <link xlink:href="https://endings.uvic.ca/">Endings Project</link>. Convened in 2016 by the
+      the outcomes of the <link xlink:href="https://endings.uvic.ca/">Endings Project</link>. Initiated in 2016 by the
       University of Victoria’s Humanities Computing and Media Centre, the Endings Project’s goal was to
       develop and recommend practices that would aid the longevity of their digital artifacts. In 2018, the team
-      released their first version of the “Endings Principles for Digital Longevity” (<xref linkend="endings"/>). 
-      These principles describe the foundations of a digital project which can be
-      used, cited, reproduced, and archived. By building for open use, the Endings Project argues,
-      the digital products are far more likely to be reused and maintained, and thus, more likely to
-      survive.</para>
-    
-    <para>The Endings Principles assume:
-      <itemizedlist>
-        <listitem>
-          <para>that your tools and data are really part of the same ecosystem, and that they are being generated and updated in tandem, in mutual responsiveness;</para>
-        </listitem>
-        <listitem>
-          <para>that you have a very direct role in developing and maintaining your tool set;</para>
-        </listitem>
-        <listitem>
-          <para>that for limited sectors of your audience, reusing and repurposing the source data may be as important as interacting with the site itself; and</para>
-        </listitem>
-        <listitem>
-          <para>that tools and code, being <quote>necessarily impermanent</quote> (<xref linkend="holmes2023b"/>), should produce products which can be used independently of further processing.</para>
-        </listitem>
-      </itemizedlist>
-    </para>
-    <para>The Principles lay out prescriptions for a project’s data, documentation, processing, products, and release management. Each principle works toward the goal of granting digital longevity to the project’s products. To that end, the Endings Project promotes the use of standalone, static websites, with no server-side
+      released their first version of the “Endings Principles for Digital Longevity” (<xref linkend="endings"/>), 
+      which describes infrastructure to make sure that digital products can be
+      used, cited, reproduced, and archived.</para>
+    <para>The Endings Principles lay out prescriptions for a project’s data, documentation, processing, products, and release management. Each principle works toward the goal of granting digital longevity to the project’s products.
+      For instance, the very first principle states that <emphasis>data</emphasis> should be <quote>stored only in formats that conform to open standards and that are amenable to processing</quote> (<xref linkend="endings"/>), such as TEI markup.
+      The Principles also recommend documentation, <quote>relentless</quote> validation, version control, versioning, and continuous integration. By existing outside of a black box, the Endings Project argues,
+      digital products are far more likely to be reused and maintained, and thus, more likely to
+      survive.
+      </para>
+    <para>For products, the Endings Project  promotes the use of standalone, static websites, with no server-side
       processing or backend components. The HTML markup is not programmatically built out after the
-      page loads; all content is available and all dependencies are satisfied simply by accessing
+      page loads — rather, all content is available and all dependencies are satisfied simply by accessing
       the file (<xref
         linkend="endings"/>). This greatly aids those who intentionally set out to archive the project materials,
       such as a digital repository or the Internet Archive’s Wayback Machine. The static site
       approach also makes it easy for researchers and other users to become casual archivists. It is
-      not necessary to use extensions or software to generate a <link xlink:href="https://iipc.github.io/warc-specifications/specifications/warc-format/warc-1.1-annotated/">WARC file</link> from the page; saving the
+      not necessary to use extensions or software to generate an archivable <link xlink:href="https://iipc.github.io/warc-specifications/specifications/warc-format/warc-1.1-annotated/">WARC file</link> from the page; saving the
       page as an HTML file is enough to obtain your own working copy.</para>
     <para>Crucially, the Endings Project does not intend for digital humanities projects to pursue 
       archival solutions on their own. The survival of the original publication 
@@ -518,7 +505,25 @@ In order to retain both the toggle feature and the collection’s searchability,
     
   <section>
     <title>Synthesis of tools and data</title>
-    <!--<para>The Endings Principles themselves are hugely influential and important, and they speak to an important turn in discussions and theorizations of tools within the digital humanities project ecology.</para>-->
+    <para>The Endings Principles themselves are hugely influential and important, and they speak to an important turn in discussions and theorizations of tools within the digital humanities project ecology. They represent a thorough exploration of the implications of an open-source, minimal-computing orientation towards project development.
+    </para>
+    <para>The Endings Principles assume:
+      <itemizedlist>
+        <listitem>
+          <para>that your tools and data are really part of the same ecosystem, and that they are being generated and updated in tandem, in mutual responsiveness;</para>
+        </listitem>
+        <listitem>
+          <para>that you have a very direct role in developing and maintaining your tool set;</para>
+        </listitem>
+        <listitem>
+          <para>that for limited sectors of your audience, reusing and repurposing the source data may be as important as interacting with the site itself; and</para>
+        </listitem>
+        <listitem>
+          <para>that tools and code, being <quote>necessarily impermanent</quote> (<xref linkend="holmes2023b"/>), should produce products which can be used independently of further processing.</para>
+        </listitem>
+      </itemizedlist>
+    </para>
+    <para>However, the Principles also state that <quote>wherever possible, all code should follow Endings principles for data and products</quote> (<xref linkend="endings"/>), making use of open formats, versioning, documentation, and so on. Following the Principles can be a boon for maintaining the project’s code and tools, as well as enabling the publication and reuse of the code by others.</para>
     <para>Though the WWP puts much of our emphasis on the markup — without which, there would be no
       publication — the Endings Project counsels against considering our data alone as enough for
       project preservation. Dynamic <quote>products</quote> such as website interfaces are <quote>arguably the most
@@ -535,6 +540,9 @@ In order to retain both the toggle feature and the collection’s searchability,
           current era of digital communication survives, it will be HTML. So our HTML is more likely
           to be reused than our XML in the long term.</para>
       </blockquote> (<xref linkend="holmes2023b"/>)</para>
+    <para>The Endings Principles don’t say explicitly that a project’s data is embodied in its product, the static website. However, FRBR adds a useful layer here: the process of turning data into a digital resource is creating a <emphasis>manifestation</emphasis> of that data and the knowledge embedded in it. Manifestation is lossy — not every feature of the data can be represented in the site. However, as the Endings Principles hold, this manifestation is especially important to digital longevity, because more people will be able to use a project’s website than its data.</para>
+    <para>The tools which aid and perform that embodiment, that mapping of markup to brower page, serve reciprocally in the continued development of the data. As a means of manifestation, tools can provide a space for engaging with the modeling, design, and expression of data. The tool therefore may have something to say to the data that comes from the same intellectual space: not an intrusion or an unwarranted constraint or deflection from its true purpose, but a learning opportunity.
+    </para>
     <para>In our pursuit of maintainability, the WWP is working towards greater synthesis between
       markup, documentation, and website, especially for Women Writers Online. We intend to make it
       easier for users to download WWO’s TEI, packaging the files as part of the interface.
@@ -601,12 +609,12 @@ In order to retain both the toggle feature and the collection’s searchability,
   	<para>In the spirit of that continued experimentation, there are some research questions which feel urgent:
   	<itemizedlist>
   		<listitem>
-  			<para><emphasis>How to make tools a benign and cheap aspect of digital humanities project development and support.</emphasis> Arguably, it is the continued expansion of the digital humanities tool set (and its dependencies on tools and standards whose pace of development is determined by industry) that constitutes the greatest challenge to sustainability.
+  			<para><emphasis role="bold">How to make tools a benign and cheap aspect of digital humanities project development and support.</emphasis> Arguably, it is the continued expansion of the digital humanities tool set (and its dependencies on tools and standards whose pace of development is determined by industry) that constitutes the greatest challenge to sustainability.
 This is why the Endings Principles set such firm boundaries on those dependencies. This raises several questions: Does the XML tool set need to continue to evolve, and does its evolution necessarily involve a threat to the stable operation of older projects, requiring ongoing intervention to keep them operational? A project like the WWP has the resources to continue to evolve a data set and a publication like WWO, but we do not always have the resources to evolve the toolsets of Women Writers in Context, Women Writers in Review, and Women Writers: Intertextual Networks in turn. Other projects will also have to wrestle with this. At what point does the maintainability burden become too much? The Endings Project argues that projects can persist longer in their research by adopting static site, Endings-compliant tools earlier, or (better still) from the start: what are the concomitant challenges, costs, and constraints of that approach?
 </para>
   		</listitem>
   		<listitem>
-  			<para><emphasis>How to make tools that engage users more directly with the data, not less.</emphasis> At one point, the WWP had an idea of providing readers with some kind of “user-friendly” or “human-language” interface for doing XPath searches that would not require users to know about our TEI markup, but would draw instead on their understanding of how early modern texts work. For example: sometimes there may be dialogue (or references to places, or handwritten annotations…) within poems, or that there may be poems or letters or footnotes within plays, or [etc.!]. Ideally, such a system would be able to mediate between that conceptual level of “structure” and the much more detailed (and also variable) representation of textual structure in the TEI markup. For example, there might be several intervening unpredictable layers between the “poem” (&lt;lg&gt;) and the “play” (&lt;div type="act | scene"&gt;), or that there might be several different ways of representing a letter. We did not end up pursuing this idea, because it was difficult and was never was the most urgent user interface priority, but the motivations are interesting: make readers aware of the data and get them interested in how the data works as a representational system. The question for further consideration is: are there methods within our current tool technologies to introduce layers of abstraction in this way–just enough distance from the data to meet the reader’s thought and research processes where they are, but not so much that the reader loses sight of the data as a conceptual system? What value does the conceptual system of the data itself retain, or accrue, for a digital humanities user? Will data and its modeling always be positioned as a poor approximation of the “real” research artifact, or will users at some point come to recognize and engage with the modeling work of their colleagues as a research artifact in its own right?
+  			<para><emphasis role="bold">How to make tools that engage users more directly with the data, not less.</emphasis> At one point, the WWP had an idea of providing readers with some kind of “user-friendly” or “human-language” interface for doing XPath searches that would not require users to know about our TEI markup, but would draw instead on their understanding of how early modern texts work. For example: sometimes there may be dialogue (or references to places, or handwritten annotations…) within poems, or that there may be poems or letters or footnotes within plays, or [etc.!]. Ideally, such a system would be able to mediate between that conceptual level of “structure” and the much more detailed (and also variable) representation of textual structure in the TEI markup. For example, there might be several intervening unpredictable layers between the “poem” (&lt;lg&gt;) and the “play” (&lt;div type="act | scene"&gt;), or that there might be several different ways of representing a letter. We did not end up pursuing this idea, because it was difficult and was never was the most urgent user interface priority, but the motivations are interesting: make readers aware of the data and get them interested in how the data works as a representational system. The question for further consideration is: are there methods within our current tool technologies to introduce layers of abstraction in this way–just enough distance from the data to meet the reader’s thought and research processes where they are, but not so much that the reader loses sight of the data as a conceptual system? What value does the conceptual system of the data itself retain, or accrue, for a digital humanities user? Will data and its modeling always be positioned as a poor approximation of the “real” research artifact, or will users at some point come to recognize and engage with the modeling work of their colleagues as a research artifact in its own right?
 </para>
   		</listitem>
   	</itemizedlist>
