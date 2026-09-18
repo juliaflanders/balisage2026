@@ -319,7 +319,34 @@ To come at this from another angle: markup can be understood as potential inform
       was reimagined as a dynamic, three-pane interface, with users seamlessly flowing from browsing
       to searching to reading a document. Within this design, WWO offered users a sense that
       searching/filtering, visualizing, and reading are really three manifestations or framings of
-      the same thing, at different levels of scale. This approach contrasted strongly with the
+      the same thing, at different levels of scale. The following screenshots show some examples.
+      
+      <figure>
+      	<mediaobject>
+      		<alt>A screenshot of the entry point for the XTF version of Women Writers Online.</alt>
+      		<imageobject>
+      			<imagedata fileref="./img/Bal2026clar041608.png"/>
+      		</imageobject>
+      		<caption>
+      			<para>The entry point for the XTF version of Women Writers Online (active starting in 2005), showing the simultaneous accessibility of search, filter, and browse.</para>
+      		</caption>
+      	</mediaobject>
+      </figure>
+    	 <figure>
+      	<mediaobject>
+      		<alt>A screenshot of the XTF version of Women Writers Online once a search has been executed.</alt>
+      		<imageobject>
+      			<imagedata fileref="./img/Bal2026clar041609.png"/>
+      		</imageobject>
+      		<caption>
+      			<para>Once a search has been executed, the XTF version of WWO shows search, context, and reading interface simultaneously.</para>
+      		</caption>
+      	</mediaobject>
+      </figure>
+      </para>
+  	
+  	<para>
+      This approach contrasted strongly with the
       traditional (at the time) search model in which users would first specify a set of search
       parameters and then execute a search to receive results—with the need to go back to the start
       of the process if the results were not what the user wanted. (A few years later, Stephen
