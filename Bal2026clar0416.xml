@@ -284,11 +284,7 @@ To come at this from another angle: markup can be understood as potential inform
       WWO running on Philologic. Philologic placed its emphasis on speed and power; it was
       database-driven and selective in its indexing, so that it was able to provide very fast search
       results as well as context-sensitive searching. Its search also included fuzzy matching, which
-      made it adept at handling the highly variable spelling in older WWO texts. This system served
-      us well for several years, but by 2011 the project was seeking a more modern XML framework
-      that would support more flexible experimentation with interface, responding to the significant
-      expansion of interface paradigms as “digital humanities” became a widespread academic
-      domain. The screenshots below illustrate some of these features:
+      made it adept at handling the highly variable spelling in older WWO texts. The screenshots below illustrate some of these features:
     <figure>
       	<mediaobject>
       		<alt>A screenshot of the search results interface of the second iteration of Women Writers Online, showing fuzzy matching and search refinement options.</alt>
@@ -312,7 +308,11 @@ To come at this from another angle: markup can be understood as potential inform
       	</mediaobject>
       </figure>
     </para>
-    <para>Starting in 2012, Women Writers Online was served out of <link xlink:href="https://xtf.cdlib.org/">XTF</link> (eXtensible Text Framework),
+    <para>This system served
+      us well for several years, but by 2011 the project was seeking a more modern XML framework
+      that would support more flexible experimentation with interface, responding to the significant
+      expansion of interface paradigms as “digital humanities” became a widespread academic
+      domain. Starting in 2012, Women Writers Online was served out of <link xlink:href="https://xtf.cdlib.org/">XTF</link> (eXtensible Text Framework),
       a Java- and XSLT-based publication system created by the California Digital Library. The WWP
       staff heavily customized XTF’s stylesheets in order to produce indexable versions of the WWO
       documents, as well as HTML representations for display. On the front end, Women Writers Online
