@@ -353,7 +353,7 @@ To come at this from another angle: markup can be understood as potential inform
       Ramsay’s essay on “The Hermeneutics of Screwing Around” [<xref linkend="ramsay2010"/>]
       captured the element of play and exploration that such “pipeline” systems foreclose.) By
       searching and filtering across WWO, one can “read” the corpus as a whole as a spread of dots
-      on a timeline, or as a list of matching search results — keywords in context for multiple WWO
+      on a timeline, or as a list of matching search results—keywords in context for multiple WWO
       documents. One can then focus in on a more specific area (e.g. a specific genre or time
       period) and finally on a specific text. Although this interface doesn’t fully implement this
       idea, it introduces it and makes it possible. And within this interactive paradigm of usage, markup has a very significant role to play: it makes all features of the text potentially discoverable and operable (<quote>addressable</quote> to use Michael Witmore’s term [<xref linkend="witmore2012"/>]), not only as hooks for formatting and presentation but also as informational filters and points of correlation. However, for the WWP, the challenge has been to anticipate and present those opportunities to users without requiring them, in effect, to write XPath expressions.</para>
@@ -471,7 +471,7 @@ In order to retain both the toggle feature and the collection’s searchability,
   <section>
     <title>Project sustainability</title>
     <para>In July 2023, the Women Writers Project staff held a retreat to discuss plans for the next
-      ten years of the WWP — what would the project need in order to continue on indefinitely, in
+      ten years of the WWP—what would the project need in order to continue on indefinitely, in
       areas such as staffing, technology, and administration? The retreat focused on staff analysis of
       various aspects of the project. Our markup and publication processes seemed stable for the
       moment, but analysis revealed that these systems were potentially at risk to events for which
@@ -486,17 +486,17 @@ In order to retain both the toggle feature and the collection’s searchability,
           <link xlink:href="https://web.archive.org/web/20190000000000*/https://www.exist-db.org/exist/apps/doc/xquery"
           >The Wayback Machine has also captured iterations of the page since 2019.</link></para>
       </footnote> eXist-specific code requires
-      eXist-specific knowledge to use and maintain it — a high barrier to entry and a high barrier
-      to exiting. Northeastern’s Digital Scholarship Group — of which the Women Writers Project is a part — had
+      eXist-specific knowledge to use and maintain it—a high barrier to entry and a high barrier
+      to exiting. Northeastern’s Digital Scholarship Group—of which the Women Writers Project is a part—had
           already adopted BaseX as its XML database of choice for TEI and other XML projects, due to
           BaseX’s lightweight footprint, excellent documentation, and adherence to the XQuery
           standard. At this time, the WWP is the only DSG project which uses eXist. The WWP’s dependency on eXist is therefore also a dependence on continued staffing with
       eXist-specific skills.</para>
     <note>
       <para>To their credit, eXist’s development team has also identified specification compliance as a significant goal, and they have been making incremental progress since at least 2016.<footnote>
-          <para>In a 2019 eXist issue thread, Joe Wicentowski posted <link xlink:href="https://github.com/eXist-db/exist/issues/2626#issuecomment-480319383">this summary of eXist-specific functions</link> which were deprecated in eXist version 4, and which would be removed in version 5 — many in favor of spec-compliant versions. Wicentowski had been tracking <link xlink:href="https://gist.github.com/joewiz/acb0558f078c0576a5e7?permalink_comment_id=1568552#gistcomment-1568552">eXist’s compliance with the Functions and Operators specification</link> since 2015, as well as helping the team improve eXist.</para>
+          <para>In a 2019 eXist issue thread, Joe Wicentowski posted <link xlink:href="https://github.com/eXist-db/exist/issues/2626#issuecomment-480319383">this summary of eXist-specific functions</link> which were deprecated in eXist version 4, and which would be removed in version 5—many in favor of spec-compliant versions. Wicentowski had been tracking <link xlink:href="https://gist.github.com/joewiz/acb0558f078c0576a5e7?permalink_comment_id=1568552#gistcomment-1568552">eXist’s compliance with the Functions and Operators specification</link> since 2015, as well as helping the team improve eXist.</para>
       </footnote> 
-        As we prepared to revise our paper in June 2026, they announced a beta version of 7.0.0, the next major version of eXist — and with it, a 90% success rate against 31,815 tests, a commendable increase from version 6.4.1’s 80% success rate. (<xref linkend="exist7beta"/>)</para>
+        As we prepared to revise our paper in June 2026, they announced a beta version of 7.0.0, the next major version of eXist—and with it, a 90% success rate against 31,815 tests, a commendable increase from version 6.4.1’s 80% success rate. (<xref linkend="exist7beta"/>)</para>
     </note>
     
   <section>
@@ -516,7 +516,7 @@ In order to retain both the toggle feature and the collection’s searchability,
       </para>
     <para>For products, the Endings Project  promotes the use of standalone, static websites, with no server-side
       processing or backend components. The HTML markup is not programmatically built out after the
-      page loads — rather, all content is available and all dependencies are satisfied simply by accessing
+      page loads—rather, all content is available and all dependencies are satisfied simply by accessing
       the file (<xref
         linkend="endings"/>). This greatly aids those who intentionally set out to archive the project materials,
       such as a digital repository or the Internet Archive’s Wayback Machine. The static site
@@ -558,8 +558,8 @@ In order to retain both the toggle feature and the collection’s searchability,
       </itemizedlist>
     </para>
     <para>However, the Principles also state that <quote>wherever possible, all code should follow Endings principles for data and products</quote> (<xref linkend="endings"/>), making use of open formats, versioning, documentation, and so on. Following the Principles can be a boon for maintaining the project’s code and tools, as well as enabling the publication and reuse of the code by others.</para>
-    <para>Though the WWP puts much of our emphasis on the markup — without which, there would be no
-      publication — the Endings Project counsels against considering our data alone as enough for
+    <para>Though the WWP puts much of our emphasis on the markup—without which, there would be no
+      publication—the Endings Project counsels against considering our data alone as enough for
       project preservation. Dynamic <quote>products</quote> such as website interfaces are <quote>arguably the most
       recognizable and least preservable part of a digital project</quote> (<xref linkend="holmes2023a"/>).
       A website is the most public expression of a project’s data, and an invitation for users to
@@ -575,7 +575,7 @@ In order to retain both the toggle feature and the collection’s searchability,
           to be reused than our XML in the long term.</para>
         <attribution><xref linkend="holmes2023b"/></attribution>
       </blockquote></para>
-    <para>The Endings Principles don’t say explicitly that a project’s data is embodied in its product, the static website. However, FRBR adds a useful layer here: the process of turning data into a digital resource is creating a <emphasis>manifestation</emphasis> of that data and the knowledge embedded in it. Manifestation is lossy — not every feature of the data can be represented in the site. However, as the Endings Principles hold, this manifestation is especially important to digital longevity, because more people will be able to use a project’s website than its data.</para>
+    <para>The Endings Principles don’t say explicitly that a project’s data is embodied in its product, the static website. However, FRBR adds a useful layer here: the process of turning data into a digital resource is creating a <emphasis>manifestation</emphasis> of that data and the knowledge embedded in it. Manifestation is lossy—not every feature of the data can be represented in the site. However, as the Endings Principles hold, this manifestation is especially important to digital longevity, because more people will be able to use a project’s website than its data.</para>
     <para>The tools which aid and perform that embodiment, that mapping of markup to brower page, serve reciprocally in the continued development of the data. As a means of manifestation, tools can provide a space for engaging with the modeling, design, and expression of data. The tool therefore may have something to say to the data that comes from the same intellectual space: not an intrusion or an unwarranted constraint or deflection from its true purpose, but a learning opportunity.
     </para>
     <para>In our pursuit of maintainability, the WWP is working towards greater synthesis between
@@ -588,7 +588,7 @@ In order to retain both the toggle feature and the collection’s searchability,
       is one example. Another toggle could show the lineation of the original publication, making 
       <code>&lt;lb&gt;</code>s (line beginnings) and <code>&lt;pb&gt;</code>s (page beginnings) visible as HTML <code>&lt;br&gt;</code>s.</para>
     <para>However, the highest priority for the WWP is refactoring our current publication processes
-      for sustainability, and to produce static websites. Step one — currently in progress — is to migrate our apps from eXist-db
+      for sustainability, and to produce static websites. Step one—currently in progress—is to migrate our apps from eXist-db
       to BaseX, as well as documenting and automating the publication processes. 
       This step mostly consists of rewriting XQuery code so that a BaseX environment can produce the same JSON output that eXist currently does. The goal of this step is to ensure more people can publish new records and maintain the site, but where possible, we are also trying to make it easier to accomplish the work to come.
     </para>
@@ -673,7 +673,7 @@ This is why the Endings Principles set such firm boundaries on those dependencie
       <varlistentry>
         <term><link xlink:href="https://wwp.northeastern.edu/context/">Women Writers in Context</link> (WWiC)</term>
         <listitem>
-          <para>A collection of modern “exhibits” — scholarly publications which provide context and create connections between works in the WWO textbase.</para>
+          <para>A collection of modern “exhibits”—scholarly publications which provide context and create connections between works in the WWO textbase.</para>
           <para><link xlink:href="https://wwp.northeastern.edu/about/announcements_archive.html#wwic_2013-04-30">WWiC was first published in 2013</link> as an eXist-based API and a Backbone.js web application.</para>
           <para>WWiC is open access.</para>
         </listitem>
