@@ -607,7 +607,7 @@ In order to retain both the toggle feature and the collection’s searchability,
       entered the site. Women Writers Online already went through this process during the migration
       to eXist. As preparation for this step, web content generated in Javascript may be extricated and placed in
       either an XQuery response, or the HTML page.</para>
-    <para>Step three is to generate static HTML. The current hope is that we will use the migrated
+    <para>Finally, we will build on previous work in order to generate static HTML. The current hope is that we will use the migrated
       XQuery code to generate HTML out of BaseX. Rather than serving the BaseX endpoint directly, 
       we will save each page as a separate HTML file, in
       directories mapping onto the URL paths. When a user requests a web page, the server will respond
@@ -625,12 +625,10 @@ In order to retain both the toggle feature and the collection’s searchability,
       page. By removing usability barriers, we extend our invitation for use and reuse to people of
       all abilities. And by preferring semantic HTML markup over CSS formatting, we bring the full
       semantics of the markup into focus.</para>
-    <para>It is worth situating this work against the Principles that we are using as our
-      foundation. The Endings Principles are written in technical language: prescriptions for each
-      component of a digital project. The Principles are also an enactment of a philosophical
-      framework designed by the UVic Humanities Computing and Media Centre. As we considered the
-      Endings Principles, we sought to understand the framework behind the Principles, and to map
-      that framework onto the WWP’s own ethos. There are no accompanying Endings Principles for the
+    <para>As the WWP considered the
+      Endings Principles, we sought to understand not just the technical prescriptions that formed the Principles, but the Principles as an enactment of a philosophical
+      framework designed by the UVic Humanities Computing and Media Centre. 
+      The WWP’s roadmap toward sustainability is an extension of UVic’s framework: there are no accompanying Endings Principles for the
       accessibility of the interface, and the UVic team may have taken it for granted that the data
       should be embodied in the design and features of the interface, not just served alongside.
       These ideas are, however, natural extensions of Endings Project’s philosophical framework, and
