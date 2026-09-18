@@ -323,23 +323,23 @@ To come at this from another angle: markup can be understood as potential inform
       
       <figure>
       	<mediaobject>
-      		<alt>A screenshot of the entry point for the XTF version of Women Writers Online.</alt>
+      		<alt>A screenshot of the entry point for the current version of Women Writers Online.</alt>
       		<imageobject>
       			<imagedata fileref="./img/Bal2026clar041608.png"/>
       		</imageobject>
       		<caption>
-      			<para>The entry point for the XTF version of Women Writers Online (active starting in 2005), showing the simultaneous accessibility of search, filter, and browse.</para>
+      			<para>The entry point for the current version of Women Writers Online (active starting in 2005), showing the user’s access to search, filter, and browse panes simultaneously.</para>
       		</caption>
       	</mediaobject>
       </figure>
     	 <figure>
       	<mediaobject>
-      		<alt>A screenshot of the XTF version of Women Writers Online once a search has been executed.</alt>
+      		<alt>A screenshot of the current version of Women Writers Online once a search has been executed.</alt>
       		<imageobject>
       			<imagedata fileref="./img/Bal2026clar041609.png"/>
       		</imageobject>
       		<caption>
-      			<para>Once a search has been executed, the XTF version of WWO shows search, context, and reading interface simultaneously.</para>
+      			<para>Once a search has been executed, the current version of WWO shows search, context, and reading interface simultaneously.</para>
       		</caption>
       	</mediaobject>
       </figure>
