@@ -302,14 +302,14 @@
                                  <dt><span class="section"><a href="#d3e28" class="toc">Research and working relationships</a></span></dt>
                                  <dt><span class="section"><a href="#d3e80" class="toc">Evolution of the WWP’s theory and practice of markup</a></span></dt>
                                  <dt><span class="section"><a href="#evolution-of-toolsets" class="toc">Evolution of toolsets</a></span></dt>
-                                 <dt><span class="section"><a href="#d3e327" class="toc">Project sustainability</a></span></dt>
+                                 <dt><span class="section"><a href="#d3e353" class="toc">Project sustainability</a></span></dt>
                                  <dd>
                                     <dl>
-                                       <dt><span class="section"><a href="#d3e356" class="toc">The Endings Principles</a></span></dt>
-                                       <dt><span class="section"><a href="#d3e390" class="toc">Synthesis of tools and data</a></span></dt>
+                                       <dt><span class="section"><a href="#d3e382" class="toc">The Endings Principles</a></span></dt>
+                                       <dt><span class="section"><a href="#d3e416" class="toc">Synthesis of tools and data</a></span></dt>
                                     </dl>
                                  </dd>
-                                 <dt><span class="section"><a href="#d3e457" class="toc">Conclusions and Next Steps</a></span></dt>
+                                 <dt><span class="section"><a href="#d3e483" class="toc">Conclusions and Next Steps</a></span></dt>
                                  <dt><span class="appendix"><a href="#wwp-pubs" class="toc">Appendix A. Women Writers Project Publications</a></span></dt>
                               </dl>
                            </details>
@@ -387,14 +387,14 @@
                         <dt><span class="section"><a href="#d3e28" class="toc">Research and working relationships</a></span></dt>
                         <dt><span class="section"><a href="#d3e80" class="toc">Evolution of the WWP’s theory and practice of markup</a></span></dt>
                         <dt><span class="section"><a href="#evolution-of-toolsets" class="toc">Evolution of toolsets</a></span></dt>
-                        <dt><span class="section"><a href="#d3e327" class="toc">Project sustainability</a></span></dt>
+                        <dt><span class="section"><a href="#d3e353" class="toc">Project sustainability</a></span></dt>
                         <dd>
                            <dl>
-                              <dt><span class="section"><a href="#d3e356" class="toc">The Endings Principles</a></span></dt>
-                              <dt><span class="section"><a href="#d3e390" class="toc">Synthesis of tools and data</a></span></dt>
+                              <dt><span class="section"><a href="#d3e382" class="toc">The Endings Principles</a></span></dt>
+                              <dt><span class="section"><a href="#d3e416" class="toc">Synthesis of tools and data</a></span></dt>
                            </dl>
                         </dd>
-                        <dt><span class="section"><a href="#d3e457" class="toc">Conclusions and Next Steps</a></span></dt>
+                        <dt><span class="section"><a href="#d3e483" class="toc">Conclusions and Next Steps</a></span></dt>
                         <dt><span class="appendix"><a href="#wwp-pubs" class="toc">Appendix A. Women Writers Project Publications</a></span></dt>
                      </dl>
                   </details>
@@ -1138,7 +1138,41 @@
                         define elements like <code class="code">&lt;vuji&gt;</code> as <a href="https://www.exist-db.org/exist/apps/doc/lucene#inline" class="link">“inline,”</a> or, implying no word break. As such,
                         a search in eXist for the word “injurious” will lead to <span class="ital">Jane Anger
                            Her Protection For Women</span>, where XTF would have come up short.</p>
-                     <p id="d3e322">Importantly, while the code for the WWO site was updated and adapted for use in eXist,
+                     <p id="d3e322">As an example, <a class="xref" href="#wwo-missing-rose">Figure&nbsp;14</a> is a screenshot from 2022 which demonstrates that XTF would rarely 
+                        find a match for the word “rose” in WWO texts that were originally published before
+                        1775. 
+                        The older the source material, the more likely it was that “rose” would have a long-s
+                        in it: <code class="code">roſe</code>. 
+                        Our pre-publication workflow would introduce a tag around long-s characters so they
+                        could be swapped with their modern 
+                        equivalent, consequently preventing XTF from indexing the full word.
+                        
+                        <figure id="wwo-missing-rose">
+                           <p class="title">Figure&nbsp;14</p>
+                           <div class="figure-contents">
+                              <div class="mediaobject" id="d3e329"><img alt="Screenshot of the XTF interface, showing search results for the word 'rose'. The timeline shows few hits before 1775." src="img/Bal2026clar041610.png"></div>
+                              <div class="caption">
+                                 <p id="d3e334">XTF showed 119 documents matching the word “rose,” with a vast majority of the results
+                                    clustered between 1775 and 1855 on the timeline.</p>
+                              </div>
+                           </div>
+                        </figure>
+                        </p>
+                     <p id="d3e336">At that time, work had begun on WWO’s eXist implementation. By running the same search
+                        in the new database, we discovered that XTF was missing <span class="ital">one hundred</span> documents matching the word “rose”:
+                        
+                        <figure id="d3e340">
+                           <p class="title">Figure&nbsp;15</p>
+                           <div class="figure-contents">
+                              <div class="mediaobject" id="d3e341"><img alt="Screenshot of the eXist interface, which is similar but has XML placeholders for the query, and more keywords in context. There are more search results." src="img/Bal2026clar041611.png"></div>
+                              <div class="caption">
+                                 <p id="d3e346">This early version of WWO in eXist showed 220 documents matching the word “rose.”
+                                    Results are evenly spread between 1550 and 1800.</p>
+                              </div>
+                           </div>
+                        </figure>
+                        </p>
+                     <p id="d3e348">Importantly, while the code for the WWO site was updated and adapted for use in eXist,
                         the WWO documents themselves stayed the same.
                         The relationship between the markup and the publication tool is thus very indirect.
                         The
@@ -1155,7 +1189,7 @@
                         aimed at producing a specific kind of outcome, the source markup remains tool-agnostic
                         and
                         could be published through varied systems to produce varied user experiences.</p>
-                     <p id="d3e326">Read broadly, this history reveals several important points. First, the lifespan of
+                     <p id="d3e352">Read broadly, this history reveals several important points. First, the lifespan of
                         monolithic tools was comparatively short: the first two iterations of Women Writers
                         Online
                         (DynaWeb and Philologic) each lasted about six years, whereas our current system has
@@ -1175,9 +1209,9 @@
                         “XML
                         publishing” means (inflected as well by the WWP’s own intentions for the data).</p>
                   </div>
-                  <div class="section" id="d3e327">
+                  <div class="section" id="d3e353">
                      <h2 class="title" style="clear: both">Project sustainability</h2>
-                     <p id="d3e329">In July 2023, the Women Writers Project staff held a retreat to discuss plans for
+                     <p id="d3e355">In July 2023, the Women Writers Project staff held a retreat to discuss plans for
                         the next
                         ten years of the WWP—what would the project need in order to continue on indefinitely,
                         in
@@ -1188,10 +1222,10 @@
                         moment, but analysis revealed that these systems were potentially at risk to events
                         for which
                         we had no contingency or recovery plan.</p>
-                     <p id="d3e330">For example, many of the WWP’s web resources are
+                     <p id="d3e356">For example, many of the WWP’s web resources are
                         dependent on eXist-DB. For years, the eXist database had its own divergent implementations
                         of XQuery
-                        standards, such as XPath functions, XQuery Update, and output serialization.<sup class="fn-label"><a href="#d3e332" class="footnoteref" id="d3e332-ref">[3]</a></sup> eXist-specific code requires
+                        standards, such as XPath functions, XQuery Update, and output serialization.<sup class="fn-label"><a href="#d3e358" class="footnoteref" id="d3e358-ref">[3]</a></sup> eXist-specific code requires
                         eXist-specific knowledge to use and maintain it—a high barrier to entry and a high
                         barrier
                         to exiting. Northeastern’s Digital Scholarship Group—of which the Women Writers Project
@@ -1202,50 +1236,50 @@
                         standard. At this time, the WWP is the only DSG project which uses eXist. The WWP’s
                         dependency on eXist is therefore also a dependence on continued staffing with
                         eXist-specific skills.</p>
-                     <div class="note" id="d3e341">
+                     <div class="note" id="d3e367">
                         <h3 class="title">Note</h3>
-                        <p id="d3e342">To their credit, eXist’s development team has also identified specification compliance
+                        <p id="d3e368">To their credit, eXist’s development team has also identified specification compliance
                            as a significant goal, and they have been making incremental progress since at least
-                           2016.<sup class="fn-label"><a href="#d3e344" class="footnoteref" id="d3e344-ref">[4]</a></sup> 
+                           2016.<sup class="fn-label"><a href="#d3e370" class="footnoteref" id="d3e370-ref">[4]</a></sup> 
                            As we prepared to revise our paper in June 2026, they announced a beta version of
                            7.0.0, the next major version of eXist—and with it, a 90% success rate against 31,815
-                           tests, a commendable increase from version 6.4.1’s 80% success rate. (<a class="xref" id="d3e354" href="javascript:showcite('cite-exist7beta','d3e354')">eXist-db release 7.0.0-beta3</a>)</p>
+                           tests, a commendable increase from version 6.4.1’s 80% success rate. (<a class="xref" id="d3e380" href="javascript:showcite('cite-exist7beta','d3e380')">eXist-db release 7.0.0-beta3</a>)</p>
                      </div>
-                     <div class="section" id="d3e356">
+                     <div class="section" id="d3e382">
                         <h3 class="title" style="clear: both">The Endings Principles</h3>
-                        <p id="d3e358">By the close of our retreat, we decided it would be valuable to familiarize ourselves
+                        <p id="d3e384">By the close of our retreat, we decided it would be valuable to familiarize ourselves
                            with
                            the outcomes of the <a href="https://endings.uvic.ca/" class="link">Endings Project</a>. Initiated in 2016 by the
                            University of Victoria’s Humanities Computing and Media Centre, the Endings Project’s
                            goal was to
                            develop and recommend practices that would aid the longevity of their digital artifacts.
                            In 2018, the team
-                           released their first version of the “Endings Principles for Digital Longevity” (<a class="xref" id="d3e363" href="javascript:showcite('cite-endings','d3e363')">Endings Principles 2023</a>), 
+                           released their first version of the “Endings Principles for Digital Longevity” (<a class="xref" id="d3e389" href="javascript:showcite('cite-endings','d3e389')">Endings Principles 2023</a>), 
                            which describes infrastructure to make sure that digital products can be
                            used, cited, reproduced, and archived.</p>
-                        <p id="d3e365">The Endings Principles lay out prescriptions for a project’s data, documentation,
+                        <p id="d3e391">The Endings Principles lay out prescriptions for a project’s data, documentation,
                            processing, products, and release management. Each principle works toward the goal
                            of granting digital longevity to the project’s products.
-                           For instance, the very first principle states that <span class="ital">data</span> should be <q>stored only in formats that conform to open standards and that are amenable to processing</q> (<a class="xref" id="d3e371" href="javascript:showcite('cite-endings','d3e371')">Endings Principles 2023</a>), such as TEI markup.
+                           For instance, the very first principle states that <span class="ital">data</span> should be <q>stored only in formats that conform to open standards and that are amenable to processing</q> (<a class="xref" id="d3e397" href="javascript:showcite('cite-endings','d3e397')">Endings Principles 2023</a>), such as TEI markup.
                            The Principles also recommend documentation, <q>relentless</q> validation, version control, versioning, and continuous integration. The Endings
                            Project argues that when digital products are produced openly, outside of black boxes,
                            they are far more likely to be reused and maintained—and thus, more likely to
                            survive.
                            </p>
-                        <p id="d3e375">For products, the Endings Project  promotes the use of standalone, static websites,
+                        <p id="d3e401">For products, the Endings Project  promotes the use of standalone, static websites,
                            with no server-side
                            processing or backend components. The HTML markup is not programmatically built out
                            after the
                            page loads—rather, all content is available and all dependencies are satisfied simply
                            by accessing
-                           the file (<a class="xref" id="d3e377" href="javascript:showcite('cite-endings','d3e377')">Endings Principles 2023</a>). This greatly aids those who intentionally set out to archive the project materials,
+                           the file (<a class="xref" id="d3e403" href="javascript:showcite('cite-endings','d3e403')">Endings Principles 2023</a>). This greatly aids those who intentionally set out to archive the project materials,
                            such as a digital repository or the Internet Archive’s Wayback Machine. The static
                            site
                            approach also makes it easy for researchers and other users to become casual archivists.
                            It is
                            not necessary to use extensions or software to generate an archivable <a href="https://iipc.github.io/warc-specifications/specifications/warc-format/warc-1.1-annotated/" class="link">WARC file</a> from the page; saving the
                            page as an HTML file is enough to obtain your own working copy.</p>
-                        <p id="d3e382">Crucially, the Endings Project does not intend for digital humanities projects to
+                        <p id="d3e408">Crucially, the Endings Project does not intend for digital humanities projects to
                            pursue 
                            archival solutions on their own. The survival of the original publication 
                            <span class="ital">on the web</span> is paramount. As Ending Project technical leads Martin Holmes 
@@ -1258,56 +1292,56 @@
                               will survive in 
                               a usable form. Every server-side dependency is a barrier to replication and therefore
                               to 
-                              survival</q> (<a class="xref" id="d3e388" href="javascript:showcite('cite-holmes2023b','d3e388')">Holmes and Takeda 2023</a>). It is important for the Internet Archive to be 
+                              survival</q> (<a class="xref" id="d3e414" href="javascript:showcite('cite-holmes2023b','d3e414')">Holmes and Takeda 2023</a>). It is important for the Internet Archive to be 
                            able to create WARC files from a digital humanities project’s site, but it is just
                            as important 
                            for the project to be able to transfer ownership of the site (with its incorporated
                            data, documentation, and code) to a repository or library for 
                            hosting and long-term maintenance.</p>
                      </div>
-                     <div class="section" id="d3e390">
+                     <div class="section" id="d3e416">
                         <h3 class="title" style="clear: both">Synthesis of tools and data</h3>
-                        <p id="d3e392">The Endings Principles themselves are hugely influential and important, and they speak
+                        <p id="d3e418">The Endings Principles themselves are hugely influential and important, and they speak
                            to an important turn in discussions and theorizations of tools within the digital
                            humanities project ecology. They represent a thorough exploration of the implications
                            of an open-source, minimal-computing orientation towards project development.
                            </p>
-                        <p id="d3e393">The Endings Principles assume:
+                        <p id="d3e419">The Endings Principles assume:
                            
-                           <div class="itemizedlist" id="d3e395">
+                           <div class="itemizedlist" id="d3e421">
                               <ul>
-                                 <li id="d3e396">
-                                    <p id="d3e397">that your tools and data are really part of the same ecosystem, and that they are
+                                 <li id="d3e422">
+                                    <p id="d3e423">that your tools and data are really part of the same ecosystem, and that they are
                                        being generated and updated in tandem, in mutual responsiveness;</p>
                                  </li>
-                                 <li id="d3e398">
-                                    <p id="d3e399">that you have a very direct role in developing and maintaining your tool set;</p>
+                                 <li id="d3e424">
+                                    <p id="d3e425">that you have a very direct role in developing and maintaining your tool set;</p>
                                  </li>
-                                 <li id="d3e400">
-                                    <p id="d3e401">that for limited sectors of your audience, reusing and repurposing the source data
+                                 <li id="d3e426">
+                                    <p id="d3e427">that for limited sectors of your audience, reusing and repurposing the source data
                                        may be as important as interacting with the site itself; and</p>
                                  </li>
-                                 <li id="d3e402">
-                                    <p id="d3e403">that tools and code, being <q>necessarily impermanent</q> (<a class="xref" id="d3e407" href="javascript:showcite('cite-holmes2023b','d3e407')">Holmes and Takeda 2023</a>), should produce products which can be used independently of further processing.</p>
+                                 <li id="d3e428">
+                                    <p id="d3e429">that tools and code, being <q>necessarily impermanent</q> (<a class="xref" id="d3e433" href="javascript:showcite('cite-holmes2023b','d3e433')">Holmes and Takeda 2023</a>), should produce products which can be used independently of further processing.</p>
                                  </li>
                               </ul>
                            </div>
                            </p>
-                        <p id="d3e410">However, the Principles also state that <q>wherever possible, all code should follow Endings principles for data and products</q> (<a class="xref" id="d3e414" href="javascript:showcite('cite-endings','d3e414')">Endings Principles 2023</a>), making use of open formats, versioning, documentation, and so on. Following the
+                        <p id="d3e436">However, the Principles also state that <q>wherever possible, all code should follow Endings principles for data and products</q> (<a class="xref" id="d3e440" href="javascript:showcite('cite-endings','d3e440')">Endings Principles 2023</a>), making use of open formats, versioning, documentation, and so on. Following the
                            Principles can be a boon for maintaining the project’s code and tools, as well as
                            enabling the publication and reuse of the code by others.</p>
-                        <p id="d3e416">Though the WWP puts much of our emphasis on the markup—without which, there would
+                        <p id="d3e442">Though the WWP puts much of our emphasis on the markup—without which, there would
                            be no
                            publication—the Endings Project counsels against considering our data alone as enough
                            for
                            project preservation. Dynamic <q>products</q> such as website interfaces are <q>arguably the most
-                              recognizable and least preservable part of a digital project</q> (<a class="xref" id="d3e422" href="javascript:showcite('cite-holmes2023a','d3e422')">Holmes, Jenstad, and Huculak 2023</a>).
+                              recognizable and least preservable part of a digital project</q> (<a class="xref" id="d3e448" href="javascript:showcite('cite-holmes2023a','d3e448')">Holmes, Jenstad, and Huculak 2023</a>).
                            A website is the most public expression of a project’s data, and an invitation for
                            users to
                            participate in the products’ use and reuse. 
                            <div class="blockquote">
                               <blockquote class="blockquote">
-                                 <p id="d3e425">Just as we offer repurposable XML versions of our documents, we try to provide HTML
+                                 <p id="d3e451">Just as we offer repurposable XML versions of our documents, we try to provide HTML
                                     pages which can also be pulled out of the project and reused easily. While TEI XML
                                     is a
                                     widely-used and trusted archival format for digital scholarly work, compared with
@@ -1322,24 +1356,24 @@
                                     current era of digital communication survives, it will be HTML. So our HTML is more
                                     likely
                                     to be reused than our XML in the long term.</p>
-                                 <p class="attribution">— <a class="xref" id="d3e427" href="javascript:showcite('cite-holmes2023b','d3e427')">Holmes and Takeda 2023</a></p>
+                                 <p class="attribution">— <a class="xref" id="d3e453" href="javascript:showcite('cite-holmes2023b','d3e453')">Holmes and Takeda 2023</a></p>
                               </blockquote>
                            </div>
                         </p>
-                        <p id="d3e428">The Endings Principles don’t say explicitly that a project’s data is embodied in its
+                        <p id="d3e454">The Endings Principles don’t say explicitly that a project’s data is embodied in its
                            product, the static website. However, FRBR adds a useful layer here: the process of
                            turning data into a digital resource is creating a <span class="ital">manifestation</span> of that data and the knowledge embedded in it. Manifestation is lossy—not every feature
                            of the data can be represented in the site. However, as the Endings Principles hold,
                            this manifestation is especially important to digital longevity, because more people
                            will be able to use a project’s website than its data.</p>
-                        <p id="d3e432">The tools which aid and perform that embodiment, that mapping of markup to brower
+                        <p id="d3e458">The tools which aid and perform that embodiment, that mapping of markup to brower
                            page, serve reciprocally in the continued development of the data. As a means of manifestation,
                            tools can provide a space for engaging with the modeling, design, and expression of
                            data. The tool therefore may have something to say to the data that comes from the
                            same intellectual space: not an intrusion or an unwarranted constraint or deflection
                            from its true purpose, but a learning opportunity.
                            </p>
-                        <p id="d3e433">In our pursuit of maintainability, the WWP is working towards greater synthesis between
+                        <p id="d3e459">In our pursuit of maintainability, the WWP is working towards greater synthesis between
                            markup, documentation, and website, especially for Women Writers Online. We intend
                            to make it
                            easier for users to download WWO’s TEI, packaging the files as part of the interface.
@@ -1352,7 +1386,7 @@
                            is one example. Another toggle could show the lineation of the original publication,
                            making 
                            <code class="code">&lt;lb&gt;</code>s (line beginnings) and <code class="code">&lt;pb&gt;</code>s (page beginnings) visible as HTML <code class="code">&lt;br&gt;</code>s.</p>
-                        <p id="d3e443">However, the highest priority for the WWP is refactoring our current publication processes
+                        <p id="d3e469">However, the highest priority for the WWP is refactoring our current publication processes
                            for sustainability, and to produce static websites. Step one—currently in progress—is
                            to migrate our apps from eXist-db
                            to BaseX, as well as documenting and automating the publication processes. 
@@ -1361,12 +1395,12 @@
                            ensure more people can publish new records and maintain the site, but where possible,
                            we are also trying to make it easier to accomplish the work to come.
                            </p>
-                        <p id="d3e444">For Women Writers in Review and Women Writers in Context, the next step will be to
+                        <p id="d3e470">For Women Writers in Review and Women Writers in Context, the next step will be to
                            shift away from single-page Javascript applications
                            and towards giving the user a complete HTML page on request.
-                           <div class="note" id="d3e446">
+                           <div class="note" id="d3e472">
                               <h3 class="title">Note</h3>
-                              <p id="d3e447">Women Writers in Review and Women Writers in Context each have a single index page.
+                              <p id="d3e473">Women Writers in Review and Women Writers in Context each have a single index page.
                                  On
                                  page load, their <a href="https://backbonejs.org/" class="link">Backbone.js</a> apps request and consume data
                                  from the XQuery API in eXist. That data is used to construct a web page to match the
@@ -1384,7 +1418,7 @@
                            to eXist. As preparation for this step, web content generated in Javascript may be
                            extricated and placed in
                            either an XQuery response, or the HTML page.</p>
-                        <p id="d3e453">Finally, we will build on previous work in order to generate static HTML. The current
+                        <p id="d3e479">Finally, we will build on previous work in order to generate static HTML. The current
                            hope is that we will use the migrated
                            XQuery code to generate HTML out of BaseX. Rather than serving the BaseX endpoint
                            directly, 
@@ -1394,7 +1428,7 @@
                            with the static HTML file. We may still incorporate search through BaseX, but because
                            it will no longer be required to respond to all requests, its workload (and perhaps
                            response time) will be lessened.</p>
-                        <p id="d3e455">Throughout the process, we are also working to make our web content more accessible.
+                        <p id="d3e481">Throughout the process, we are also working to make our web content more accessible.
                            For
                            example, the Women Writers Online interface includes a standard “Search” feature,
                            implemented
@@ -1418,7 +1452,7 @@
                            all abilities. And by preferring semantic HTML markup over CSS formatting, we bring
                            the full
                            semantics of the markup into focus.</p>
-                        <p id="d3e456">As the WWP considered the
+                        <p id="d3e482">As the WWP considered the
                            Endings Principles, we sought to understand not just the technical prescriptions that
                            formed the Principles, but the Principles as an enactment of a philosophical
                            framework designed by the UVic Humanities Computing and Media Centre. 
@@ -1434,10 +1468,10 @@
                            most prominent manifestation of our markup.</p>
                      </div>
                   </div>
-                  <div class="section" id="d3e457">
+                  <div class="section" id="d3e483">
                      <h2 class="title" style="clear: both">Conclusions and Next Steps</h2>
-                     <p id="d3e459">C. Michael Sperberg-McQueen, in his 2012 keynote at the Knowledge Organization and
-                        Data Modeling conference, said that <q>modeling is a way to make explicit our assumptions about the nature of a text/artefact</q> (<a class="xref" id="d3e463" href="javascript:showcite('cite-sperbergmcqueen2012','d3e463')">Sperberg-McQueen 2012</a>). These assumptions are often complexly layered and may even represent divergent
+                     <p id="d3e485">C. Michael Sperberg-McQueen, in his 2012 keynote at the Knowledge Organization and
+                        Data Modeling conference, said that <q>modeling is a way to make explicit our assumptions about the nature of a text/artefact</q> (<a class="xref" id="d3e489" href="javascript:showcite('cite-sperbergmcqueen2012','d3e489')">Sperberg-McQueen 2012</a>). These assumptions are often complexly layered and may even represent divergent
                         perspectives or possibilities in the text. The tools that express the potential of
                         our modeling also participate in making those assumptions explicit, by enacting some
                         of the practical or analytical consequences of those assumptions: if the modeling
@@ -1454,13 +1488,13 @@
                         methodological orientation but is open-ended as to the specific activities through
                         which reading and analysis will be practiced—and also a continued experimentation
                         with how interfaces can support the evolution of those practices. </p>
-                     <p id="d3e467">In the spirit of that continued experimentation, there are some research questions
+                     <p id="d3e493">In the spirit of that continued experimentation, there are some research questions
                         which feel urgent:
                         	
-                        <div class="itemizedlist" id="d3e469">
+                        <div class="itemizedlist" id="d3e495">
                            <ul>
-                              <li id="d3e470">
-                                 <p id="d3e471"><span class="bold">How to make tools a benign and cheap aspect of digital humanities project development
+                              <li id="d3e496">
+                                 <p id="d3e497"><span class="bold">How to make tools a benign and cheap aspect of digital humanities project development
                                        and support.</span> Arguably, it is the continued expansion of the digital humanities tool set (and its
                                     dependencies on tools and standards whose pace of development is determined by industry)
                                     that constitutes the greatest challenge to sustainability.
@@ -1478,8 +1512,8 @@
                                     approach?
                                     </p>
                               </li>
-                              <li id="d3e475">
-                                 <p id="d3e476"><span class="bold">How to make tools that engage users more directly with the data, not less.</span> At one point, the WWP had an idea of providing readers with some kind of “user-friendly”
+                              <li id="d3e501">
+                                 <p id="d3e502"><span class="bold">How to make tools that engage users more directly with the data, not less.</span> At one point, the WWP had an idea of providing readers with some kind of “user-friendly”
                                     or “human-language” interface for doing XPath searches that would not require users
                                     to know about our TEI markup, but would draw instead on their understanding of how
                                     early modern texts work. Scholarly readers know that there may be dialogue (or references
@@ -1507,7 +1541,7 @@
                            </ul>
                         </div>
                         	</p>
-                     <p id="d3e491">Interfaces serve as manifestations of markup and as an invitation to the user to interact:
+                     <p id="d3e517">Interfaces serve as manifestations of markup and as an invitation to the user to interact:
                         not only with patterns of tokens or with structures inferred from them but also with
                         human readings. This is particularly significant for historical materials because
                         the meaning of what they present to us is not transparent or unimportant: reading
@@ -1534,78 +1568,78 @@
                   </div>
                   <div class="appendix" id="wwp-pubs">
                      <h2 class="title" style="clear: both">Appendix A. Women Writers Project Publications</h2>
-                     <p id="d3e494">All publications below make use of TEI encoding.</p>
-                     <div class="variablelist" id="d3e495">
+                     <p id="d3e520">All publications below make use of TEI encoding.</p>
+                     <div class="variablelist" id="d3e521">
                         <table border="0" class="variablelist">
                            <col valign="top" align="left">
                            <tbody>
-                              <tr id="d3e496">
+                              <tr id="d3e522">
                                  <td class="varlist-term">
                                     <p><span class="term"><a href="https://wwp.northeastern.edu/wwo/" class="link">Women Writers Online</a> (WWO)</span></p>
                                  </td>
                                  <td class="varlist-item">
-                                    <p id="d3e502">The WWP’s flagship publication, a collection of works by women which were originally
+                                    <p id="d3e528">The WWP’s flagship publication, a collection of works by women which were originally
                                        published between 1526 and 1850.</p>
-                                    <p id="d3e503">WWO was first published in 1999. The “<a class="xref" href="#evolution-of-toolsets" id="d3e505">Evolution of Toolsets</a>” section provides details about WWO’s publication history.</p>
-                                    <p id="d3e507"><a href="https://wwp.northeastern.edu/wwo/license/" class="link">Access to WWO is limited to subscribers.</a></p>
+                                    <p id="d3e529">WWO was first published in 1999. The “<a class="xref" href="#evolution-of-toolsets" id="d3e531">Evolution of Toolsets</a>” section provides details about WWO’s publication history.</p>
+                                    <p id="d3e533"><a href="https://wwp.northeastern.edu/wwo/license/" class="link">Access to WWO is limited to subscribers.</a></p>
                                  </td>
                               </tr>
-                              <tr id="d3e510">
+                              <tr id="d3e536">
                                  <td class="varlist-term">
                                     <p><span class="term"><a href="https://wwp.northeastern.edu/context/" class="link">Women Writers in Context</a> (WWiC)</span></p>
                                  </td>
                                  <td class="varlist-item">
-                                    <p id="d3e516">A collection of modern “exhibits”—scholarly publications which provide context and
+                                    <p id="d3e542">A collection of modern “exhibits”—scholarly publications which provide context and
                                        create connections between works in the WWO textbase.</p>
-                                    <p id="d3e517"><a href="https://wwp.northeastern.edu/about/announcements_archive.html#wwic_2013-04-30" class="link">WWiC was first published in 2013</a> as an eXist-based API and a Backbone.js web application.</p>
-                                    <p id="d3e521">WWiC is open access.</p>
+                                    <p id="d3e543"><a href="https://wwp.northeastern.edu/about/announcements_archive.html#wwic_2013-04-30" class="link">WWiC was first published in 2013</a> as an eXist-based API and a Backbone.js web application.</p>
+                                    <p id="d3e547">WWiC is open access.</p>
                                  </td>
                               </tr>
-                              <tr id="d3e522">
+                              <tr id="d3e548">
                                  <td class="varlist-term">
                                     <p><span class="term"><a href="https://wwp.northeastern.edu/review/" class="link">Women Writers in Review</a> (WWiR)</span></p>
                                  </td>
                                  <td class="varlist-item">
-                                    <p id="d3e528">The WWP’s collection of 18th- and 19th-century reviews and other texts which respond
+                                    <p id="d3e554">The WWP’s collection of 18th- and 19th-century reviews and other texts which respond
                                        to the works of early women writers.</p>
-                                    <p id="d3e529">WWiR is the product of “<a href="https://wwp.northeastern.edu/research/projects/reception/" class="link">Cultures of Reception</a>,” a 2011–2015 research project funded by the National Endowment for the Humanities.
+                                    <p id="d3e555">WWiR is the product of “<a href="https://wwp.northeastern.edu/research/projects/reception/" class="link">Cultures of Reception</a>,” a 2011–2015 research project funded by the National Endowment for the Humanities.
                                        <a href="https://wwp.northeastern.edu/about/announcements_archive.html#review-2016-11-16" class="link">WWiR was first published in 2016</a> as an eXist-based API and a Backbone.js web application.</p>
-                                    <p id="d3e537">WWiR is open access.</p>
+                                    <p id="d3e563">WWiR is open access.</p>
                                  </td>
                               </tr>
-                              <tr id="d3e538">
+                              <tr id="d3e564">
                                  <td class="varlist-term">
                                     <p><span class="term"><a href="https://wwp.northeastern.edu/intertextual-networks" class="link">Women Writers: Intertextual Networks</a> (WW:IN)</span></p>
                                  </td>
                                  <td class="varlist-item">
-                                    <p id="d3e544">A bibliography and extracts from WWO, surfacing the sources of quotations, allusions,
+                                    <p id="d3e570">A bibliography and extracts from WWO, surfacing the sources of quotations, allusions,
                                        and citations in the Women Writers Online textbase.</p>
-                                    <p id="d3e545">WW:IN came out of the grant-funded research project <a href="https://wwp.northeastern.edu/research/projects/intertextuality/index.html" class="link">Intertextual Networks</a>, which began in 2016 by augmenting the WWO markup. <a href="https://wwp.northeastern.edu/about/announcements_archive.html#wwin-2022-05-25" class="link">WW:IN was first published in 2022</a> as an application hosted entirely from an eXist-db instance. Since its launch, it
+                                    <p id="d3e571">WW:IN came out of the grant-funded research project <a href="https://wwp.northeastern.edu/research/projects/intertextuality/index.html" class="link">Intertextual Networks</a>, which began in 2016 by augmenting the WWO markup. <a href="https://wwp.northeastern.edu/about/announcements_archive.html#wwin-2022-05-25" class="link">WW:IN was first published in 2022</a> as an application hosted entirely from an eXist-db instance. Since its launch, it
                                        has been taken down periodically due to overzealous scraping.</p>
-                                    <p id="d3e553">WW:IN is open access.</p>
+                                    <p id="d3e579">WW:IN is open access.</p>
                                  </td>
                               </tr>
                            </tbody>
                         </table>
                      </div>
                   </div>
-                  <div class="bibliography" id="d3e554">
+                  <div class="bibliography" id="d3e580">
                      <h2 class="title">References</h2>
                      <p class="bibliomixed" id="caton1998"><a href="#d3e154">[Caton 1998] </a>Caton, Paul. “Putting Renaissance Women Online.” <span class="ital">WWP
                            Newsletter</span>, vol. 4, no. 1, 1998, Women Writers Project. <a href="https://wwp.northeastern.edu/about/history/archive/newsletter/vol04num01/RWO041.html" class="link">wwp.northeastern.edu/about/history/archive/newsletter/vol04num01/RWO041.html</a>.</p>
-                     <p class="bibliomixed" id="endings"><a href="#d3e363">[Endings Principles 2023] </a>Endings Project Team. “Endings Principles for Digital Longevity.” Version 2.2.1.
+                     <p class="bibliomixed" id="endings"><a href="#d3e389">[Endings Principles 2023] </a>Endings Project Team. “Endings Principles for Digital Longevity.” Version 2.2.1.
                         <span class="ital">The Endings Project</span>, University of Victoria, 3 Mar. 2023. <a href="https://endings.uvic.ca/principles.html" class="link">endings.uvic.ca/principles.html</a>.</p>
-                     <p class="bibliomixed" id="exist7beta"><a href="#d3e354">[eXist-db release 7.0.0-beta3] </a>eXist-db authors. “Release eXist-7.0.0-beta3.” eXist-db/exist repository, 2 Jun. 2026.
+                     <p class="bibliomixed" id="exist7beta"><a href="#d3e380">[eXist-db release 7.0.0-beta3] </a>eXist-db authors. “Release eXist-7.0.0-beta3.” eXist-db/exist repository, 2 Jun. 2026.
                         <a href="https://github.com/eXist-db/exist/releases/tag/eXist-7.0.0-beta3" class="link">github.com/eXist-db/exist/releases/tag/eXist-7.0.0-beta3</a>.</p>
                      <p class="bibliomixed" id="flandersjannidis2019"><a href="#d3e62">[Flanders and Jannidis 2019] </a>Flanders, Julia, and Fotis Jannidis. “Data Modeling in a Digital Humanities Context.”
                         In <span class="ital">The Shape of Data in Digital Humanities: Modeling Texts and Text-based Resources</span>, edited by Julia Flanders and Fotis Jannidis, 15.  Routledge, 2019.</p>
                      <p class="bibliomixed" id="frbr1998"><a href="#d3e69">[FRBR 1998] </a>IFLA Study Group on the Functional Requirements for Bibliographic Records. <span class="ital">Functional
                            Requirements for Bibliographic Records: Final Report.</span> UBCIM Publications-New Series. Vol. 19,
                         München: K.G.Saur, 1998. http://www.ifla.org/VII/s13/frbr/frbr.pdf.</p>
-                     <p class="bibliomixed" id="holmes2023a"><a href="#d3e422">[Holmes, Jenstad, and Huculak 2023] </a>Holmes, Martin, Janelle Jenstad, and J. Matthew Huculak. “Introduction to Special
+                     <p class="bibliomixed" id="holmes2023a"><a href="#d3e448">[Holmes, Jenstad, and Huculak 2023] </a>Holmes, Martin, Janelle Jenstad, and J. Matthew Huculak. “Introduction to Special
                         Issue: Project Resiliency in the Digital Humanities.” <span class="ital">Digital Humanities
                            Quarterly</span>, vol. 17, no. 1, 2023, <a href="https://doi.org/10.63744/g7c3rkvm5bzr" class="link">https://doi.org/10.63744/g7c3rkvm5bzr</a>.</p>
-                     <p class="bibliomixed" id="holmes2023b"><a href="#d3e388">[Holmes and Takeda 2023] </a>Holmes, Martin, and Joey Takeda. “From Tamagotchis to Pet Rocks: On Learning to
+                     <p class="bibliomixed" id="holmes2023b"><a href="#d3e414">[Holmes and Takeda 2023] </a>Holmes, Martin, and Joey Takeda. “From Tamagotchis to Pet Rocks: On Learning to
                         Love Simplicity through the Endings Principles.” <span class="ital">Digital Humanities
                            Quarterly</span>, vol. 17, no. 1, 2023, <a href="https://doi.org/10.63744/dr2uaqdau4tz" class="link">https://doi.org/10.63744/dr2uaqdau4tz</a>.</p>
                      <p class="bibliomixed" id="melson2010"><a href="#d3e128">[Melson and Flanders 2010] </a>Melson, John, and Julia Flanders. “Not Just One of Your Holiday Games: Names and
@@ -1620,7 +1654,7 @@
                      <p class="bibliomixed" id="renear2003"><a href="#d3e67">[Renear 2003] </a>Renear, Allen, Pat Lawton, Christopher Philippe, and David Dubin. “An XML document
                         corresponds to which FRBR Group 1 entity?”, paper presented at Extreme Markup Languages
                         2003, 4–8 August 2003.</p>
-                     <p class="bibliomixed" id="sperbergmcqueen2012"><a href="#d3e463">[Sperberg-McQueen 2012] </a>Sperberg-McQueen, C. M. Keynote Address. Knowledge Organization and Data Modeling
+                     <p class="bibliomixed" id="sperbergmcqueen2012"><a href="#d3e489">[Sperberg-McQueen 2012] </a>Sperberg-McQueen, C. M. Keynote Address. Knowledge Organization and Data Modeling
                         in the Humanities, 16 March 2012, Brown University, Providence, RI. <a href="https://youtu.be/2F98I3bbOVM" class="link">youtu.be/2F98I3bbOVM</a></p>
                      <p class="bibliomixed" id="teip5about"><a href="#d3e119">[TEI Guidelines, “About These Guidelines”] </a>TEI Consortium. “iv. About These Guidelines.” In <span class="ital">TEI: Guidelines for Electronic Text Encoding and Interchange</span>, P5 Version 4.11.0, 18 Feb. 2026. <a href="https://tei-c.org/release/doc/tei-p5-doc/en/html/AB.html#ABTEI" class="link">tei-c.org/release/doc/tei-p5-doc/en/html/AB.html#ABTEI</a>.</p>
                      <p class="bibliomixed" id="witmore2012"><a href="#d3e229">[Witmore 2012] </a>Witmore, Michael. “Text: A Massively Addressable Object,” in <span class="ital">Debates in Digital Humanities</span>, edited by Matthew Gold. University of Minnesota Press, 2012. <a href="https://dhdebates.gc.cuny.edu/read/untitled-88c11800-9446-469b-a3be-3fdb36bfbd1e/section/402e7e9a-359b-4b11-8386-a1b48e40425a#p4b3" class="link">dhdebates.gc.cuny.edu/read/untitled-88c11800-9446-469b-a3be-3fdb36bfbd1e/section/402e7e9a-359b-4b11-8386-a1b48e40425a#p4b3</a></p>
@@ -1634,14 +1668,14 @@
                      <div id="d3e157" class="footnote">
                         <p><sup class="fn-label"><a href="#d3e157-ref" class="footnoteref">[2]</a></sup> Later, these contextual essays were republished in Women Writers in Context.</p>
                      </div>
-                     <div id="d3e332" class="footnote">
-                        <p><sup class="fn-label"><a href="#d3e332-ref" class="footnoteref">[3]</a></sup> See the <a href="https://www.exist-db.org/exist/apps/doc/xquery#unsupported-features" class="link">“XQuery
+                     <div id="d3e358" class="footnote">
+                        <p><sup class="fn-label"><a href="#d3e358-ref" class="footnoteref">[3]</a></sup> See the <a href="https://www.exist-db.org/exist/apps/doc/xquery#unsupported-features" class="link">“XQuery
                               in eXist-db” documentation page</a> for a list of XQuery features currently unsupported by
                            eXist, and features which have eXist-specific implementations. 
                            <a href="https://web.archive.org/web/20190000000000*/https://www.exist-db.org/exist/apps/doc/xquery" class="link">The Wayback Machine has also captured iterations of the page since 2019.</a></p>
                      </div>
-                     <div id="d3e344" class="footnote">
-                        <p><sup class="fn-label"><a href="#d3e344-ref" class="footnoteref">[4]</a></sup> In a 2019 eXist issue thread, Joe Wicentowski posted <a href="https://github.com/eXist-db/exist/issues/2626#issuecomment-480319383" class="link">this summary of eXist-specific functions</a> which were deprecated in eXist version 4, and which would be removed in version 5—many
+                     <div id="d3e370" class="footnote">
+                        <p><sup class="fn-label"><a href="#d3e370-ref" class="footnoteref">[4]</a></sup> In a 2019 eXist issue thread, Joe Wicentowski posted <a href="https://github.com/eXist-db/exist/issues/2626#issuecomment-480319383" class="link">this summary of eXist-specific functions</a> which were deprecated in eXist version 4, and which would be removed in version 5—many
                            in favor of spec-compliant versions. Wicentowski had been tracking <a href="https://gist.github.com/joewiz/acb0558f078c0576a5e7?permalink_comment_id=1568552#gistcomment-1568552" class="link">eXist’s compliance with the Functions and Operators specification</a> since 2015, as well as helping the team improve eXist.</p>
                      </div>
                   </div>

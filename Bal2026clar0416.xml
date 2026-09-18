@@ -445,6 +445,37 @@ In order to retain both the toggle feature and the collection’s searchability,
       define elements like <code>&lt;vuji></code> as <link xlink:href="https://www.exist-db.org/exist/apps/doc/lucene#inline">“inline,”</link> or, implying no word break. As such,
       a search in eXist for the word “injurious” will lead to <emphasis>Jane Anger
         Her Protection For Women</emphasis>, where XTF would have come up short.</para>
+    <para>As an example, <xref linkend="wwo-missing-rose"/> is a screenshot from 2022 which demonstrates that XTF would rarely 
+      find a match for the word “rose” in WWO texts that were originally published before 1775. 
+      The older the source material, the more likely it was that “rose” would have a long-s in it: <code>roſe</code>. 
+      Our pre-publication workflow would introduce a tag around long-s characters so they could be swapped with their modern 
+      equivalent, consequently preventing XTF from indexing the full word.
+      <figure xml:id="wwo-missing-rose">
+        <mediaobject>
+          <alt>Screenshot of the XTF interface, showing search results for the word 'rose'. The timeline shows few hits before 1775.</alt>
+          <imageobject>
+            <imagedata fileref="img/Bal2026clar041610.png"/>
+          </imageobject>
+        </mediaobject>
+        <caption>
+          <para>XTF showed 119 documents matching the word “rose,” with a vast majority of the results clustered between 1775 and 1855 on the timeline.</para>
+        </caption>
+      </figure>
+    </para>
+    <para>At that time, work had begun on WWO’s eXist implementation. By running the same search in the new database, we discovered that XTF was missing <emphasis>one hundred</emphasis> documents matching the word “rose”:
+      <figure>
+        <mediaobject>
+          <alt>Screenshot of the eXist interface, which is similar but has XML placeholders for the query, and more keywords in context. There are more search results.</alt>
+          <imageobject>
+            <imagedata fileref="img/Bal2026clar041611.png"/>
+          </imageobject>
+        </mediaobject>
+        <caption>
+          <para>This early version of WWO in eXist showed 220 documents matching the word “rose.” Results are evenly spread between 1550 and 1800.</para>
+        </caption>
+      </figure>
+    </para>
+    
     <para>Importantly, while the code for the WWO site was updated and adapted for use in eXist, the WWO documents themselves stayed the same.
       The relationship between the markup and the publication tool is thus very indirect. The
       markup represents a durable, evolving expression of our analysis of the source texts, based on
