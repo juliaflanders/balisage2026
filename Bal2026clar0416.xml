@@ -483,8 +483,8 @@ In order to retain both the toggle feature and the collection’s searchability,
       used, cited, reproduced, and archived.</para>
     <para>The Endings Principles lay out prescriptions for a project’s data, documentation, processing, products, and release management. Each principle works toward the goal of granting digital longevity to the project’s products.
       For instance, the very first principle states that <emphasis>data</emphasis> should be <quote>stored only in formats that conform to open standards and that are amenable to processing</quote> (<xref linkend="endings"/>), such as TEI markup.
-      The Principles also recommend documentation, <quote>relentless</quote> validation, version control, versioning, and continuous integration. By existing outside of a black box, the Endings Project argues,
-      digital products are far more likely to be reused and maintained, and thus, more likely to
+      The Principles also recommend documentation, <quote>relentless</quote> validation, version control, versioning, and continuous integration. The Endings Project argues that when digital products are produced openly, outside of black boxes,
+      they are far more likely to be reused and maintained—and thus, more likely to
       survive.
       </para>
     <para>For products, the Endings Project  promotes the use of standalone, static websites, with no server-side
